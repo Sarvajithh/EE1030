@@ -1,0 +1,227 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{gvv}  
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{caption}
+\def\inputGnumericTable{}              
+\usepackage[latin1]{inputenc}          
+\usepackage{color}                    
+\usepackage{array}                    
+\usepackage{longtable}                
+\usepackage{calc}                     \usepackage{multirow}                 \usepackage{multicol}
+\usepackage{hhline}                    
+\usepackage{ifthen}                    
+\usepackage{lscape}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\title{18-Definite Integrals and Applications of Integrals
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+% }
+}
+\author{Sarvajith Guddety}
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+\noindent\textbf{9.} Let \( S \) be the area of the region enclosed by \( y = e^{-x^2} \), \( y = 0 \), \( x = 0 \) and \( x = 1 \); then $\hfill \textbf{(2012)}$
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item  [(a)] \( S \geq \frac{1}{e} \)
+\item [(b)]\( S \geq 1 - \frac{1}{e} \)
+\columnbreak
+\item  [(c)] \( S \leq \frac{1}{4} \left( 1 + \frac{1}{\sqrt{e}} \right) \)
+\item  (d) \( S \leq \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{e}} \left( 1 - \frac{1}{\sqrt{2}} \right) \)
+\end{enumerate}
+\end{multicols}
+
+   
+
+   \noindent\textbf{10.} The option(s) with the values of $a$ and $L$ that satisfy the following equation is(are)$ \hfill \textbf{(JEE Adv. 2015)}$
+
+   \[
+   \frac{\int_0^{4\pi} e^t \left( \sin^6(at) + \cos^4(at) \right) dt}{\int_0^{\pi} e^t \left( \sin^6(at) + \cos^4(at) \right) dt} = L?
+   \]
+
+   \begin{multicols}{2}
+   \begin{enumerate}
+   \item  [(a)] $a = 2$, $L = \frac{e^{4\pi} - 1}{e^\pi - 1}$
+   \item [(b)] $a = 2$, $L = \frac{e^{4\pi} + 1}{e^\pi + 1}$
+   \columnbreak
+   \item  [(c)] $a = 4$, $L = \frac{e^{4\pi} - 1}{e^\pi - 1}$
+   \item [(d)] $a = 4$, $L = \frac{e^{4\pi} + 1}{e^\pi + 1}$
+   \end{enumerate}
+   \end{multicols}
+
+   \noindent\textbf{11.} Let $f(x) = 7\tan^8x + 7\tan^6x - 3\tan^4x - 3\tan^2x$ for all $x \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$. \\
+   Then the correct expression(s) is(are) $\hfill \hfill \textbf{(JEE Adv. 2015)}$
+    
+    \begin{multicols}{2}
+    \begin{enumerate}
+    \item  [(a)] $\int_0^{\pi/4} x f(x) dx = \frac{1}{12}$ \item [(b)]$\int_0^{\pi/4} f(x) dx = 0$
+    \columnbreak
+    \item  [(c)] $\int_0^{\pi/4} x f(x) dx = \frac{1}{6}$
+    \item  [(d)] $\int_0^{\pi/4} f(x) dx = 1$ \end{enumerate}
+    \end{multicols}
+
+     
+
+     \noindent\textbf{12.} Let $f'(x) = \frac{192x^3}{2 + \sin^4(\pi x)}$ for all $x \in \mathbb{R}$ with $f\left(\frac{1}{2}\right) = 0$.\\
+     If $m \leq \int_{1/2}^{1} f(x) dx \leq M$, then the possible values of $m$ and $M$ are $\hfill \textbf{(JEE Adv. 2015)}$
+     \begin{multicols}{2}
+     \begin{enumerate}
+             \item[(a)] $m = 13, M = 24$
+	         \item[(b)] $m = \frac{1}{4}, M = \frac{1}{2}$
+		     \columnbreak
+		         \item[(c)] $m = -11, M = 0$
+			     \item[(d)] $m = 1, M = 12$
+			     \end{enumerate}
+			     \end{multicols}  
+			     \textbf{13.} Let
+			     \[
+			     f(x) = \lim_{n \to \infty} \left( \frac{n^n (x+n) \left(x + \frac{n}{2}\right) \cdots \left(x + \frac{n}{n}\right)}{n! \left(x^2 + n^2\right) \left(x^2 + \frac{n^2}{4}\right) \cdots \left(x^2 + \frac{n^2}{n^2}\right)} \right)^{\frac{x}{n}},
+			     \]
+			     Then  \text{ for all } $x > 0$. $\hfill \textbf{(JEE Adv. 2015)}$
+			     \begin{multicols}{2}
+			     \begin{enumerate}
+			         \item[(a)] $f\left(\frac{1}{2}\right) \geq f(1)$
+				     \item[(b)] $f\left(\frac{1}{3}\right) \leq f\left(\frac{2}{3}\right)$
+				         \item[(c)] $f'(2) \leq 0$
+					     \item[(d)] $\frac{f'(3)}{f(3)} \geq \frac{f'(2)}{f(2)}$
+					     \end{enumerate}
+					     \end{multicols}
+					     \textbf{14} Let $f: \mathbb{R} \to (0,1)$ be a continuous function. Then, which of the following function(s) has (have) the value zero at some point in the interval (0,1)?  $\hfill \textbf{(JEE Adv 2016)}$
+					     \begin{multicols}{2}
+					     \begin{enumerate}
+					         \item[(a)] $x^9 - f(x)$
+						     \item[(b)] $x - \int_{0}^{\frac{\pi}{2} - x} f(t) \cos t \, dt$
+						         \item[(c)] $e^x - \int_{0}^{x} f(t) \sin t \, dt$
+							     \item[(d)] $f(x) + \int_{0}^{\frac{\pi}{2}} f(t) \sin t \, dt$
+							     \end{enumerate}
+							     \end{multicols}
+
+
+							     \textbf{15.} If $g(x) = \int_{\sin x}^{\sin(2x)} \sin^{-1}(t) \, dt$, then
+							     $\hfill \textbf{(JEE Adv 2017)}$
+							     \begin{multicols}{2}
+							     \begin{itemize}
+							         \item[(a)] $g'\left(\frac{\pi}{2}\right) = -2\pi$
+								     \item[(b)] $g'\left(-\frac{\pi}{2}\right) = 2\pi$
+								         \item[(c)] $g'\left(\frac{\pi}{2}\right) = 2\pi$
+									     \item[(d)] $g'\left(-\frac{\pi}{2}\right) = -2\pi$
+									     \end{itemize}
+									     \end{multicols}
+									     \textbf{16.} If the line $sx = \alpha$ divides the area of region
+									     \[
+									     R = \left\{(x, y) \in \mathbb{R}^2 : x^3 \leq y \leq x, 0 \leq x \leq 1\right\}
+									     \]
+									     into two equal parts, then $\hfill \textbf{(JEE Adv. 2017)}$
+									     \begin{multicols}{2}
+									     \begin{itemize}
+									         \item[(a)] $0 < \alpha \leq \frac{1}{2}$
+										     \item[(b)] $\frac{1}{2} < \alpha < 1$
+										         \item[(c)] $2\alpha^4 - 4\alpha^2 + 1 = 0$
+											     \item[(d)] $\alpha^4 + 4\alpha^2 - 1 = 0$
+											     \end{itemize}
+											     \end{multicols}
+											     \textbf{17.} If $I = \sum_{k=1}^{98} \int_{k}^{k+1} \frac{k+1}{x(k+1)} \, dx$, then $\hfill \textbf{(JEE Adv 2017)}$
+											     \begin{multicols}{2}
+											     \begin{itemize}
+											         \item[(a)] $1 > \log_e 99$  \item[(b)] $1 < \log_e 99$
+												     \item[(c)] $1 < \frac{49}{50}$  \item[(d)] $1 > \frac{49}{50}$
+												     \end{itemize}
+												     \end{multicols}
+												     \textbf{18.} For \(a \in \mathbb{R}, |a| \geq 1\), let $\hfill \textbf{(JEE Adv 2019)}$
+
+												     \[
+												     \lim_{{n \to \infty}}
+												         \frac{
+													         1 + \sqrt{2} + \cdots + \sqrt{n}
+														     }{
+														             (an+1)^2 + (an+2)^2 + \cdots + (an+n)^2
+															         } = 54
+																 \]
+																 Then the possible value(s) of  are:
+																 \begin{multicols}{2}
+																 \begin{itemize}
+																     \item[(a)] $9$
+																         \item[(b)] $7$
+																	     \item[(c)] $6$
+																	         \item[(d)] $8$
+																		 \end{itemize}
+																		 \end{multicols}
+																		 \section*{E Subjective Problems}
+
+																		 1. Find the area bounded by the curve \( x^2 = 4y \) and the straight line \( x = 4y - 2 \). $\hfill \textbf{(1981 - 4 Marks)}$
+
+																		 2. Show that:
+																		 \[
+																		 \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e \quad \text{and} \quad \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^{n^2} = e^{1981}
+																		 \]
+																		 $\hfill \textbf{(1981 - 4 Marks)}$
+
+																		 3. Show that:
+																		 \[
+																		 n \int_0^\pi f(x) \sin x \, dx = \frac{n\pi}{2} \int_0^\pi f(\sin x) \, dx
+																		 \]
+																		 $\hfill \textbf{(1982 - 2 Marks)}$
+
+																		 4. Find the value of:
+																		 \[
+																		 p \int_0^p |\sin x| \, dx + q \int_p^{2p} \sin x \, dx \quad \text{where} \quad p > q > 0
+																		 \]
+																		 $\hfill \textbf{(1982 - 3 Marks)}$
+																		 5. For any real \( t \), show that the point with coordinates given by:
+																		 \[
+																		 x = e^{-t}, \quad y = e^{t} - e^{-t}
+																		 \]
+																		 lies on the hyperbola defined by:
+																		 \[
+																		 x^2 - \frac{y^2}{e^2} = 1
+																		 \]
+																		 Show that there are two points corresponding to \( t=1 \) and \( t=-1 \); find them. Show that the area bounded by this hyperbola and these two points corresponding to \( t=1 \) and \( t=-1 \) is
+																		 \[
+																		 \left(\frac{\pi}{4}\right)(e^2 + 1)
+																		 \]
+																		 $\hfill \textbf{ (1982 - 3 Marks)}$
+
+
+
+																		 \end{document}
