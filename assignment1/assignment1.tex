@@ -1,0 +1,212 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usepackage{listings}
+\usepackage{gvv}  
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{caption}
+\def\inputGnumericTable{}              
+\usepackage[latin1]{inputenc}          
+\usepackage{color}                    
+\usepackage{array}                    
+\usepackage{longtable}                
+\usepackage{calc}
+\usepackage{multirow}                
+\usepackage{multicol}
+\usepackage{hhline}                    
+\usepackage{ifthen}                    
+\usepackage{lscape}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\title{18-Definite Integrals and Applications of Integrals
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+% }
+}
+\author{Sarvajith Guddety}
+
+\begin{document}
+
+\maketitle
+
+9. Let  $ S $ be the area of the region enclosed by $y = e^{-x^2} ,$  $y = 0 ,$ $x = 0 ,$ and $ x = 1 $; then \hfill (2012)
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $ S \geq \frac{1}{e} $
+\item[(b)] $S \geq 1 - \frac{1}{e}$
+\columnbreak
+\item[(c)] $ S \leq \frac{1}{4} \brak{1 + \frac{1}{\sqrt{e}}}$
+\item[(d)] $S\leq\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{e}}\brak{1 -\frac{1}{\sqrt{2}}} $
+\end{enumerate}
+\end{multicols}
+
+10. The option(s) with the values of $a$ and $L$ that \ satisfy the following equation is(are) \hfill (JEE Adv. 2015)
+\begin{align*}
+    \frac{\int_0^{4\pi} e^t  \brak{\sin^6\brak{at} + \cos^4\brak{at}}  dt}{\int_0^{\pi} e^t  \brak{\sin^6\brak{at} + \cos^4\brak{at}} dt} = L?
+\end{align*} \\
+\begin{multicols}{2}
+\begin{enumerate}
+\item  [(a)] $a = 2$, $L = \frac{e^{4\pi} - 1}{e^\pi - 1}$
+\item [(b)] $a = 2$, $L = \frac{e^{4\pi} + 1}{e^\pi + 1}$
+\columnbreak
+\item [(c)] $a = 4$, $L = \frac{e^{4\pi} - 1}{e^\pi - 1}$
+\item[(d)] $a = 4$, $L = \frac{e^{4\pi} + 1}{e^\pi + 1}$
+\end{enumerate}
+\end{multicols}
+
+11. Let $f\brak{x}= 7\tan^8x + 7\tan^6x - 3\tan^4x - 3\tan^2x$ for all $x \in \brak{-\frac{\pi}{2}, \frac{\pi}{2}} $. \\
+Then the correct expression(s) is(are)
+
+\hfill  (JEE Adv. 2015)
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $\int_0^{\pi/4} x f\brak{x}dx = \frac{1}{12}$
+\item[(b)]$\int_0^{\pi/4} f\brak{x}dx = 0$
+\columnbreak
+\item[(c)] $\int_0^{\pi/4} x f\brak{x}dx = \frac{1}{6}$
+\item [(d)] $\int_0^{\pi/4} f\brak{x}dx = 1$
+\end{enumerate}
+\end{multicols}
+
+12. Let $f'\brak{x} = \frac{192x^3}{2 + \sin^4\brak{\pi x}}$ for all $x \in \mathbb{R}$ with \\ $f\brak{\frac{1}{2}} = 0$.
+If $m \leq \int_{1/2}^{1} f\brak{x} dx \leq M$, then the possible values of $m$ and $M$ are \hfill (JEE Adv. 2015)
+\begin{multicols}{2}
+\begin{enumerate}
+\item [(a)] $m = 13, M = 24$
+\item [(b)] $m = \frac{1}{4}, M = \frac{1}{2}$
+\columnbreak
+\item [(c)] $m = -11, M = 0$
+\item [(d)] $m = 1, M = 12$
+\end{enumerate}
+\end{multicols}
+13. Let
+\begin{align*}
+f\brak{x} = \lim_{n \to \infty}  \brak{\frac{n^n \brak{x+n} x +\brak{\frac{n}{2}} \cdots \brak{x + \frac{n}{n}}}{n!\brak{ x^2 + n^2} \brak{x^2 + \frac{n^2}{4}} \cdots \brak{x^2 + \frac{n^2}{n^2}}}} ^{\frac{x}{n}},
+\end{align*}
+Then  for all  $x > 0$. \hfill (JEE Adv. 2016)
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $f\brak{\frac{1}{2}} \geq f\brak{1}$
+\item[(b)] $\brak{\frac{1}{3} }\leq f\brak{\frac{2}{3}}$
+\columnbreak
+\item [(c)] $f'\brak{2} \leq 0$
+\item [(d)] $\frac{f'\brak{3}}{f\brak{3}} \geq \frac{f'\brak{2}}{f\brak{2}}$
+\end{enumerate}
+\end{multicols}
+14. Let $f: \mathbb{R} \to (0,1)$ be a continuous function. Then, which of the following function(s) has (have) the value zero at some point in the interval \brak{0,1}?
+
+\hfill (JEE Adv 2016)
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $x^9 - f\brak{x}$
+\item[(b)] $x - \int_{0}^{\frac{\pi}{2} - x} f\brak{t} \cos t \, dt$
+\columnbreak
+\item[(c)] $e^x - \int_{0}^{x} f\brak{t} \sin t \, dt$
+\item[(d)] $f\brak{x} + \int_{0}^{\frac{\pi}{2}} f\brak{t} \sin t \, dt$
+\end{enumerate}
+\end{multicols}
+15. If $g\brak{x} = \int_{\sin x}^{\sin\brak{2x} \sin^{-1}\brak{t} }, dt$, then
+
+\hfill (JEE Adv 2017)
+\begin{multicols}{2}
+\begin{enumerate}
+\item [(a)] $g'\brak{\frac{\pi}{2}} = -2\pi$
+\item [(b)] $g' \brak{-\frac{\pi}{2}} = 2\pi$
+\columnbreak
+\item[(c)] $g' \brak{\frac{\pi}{2}} = 2\pi$
+\item[(d)] $g' \brak{-\frac{\pi}{2}} = -2\pi$
+\end{enumerate}
+\end{multicols}
+16. If the line $sx = \alpha$ divides the area of region
+$R = \brak{\brak{x, y} \in \mathbb{R}^2 : x^3 \leq y \leq x, 0 \leq x \leq 1}$
+into two equal parts, then \hfill (JEE Adv. 2017)
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $0 < \alpha \leq \frac{1}{2}$
+\item[(b)] $\frac{1}{2} < \alpha < 1$
+\columnbreak
+\item[(c)] $2\alpha^4 - 4\alpha^2 + 1 = 0$
+\item[(d)] $\alpha^4 + 4\alpha^2 - 1 = 0$
+\end{enumerate}
+\end{multicols}
+17. If $I = \sum_{k=1}^{98} \int_{k}^{k+1} \frac{k+1}{x(k+1)} \, dx$, then
+
+\hfill (JEE Adv 2017)
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $1 > \ln 99$
+\item[(b)] $1 < \ln 99$
+\columnbreak
+\item[(c)] $1 < \frac{49}{50}$  
+\item [(d)] $1 > \frac{49}{50}$
+\end{enumerate}
+\end{multicols}
+18. For $a \in \mathbb{R}, \abs{a} \geq 1$, let \hfill (JEE Adv 2019)
+\begin{align*}
+\lim_{{n \to \infty}} \frac{1 + \sqrt{2} + \cdots + \sqrt{n}}{(an+1)^2 + (an+2)^2 + \cdots + (an+n)^2} = 54
+\end{align*}
+Then the possible value(s) of  are:
+\begin{multicols}{2}
+\begin{enumerate}
+\item[(a)] $9$
+\item[(b)] $7$
+\columnbreak
+\item[(c)] $6$
+\item[(d)] $8$
+\end{enumerate}
+\end{multicols}
+\section*{E Subjective Problems}
+1. Find the area bounded by the curve $ x^2 = 4y $ and the straight line $ x = 4y - 2 $. \hfill (1981 - 4 Marks) \\
+2. Show that:
+\begin{align*}
+\lim_{n \to \infty} 1 +\brak{\frac{1}{n}}^n = e \quad \text{and} \quad \lim_{n \to \infty} 1 + \bra{\frac{1}{n}}^{n^2} = e^{1981}
+\end{align*}
+\hfill (1981 - 4 Marks) \\
+3. Show that:
+$n \int_0^\pi f\brak{x} \sin x \, dx = \frac{n\pi}{2} \int_0^\pi f\brak{\sin x} \, dx$
+\hfill (1982 - 2 Marks) \\
+4. Find the value of:
+\begin{align*}
+    p \int_0^p \abs \sin x \, dx + q \int_p^{2p} \sin x \, dx \quad \text{where} \quad p > q > 0
+\end{align*}
+\hfill (1982 - 3 Marks) \\
+5. For any real $ t $, show that the point with coordinates given by:
+$$x = e^{-t}, \quad y = e^{t} - e^{-t}$$
+lies on the hyperbola defined by:
+$x^2 - \frac{y^2}{e^2} = 1$
+Show that there are two points corresponding to  $t=1 $ and $ t=-1 $; find them.\\
+Show that the area bounded by this hyperbola and these two points corresponding to $ t=1$ and $ t=-1 $ is \\
+$$\brak{\frac{\pi}{4}}(e^2 + 1)$$
+\hfill  (1982 - 3 Marks)
+\end{document}
+
