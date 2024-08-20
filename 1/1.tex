@@ -62,76 +62,75 @@ If the origin is the centroid of the triangle PQR with vertices
 c.\\
 \textbf{Solution: }\\
 \begin{table}[h!]    
-  \centering
-    \input{tables/table.tex}
-      \caption{values of the geometrical points in given question}
-        \label{tab1-1.2-18-1}
-	\end{table}
-
-	\textbf{proof: }\\
-	if there are 3 points which form a triangle in 3 dimensional axis then, their centroid can be calculated using matrices by : \\
-	\begin{enumerate} [1.]
-	    \item First form a 3 x 3 matrix with the values of points as each row and name it as S\\
-	             $$ S = \begin{bmatrix}
-		                   x_1&y_1&z_1\\
-				                 x_2&y_2&z_2\\
-						               x_3&y_3&z_3
-							                 \end{bmatrix}$$
-									     \item then take another 3 x 1 matrix I which is filled with  $\frac{1}{3}$\\
-									         $$ I = \begin{bmatrix}
-										         \frac{1}{3}&\frac{1}{3}&\frac{1}{3}\\
-											     \end{bmatrix}$$
-											         \item now perform matrix multiplication I X S, which results in an 3 x 1 matrix G, which will have a the elements corresponding to centroid elements \\
-												     $$G= \begin{bmatrix}
-												             \frac{x_1+x_2+x_3}{3}&\frac{y_1+y_2+y_3}{3}&\frac{z_1+z_2+z_3}{3}
-													         \end{bmatrix}$$
-														     \item this indicates that centroid can be calculated using this method.
+\centering
+\input{tables/table.tex}
+\caption{values of the geometrical points in given question}
+\label{tab1-1.2-18-1}
+\end{table}
+\textbf{proof: }\\
+if there are 3 points which form a triangle in 3 dimensional axis then, their centroid can be calculated using matrices by : \\
+\begin{enumerate} [1.]
+    \item First form a 3 x 3 matrix with the values of points as each row and name it as S\\
+    $$ S = \begin{bmatrix}
+            x_1&y_1&z_1\\
+            x_2&y_2&z_2\\
+            x_3&y_3&z_3
+           \end{bmatrix}$$
+    \item then take another 3 x 1 matrix I which is filled with  $\frac{1}{3}$\\
+            $$ I = \begin{bmatrix}
+         \frac{1}{3}&\frac{1}{3}&\frac{1}{3}\\
+              \end{bmatrix}$$
+   \item now perform matrix multiplication I X S, which results in an 3 x 1 matrix G, which will have a the elements corresponding to centroid elements \\
+     $$G= \begin{bmatrix}
+          \frac{x_1+x_2+x_3}{3}&\frac{y_1+y_2+y_3}{3}&\frac{z_1+z_2+z_3}{3}
+         \end{bmatrix}$$
+     \item this indicates that centroid can be calculated using this method.
 														        
-															\end{enumerate}
-															\begin{equation}
-															\textbf{P}\brak{x_1,y_1,z_1} = \brak{2a,4,6}\label{eq1.12.18.1}
-															\end{equation}
-															\begin{equation}
-															    \textbf{Q}\brak{x_2,y_2,z_2} = \brak{-4,3b,10}\label{eq1.12.18.2}
-															    \end{equation}
-															    \begin{equation}
-															        \textbf{R}\brak{x_3,y_3,z_3} = \brak{8,14,2c}\label{eq1.12.18.3}\\
-																\end{equation}
+\end{enumerate}
+\begin{equation}
+\textbf{P}\brak{x_1,y_1,z_1} = \brak{2a,4,6}\label{eq1.12.18.1}
+\end{equation}
+\begin{equation}
+\textbf{Q}\brak{x_2,y_2,z_2} = \brak{-4,3b,10}\label{eq1.12.18.2}
+\end{equation}
+\begin{equation}
+\textbf{R}\brak{x_3,y_3,z_3} = \brak{8,14,2c}\label{eq1.12.18.3}\\
+\end{equation}
 
-																Given that, the centroid of the triangle \textbf{PQR} is origin\brak{0,0,0}. \\
-																Centroid\brak{G}.
-																$$let\,the\,matrix\;S =
-																\begin{bmatrix}
-																2a&4&6\\
-																-4&3b&10\\
-																8&14&2c
-																\end{bmatrix}$$\\
-																$$The\,matrix\;G = \frac{1}{3}
-																\begin{bmatrix}
-																    1&1&1
-																    \end{bmatrix}S$$\\
-																    after the matrix multiplication
-																    $$G =\frac{1}{3}
-																    \begin{bmatrix}
-																    2a-4+8&4+3b+14&6+10+2c
-																    \end{bmatrix}$$
-																    and given that
-																    $$G =\begin{bmatrix}
-																          0&0&0
-																	        \end{bmatrix}$$\\
-																		on comparing we get that
-																		$$2a -4 + 8 = 0\\$$
-																		\begin{equation}
-																		    a = -2 \label{eq : 1-1.2-18-4}\\
-																		    \end{equation}
-																		    $$4 + 3b + 14 = 0$$
-																		    \begin{equation}
-																		        b = -6 \label{eq : 1-1.2-18-5}
-																			\end{equation}
-																			$$6 + 10 + 2c = 0$$
-																			\begin{equation}
-																			    c = -8\label{eq : 1-1.2-18-6}
-																			    \end{equation}\\
-																			    $\therefore $ the values of a,b,c are -2,-6,-8 respectively.
-																			    \end{document}
+Given that, the centroid of the triangle \textbf{PQR} is origin\brak{0,0,0}. \\
+Centroid\brak{G}.
+$$let\,the\,matrix\;S =
+\begin{bmatrix}
+2a&4&6\\
+-4&3b&10\\
+8&14&2c
+\end{bmatrix}$$\\
+$$The\,matrix\;G = \frac{1}{3}
+\begin{bmatrix}
+  1&1&1
+\end{bmatrix}S$$\\
+after the matrix multiplication
+ $$G =\frac{1}{3}
+\begin{bmatrix}
+2a-4+8&4+3b+14&6+10+2c
+\end{bmatrix}$$
+and given that
+$$G =\begin{bmatrix}
+0&0&0
+\end{bmatrix}$$\\
+on comparing we get that
+$2a -4 + 8 = 0\\$$
+\begin{equation}
+ a = -2 \label{eq : 1-1.2-18-4}\\
+\end{equation}
+ $$4 + 3b + 14 = 0$$
+\begin{equation}
+b = -6 \label{eq : 1-1.2-18-5}
+\end{equation}
+$$6 + 10 + 2c = 0$$
+\begin{equation}
+c = -8\label{eq : 1-1.2-18-6}
+\end{equation}\\
+$\therefore $ the values of a,b,c are -2,-6,-8 respectively.
+\end{document}
 
