@@ -16,24 +16,21 @@ print("The values of a, b, and c are: a = {:.2f}, b = {:.2f}, c = {:.2f}".format
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Solve the equations for a, b, c
-# From the equations derived above
-# 1. 2a - 4 + 8 = 0
-# 2. 4 + 3b + 14 = 0
-# 3. 6 + 10 + 2c = 0
+from sympy import symbols, Eq, solve
 
-# Calculate the values
-a = (4 - 8) / 2
-b = -(4 + 14) / 3
-c = -(10 + 6) / 2
+# Define the symbols
+a, b, c = symbols('a b c')
 
-# Triangle vertices
-P = np.array([2*a, 2, 6])
-Q = np.array([-4, 3*b, -10])
-R = np.array([8, 14, 2*c])
+# Define the equations
+equation1 = Eq(2*a - 4 + 8, 0)
+equation2 = Eq(2 + 3*b + 14, 0)
+equation3 = Eq(6 - 10 + 2*c, 0)
 
-# Print the values of a, b, c
-print(f"a = {a}, b = {b}, c = {c}")
+# Solve the equations
+solution = solve((equation1, equation2, equation3), (a, b, c))
+
+# Print the solutions
+print(f"Solution: a = {solution[a]}, b = {solution[b]}, c = {solution[c]}")
 
 # Plot the triangle
 fig = plt.figure()
