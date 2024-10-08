@@ -1,0 +1,107 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 3}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{Feb 2021, shift 2}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+Question 16: A natural number has prime factorization given by $n = 2^x3^y5^z$, where $y$ and $z$ are such that $y + z = 5$ and $y^{-1} + z^{-1} = 5/6, y>z$. Then the number of odd divisors of $n$, including 1, is:
+\begin{enumerate}
+    \item [a.] 11
+    \item [b.] 6x
+    \item [c.] 12
+    \item [d.] 6   
+\end{enumerate}
+Question 17: Let $f\brak{x} = \sin ^{-1} \brak{x}$ and $g\brak{x} = [x^2-x-2]/[2x^2-x-6].$ If $g\brak{2} =\lim_{x\rightarrow2}g\brak{x}$, then the domain of the function f$o$g is:
+\begin{enumerate}
+    \item [a.] $(-\infty,-2]\cup[-4/3,\infty]$
+    \item [b.] $(-\infty,-1]\cup[2,\infty]$
+    \item [c.] $(-\infty,-2]\cup[-1,\infty]$
+    \item [d.] $(-\infty,-2]\cup[-3/2,\infty]$
+\end{enumerate}
+Question 18: If the mirror image of the point \brak{1,3,5} with respect to the plane $4x-5y+2z=8$ is \brak{\alpha,\beta,\gamma}, then
+5\brak{\alpha+\beta+\gamma}:
+\begin{enumerate}
+    \item [a.] 47
+    \item [b.] 39
+    \item [c.] 43
+    \item [d.] 41  
+\end{enumerate}
+Question 19: Let $f\brak{x}=\int_0 ^x e^t f\brak{t}dt + e^x $ be a differentiable function for all $x\in \mathbf{R}$. Then f\brak{x} equals:
+\begin{enumerate}
+    \item [a.] $2e^{e^x-1}-1$
+    \item [b.] $e^{e^x-1}$
+    \item [c.] $2e^{e^x}-1$
+    \item [d.] $e^{e^x}-1$
+\end{enumerate}
+Question 20: The triangle of the maximum area that can be inscribed in a given circle of radius 'r' is:
+\begin{enumerate}
+    \item [a.] A right-angle triangle having two of its sides of length 2r and r.
+    \item [b.] An equilateral triangle of height 2r/3.
+    \item [c.] Isosceles triangle with base equal to 2r.
+    \item [d.] An equilateral triangle having each of length $\sqrt{3}r$
+\end{enumerate}
+\section{Section-B}
+Question 1: The total number of 4-digit numbers whose greatest common divisor with 18 is 3, is \ldots\ldots\ldots.\vspace{50mm}\\
+Question 2: Let $\alpha$ and $\beta$ be two real numbers such that $\alpha + \beta = 1$ and $\alpha\beta = -1$. Let $P_n = \alpha^n + \beta^n$, $P_{n-1} = 11 \text{and} P_{n+1} = 29$ for some integer n = 1. Then the value of $P_n ^2$ is \ldots\ldots\ldots.\vspace{0.5mm}\\
+Question 3: Let $X_1,X_2,\ldots,X_{18}$ be eighteen observation such that $\sum_{i=1} ^{18} \brak{X_i - \alpha} = 36$ and $\sum_{i=1} ^{18} \brak{X_i - \beta}^2 = 90$, where $\alpha$ and $\beta$ are distinct real numbers. If the standard deviation of these observations is 1, then the value of $|\alpha - \beta|$ is \ldots\ldots\ldots.\vspace{0.5mm} \\ 
+Question 4: In $I_{m,n} = \int _0 ^1 x^{m-1}\brak{1-x}^{n-1}dx,$ for $m,n\geq1$ and $\int _0 ^1[x^{m-1} + x^{n-1}]/[\brak{1+x}^{m+n}]dx = \alpha I_{m,n}$,$\alpha \in R$, then $\alpha$ is \ldots\ldots\ldots. \vspace{0.5mm}\\
+Question 5: Let L be a common tangent line to the curves $4x^2 + 9y^2 = 36$ and $\brak{2x}^2 + \brak{2y}^2=31$. Then the square of the slope of the line L is \ldots\ldots\ldots.\vspace{0.5mm}\\
+Question 6: If the matrix $\myvec{1&0&0\\0&2&0\\3&0&-1}$
+satisfies the equation $A^{20} + \alpha A^{19} + \beta A = \myvec{1&0&0\\0&4&0\\0&0&1}$ for some real numbers $\alpha$ and $\beta$, then $\beta - \alpha$ is equal to?\vspace{0.5mm}\\
+Question 7: If the arithmetic mean and the geometric mean of the $p^{th}$ and $q^{th}$ terms of the sequence -16,8,-4,2,\ldots satisfy the equation $4x^2-9x+5=0$, then p+q is equal to?\vspace{0.5mm}\\
+Question 8: Let the normals at all the points on a given curve pass through a fixed point \brak{a,b}. If the curve passes through \brak{3,-3} and $\brak{4,-2\sqrt{2}}$, and given that $a-2\sqrt{2}b = 3$, then $\brak{a^2+b^2+ab}$ is equal to?\vspace{0.5mm}\\
+Question 9: Let z be those complex number which satisfies $\abs{z+5}\leq 4$ and $z\brak{i+1}+\overline{z}\brak{1-i}\geq-10, i = \sqrt{-1}$. If the maximum value of $\abs{z+1}^2$ is $\alpha + \beta \sqrt{2}$, then the value of $\alpha+\beta$ is?\vspace{0.5mm}\\
+Question 10: Let a be an integer such that all the real roots of the polynomial $2x^5+5x^4+10x^3+10x^2+10x+10$ lie in the interval \brak{a,a+1}, then $\abs{a}$ is equal to?
+\end{document}
+
