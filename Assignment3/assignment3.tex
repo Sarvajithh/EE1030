@@ -1,14 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[journal]{IEEEtran}
-\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
-\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
- % Include tfrupee package
-\setlength{\headheight}{1cm} % Set the height of the header box
-\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
-\usepackage{enumitem}
-\usepackage{gvv-book}
-\usepackage{gvv}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -22,68 +14,89 @@
 \usepackage{gensymb}
 \usepackage{comment}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} 
+\usepackage{tkz-euclide}
 \usepackage{listings}
-% \usepackage{gvv}                                        
-\def\inputGnumericTable{}                                 
-\usepackage[latin1]{inputenc}                                
-\usepackage{color}                                            
-\usepackage{array}                                            
-\usepackage{longtable}                                       
-\usepackage{calc}                                             
-\usepackage{multirow}                                         
-\usepackage{hhline}                                           
-\usepackage{ifthen}                                           
+\usepackage{gvv}  
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{caption}
+\def\inputGnumericTable{}              
+\usepackage[latin1]{inputenc}          
+\usepackage{color}                    
+\usepackage{array}                    
+\usepackage{longtable}                
+\usepackage{calc}
+\usepackage{multirow}                
+\usepackage{multicol}
+\usepackage{hhline}                    
+\usepackage{ifthen}                    
 \usepackage{lscape}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\title{Assignment-3
+
+% }
+}
+\author{Sarvajith-AI24BTECH11008}
+
 \begin{document}
 
-\bibliographystyle{IEEEtran}
-\vspace{3cm}
+\maketitle
 
 
-\author{AI24BTECH11008- Sarvajith
-}
-\title{Assignment 3}
-% \maketitle
-% \newpage
-% \bigskip
-{\let\newpage\relax\maketitle}
-\title{Feb 2021, shift 2}
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\setlength{\intextsep}{10pt} % Space between text and floats
-\numberwithin{equation}{enumi}
-\numberwithin{figure}{enumi}
-\renewcommand{\thetable}{\theenumi}
 Question 16: A natural number has prime factorization given by $n = 2^x3^y5^z$, where $y$ and $z$ are such that $y + z = 5$ and $y^{-1} + z^{-1} = 5/6, y>z$. Then the number of odd divisors of $n$, including 1, is:
+\begin{multicols}{2}
 \begin{enumerate}
     \item [a.] 11
     \item [b.] 6x
+	    \columnbreak
     \item [c.] 12
     \item [d.] 6   
 \end{enumerate}
+\end{multicols}
 Question 17: Let $f\brak{x} = \sin ^{-1} \brak{x}$ and $g\brak{x} = [x^2-x-2]/[2x^2-x-6].$ If $g\brak{2} =\lim_{x\rightarrow2}g\brak{x}$, then the domain of the function f$o$g is:
+\begin{multicols}{2}
 \begin{enumerate}
     \item [a.] $(-\infty,-2]\cup[-4/3,\infty]$
     \item [b.] $(-\infty,-1]\cup[2,\infty]$
+	    \columnbreak
     \item [c.] $(-\infty,-2]\cup[-1,\infty]$
     \item [d.] $(-\infty,-2]\cup[-3/2,\infty]$
 \end{enumerate}
+\end{multicols}
 Question 18: If the mirror image of the point \brak{1,3,5} with respect to the plane $4x-5y+2z=8$ is \brak{\alpha,\beta,\gamma}, then
 5\brak{\alpha+\beta+\gamma}:
+\begin{multicols}{2}
 \begin{enumerate}
     \item [a.] 47
     \item [b.] 39
+	    \columnbreak
     \item [c.] 43
     \item [d.] 41  
 \end{enumerate}
+\end{multicols}
 Question 19: Let $f\brak{x}=\int_0 ^x e^t f\brak{t}dt + e^x $ be a differentiable function for all $x\in \mathbf{R}$. Then f\brak{x} equals:
+\begin{multicols}{2}
 \begin{enumerate}
     \item [a.] $2e^{e^x-1}-1$
     \item [b.] $e^{e^x-1}$
+	    \columnbreak
     \item [c.] $2e^{e^x}-1$
     \item [d.] $e^{e^x}-1$
 \end{enumerate}
+\end{multicols}
 Question 20: The triangle of the maximum area that can be inscribed in a given circle of radius 'r' is:
 \begin{enumerate}
     \item [a.] A right-angle triangle having two of its sides of length 2r and r.
@@ -92,7 +105,7 @@ Question 20: The triangle of the maximum area that can be inscribed in a given c
     \item [d.] An equilateral triangle having each of length $\sqrt{3}r$
 \end{enumerate}
 \section{Section-B}
-Question 1: The total number of 4-digit numbers whose greatest common divisor with 18 is 3, is \ldots\ldots\ldots.\vspace{50mm}\\
+Question 1: The total number of 4-digit numbers whose greatest common divisor with 18 is 3, is \ldots\ldots\ldots.\vspace{0.5mm}\\
 Question 2: Let $\alpha$ and $\beta$ be two real numbers such that $\alpha + \beta = 1$ and $\alpha\beta = -1$. Let $P_n = \alpha^n + \beta^n$, $P_{n-1} = 11 \text{and} P_{n+1} = 29$ for some integer n = 1. Then the value of $P_n ^2$ is \ldots\ldots\ldots.\vspace{0.5mm}\\
 Question 3: Let $X_1,X_2,\ldots,X_{18}$ be eighteen observation such that $\sum_{i=1} ^{18} \brak{X_i - \alpha} = 36$ and $\sum_{i=1} ^{18} \brak{X_i - \beta}^2 = 90$, where $\alpha$ and $\beta$ are distinct real numbers. If the standard deviation of these observations is 1, then the value of $|\alpha - \beta|$ is \ldots\ldots\ldots.\vspace{0.5mm} \\ 
 Question 4: In $I_{m,n} = \int _0 ^1 x^{m-1}\brak{1-x}^{n-1}dx,$ for $m,n\geq1$ and $\int _0 ^1[x^{m-1} + x^{n-1}]/[\brak{1+x}^{m+n}]dx = \alpha I_{m,n}$,$\alpha \in R$, then $\alpha$ is \ldots\ldots\ldots. \vspace{0.5mm}\\
