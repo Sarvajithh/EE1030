@@ -1,0 +1,179 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 5}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item [1]: $0<x<1$, then $\frac{3}{2}x^2+\frac{5}{3}x^3+\frac{7}{4}x^4+\ldots,$ is equal to
+\begin{enumerate}
+    \item [a.] $x\brak{\frac{1+x}{1-x}}+\log _e (1-x)$
+    \item [b.]  $x\brak{\frac{1-x}{1+x}}+\log _e (1-x)$
+    \item [c.]  $\frac{1-x}{1+x}+\log _e (1-x)$
+    \item [d.]  $\frac{1+x}{1-x}+\log _e (1-x)$
+\end{enumerate}
+\item[2]: If for $x,y \in \mathbf{R},x>0$, $y=\log _{10}x+\log _{10}x^{1/3}+\log _{10}x^{1/9}+\ldots$ upto $\infty$ terms and $\frac{2+4+6+\ldots+2y}{3+6+9+\ldots+3y} = \frac{4}{\log _{10}x}$, then the ordered pair \brak{x,y} is equal to:
+\begin{enumerate}
+    \item [a.] $\brak{10^6,6}$
+    \item [b.] $\brak{10^4,6}$
+    \item [c.] $\brak{10^2,3}$
+    \item [d.] $\brak{10^6,9}$
+\end{enumerate}
+\item[3]. Let A be a fixed point \brak{0, 6} and B be a moving
+point \brak{2t, 0}. Let M be the mid-point of AB and the
+perpendicular bisector of AB meets the y-axis at C.
+The locus of the mid-point P of MC is
+\begin{enumerate}
+    \item [a.] $3x^2-2y-6=0$
+    \item [b.] $3x^2+2y-6=0$
+    \item [c.] $2x^2-3y-9=0$
+    \item [d.] $2x^2-3y-9=0$
+\end{enumerate}
+\item[4]: If $\brak{\sin ^{-1} x}^2-\brak{\cos ^{-1} x}^2=a; 0<x<1, a\neq 0$ then the value of $2x^2-1$ is
+ \begin{enumerate}
+    \item [a.] $\cos\brak{\frac{4a}{\pi}}$
+    \item [b.] $\sin\brak{\frac{2a}{\pi}}$
+    \item [c.] $\cos\brak{\frac{2a}{\pi}}$
+    \item [d.] $\sin\brak{\frac{4a}{\pi}}$
+\end{enumerate}
+\item[5]: If the matrix $$\begin{bmatrix}
+    0&2\\K&-1
+\end{bmatrix}$$ satisfies $A\brak{A^3+3I} = 2I$ then the value of K is
+\begin{enumerate}
+    \item [a.] $\frac{1}{2}$
+    \item [b.] $\frac{-1}{2}$
+    \item [c.] -1
+    \item [d.] 1
+\end{enumerate}
+\item[6]:The distance of the point \brak{1, -2, 3} from the plane $x - y + z = 5$ measured parallel to a line, whose
+direction ratios are 2, 3, -6 is :
+\begin{enumerate}
+\item [a.] 3
+    \item [b.] 5
+    \item [c.] 2
+    \item [d.] 1
+\end{enumerate}
+\item[7]: If $S = {z\in\mathbf{C}:\frac{z-i}{z+2i}\in \mathbf{R}}$ then:
+\begin{enumerate}
+ \item [a.]  S contains exactly two elements
+    \item [b.]  S contains only one element
+    \item [c.]  S is a circle in the complex plane
+    \item [d.]  S is a straight line in the complex plane
+\end{enumerate}
+\item[8]: Let $y=y\brak{x}$ be the solution of the differential equation $\frac{dy}{dx}=2\brak{y+2\sin x-5}x-2\cos{x}$ such that y\brak{0}=7, then $y\brak{\pi}$is equal to
+\begin{enumerate}
+    \item [a.] $2e^{\pi ^2}+5$
+    \item [b.] $e^{\pi ^2}+5$
+    \item [c.] $3e^{\pi ^2}+5$
+    \item [d.] $7e^{\pi ^2}+5$
+\end{enumerate}
+\item[9]: Equation of a plane at a distance $\sqrt{\frac{2}{21}}$ from the
+origin, which contains the line of intersection of
+the planes $x - y - z - 1 = 0$ and $2x + y - 3z + 4 = 0$,
+is : 
+\begin{enumerate}
+     \item [a.] $3x-y-5z+2=0$
+    \item [b.] $3x-4z+3=0$
+    \item [c.] $-x+2y+2z-3=0$
+    \item [d.] $4x-y-5z+2=0$
+\end{enumerate}
+\item[10]: If $U_n = \brak{1+\frac{1}{n}}\brak{1+\frac{2^2}{n^2}}^2\ldots\brak{1+\frac{n^2}{n^2}}^n$ then $\lim_{n\rightarrow\infty}\brak{U_n}^{\frac{-4}{n^2}}$ is equal to 
+\begin{enumerate}
+     \item [a.] $\frac{e^2}{16}$
+    \item [b.] $\frac{4}{e}$
+    \item [c.] $\frac{16}{e^2}$
+    \item [d.] $\frac{4}{e^2}$
+\end{enumerate}
+\item[11]: The statement $\brak{p\land\brak{p\rightarrow}\land\brak{q\rightarrow r}}\rightarrow r$ is
+\begin{enumerate}
+     \item [a.] a tautology
+    \item [b.] equivalent to $p\rightarrow\neg r$
+    \item [c.] a fallacy
+    \item [d.] equivalent to $q\rightarrow\neg r$
+\end{enumerate}
+
+\item[12]: Let us consider a curve, $y = f\brak{x}$ passing through the point \brak{-2,2} and the slope of the tangent to the curve at any point \brak{x,f\brak{x}} is given by $f\brak{x}+xf'\brak{x}=x^2$ then:
+\begin{enumerate}
+     \item [a.] $x^2+2xf\brak{x}-12=0$
+    \item [b.] $x^2+xf\brak{x}+12=0$
+    \item [c.] $x^2-3xf\brak{x}-4=0$
+    \item [d.] $x^2+2xf\brak{x}+4=0$
+\end{enumerate}
+\item[13]: $\sum_{k=0}^20 \brak{^{20}C_k}^2$ is equal to
+\begin{enumerate}
+     \item [a.] $^{40}C_{21}$
+    \item [b.] $^{40}C_{19}$
+    \item [c.] $^{40}C_{20}$
+    \item [d.] $^{41}C_{20}$
+\end{enumerate}
+\item[14]: A tangent and a normal are drawn at the point
+P\brak{2,-4} on the parabola $y^2 = 8x$, which meet the
+directrix of the parabola at the points A and B
+respectively. If Q\brak{a, b} is a point such that AQBP
+is a square, then 2a + b is equal to :
+\begin{enumerate}
+\item [a.] -16
+    \item [b.]-18
+    \item [c.] -12
+    \item [d.] -20
+\end{enumerate}
+\item[15] : Let $\frac{\sin{A}}{\sin{B}=\frac{\sin{A-C}}{\sin{C-B}}}$, where A,B,C are angles of a triangle ABC. If the lengths of the sides opposite these angles are a,b,c respectively then:
+\begin{enumerate}
+\item [a.] $b^2-a^2=a^2+c^2$
+    \item [b.]$b^2,c^2,a^2$ are in A.P.
+    \item [c.] $c^2,a^2,b^2$ are in A.P.
+    \item [d.] $a^2,b^2,c^2,$ are in A.P.
+\end{enumerate}
+\end{enumerate}
+\end{document}
+
