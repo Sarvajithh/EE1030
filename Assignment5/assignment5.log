@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.4)  10 OCT 2024 01:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.4)  10 OCT 2024 02:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1949,7 +1949,7 @@ Here is how much of TeX's memory you used:
  74122 multiletter control sequences out of 15000+600000
  625975 words of font info for 173 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 109i,6n,109p,1201b,1107s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,6n,109p,1201b,1108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fo
@@ -1957,7 +1957,7 @@ nts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
 b8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on assignment5.pdf (3 pages, 54549 bytes).
+Output written on assignment5.pdf (3 pages, 54813 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
