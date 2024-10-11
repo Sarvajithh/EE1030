@@ -1,0 +1,173 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 6}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{Feb 2021, shift 2}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item [1]: If $\phi \brak{x} = \frac{1}{\sqrt{x}}\int _{\frac{\pi}{4}} ^x \brak{4\sqrt{2}\sin t - 3\phi '\brak{t}}dt, x>0$, then $\phi '\brak{\frac{\pi}{4}}$ is equal to
+\begin{enumerate}
+    \item [a.] $\frac{8}{\sqrt{\pi}}$
+    \item [b.]  $\frac{4}{6+\sqrt{\pi}}$
+    \item [c.]  $\frac{8}{6+\sqrt{\pi}}$
+    \item [d.]  $\frac{4}{6-\sqrt{\pi}}$
+\end{enumerate}
+\item[2]: If a point $P\brak{\alpha, \beta, \gamma}$ satisfying $\begin{bmatrix}\alpha & \beta & \gamma \end{bmatrix}$ $\begin{bmatrix}
+    2 & 10 & 8\\ 9&3&8\\8&4&8
+\end{bmatrix} $ = $\begin{bmatrix}
+    0&0&0
+\end{bmatrix}$ lies on the plane $2x+4y+3z=5$ then $6\alpha + 9\beta + 7\gamma$ is equal to
+\begin{enumerate}
+    \item [a.] -1
+    \item [b.] $\frac{-11}{5}$
+    \item [c.] $\frac{5}{4}$
+    \item [d.] 11
+\end{enumerate}
+\item[3]. Let $a_1, a_2, a_3, \ldots$ be an A.P. If $a_7=3$ the product $a_1a_4$ is minimum and the sum of its first n terms is zero, then n!-4$a_{n\brak{n+2}}$ is equal to  
+\begin{enumerate}
+    \item [a.] 24
+    \item [b.] $\frac{33}{4}$
+    \item [c.] $\frac{381}{4}$
+    \item [d.] 9
+\end{enumerate}
+\item[4]: Let $\brak{a, b} \subset \brak{ 0, 2\pi}$ be the largest interval for which$\sin ^{-1}\brak{\sin \theta} - \cos^{-1}\brak{\sin\theta} > 0,  \theta \in \brak{ 0, 2\pi}$holds. If$\alpha x^2 + \beta x+ \sin^{-1}\brak{x^2 - 6x + 10}+\cos ^{-1}{x^2 - 6x + 10} = 0$ and $\alpha - \beta = b - a,$ then $\brak{\alpha}$ is equal to:
+
+ \begin{enumerate}
+    \item [a.] $\frac{\pi}{48}$
+    \item [b.] $\frac{\pi}{16}$
+    \item [c.] $\frac{\pi}{8}$
+    \item [d.] $\frac{\pi}{12}$
+\end{enumerate}
+\item[5]: Let $y=y\brak{x}$ be the solution of the differential equation $\brak{3y^2-5x^2}ydx+2x\brak{x^2-y^2}dy=0$ such that y\brak{1} = 1 then $\abs{\brak{y\brak{2}}^3-12y\brak{2}}$ is equal to 
+\begin{enumerate}
+    \item [a.] $32\sqrt{2}$
+    \item [b.] 64
+    \item [c.] $16\sqrt{2}$
+    \item [d.] 32
+\end{enumerate}
+\item[6]: The set of all values of $a^2$ for which the line $x+y=0$ bisects two distinct chords drawn from a point $P\brak{\frac{1+a}{2}, \frac{1-a}{2}}$ on the circle $2x^2 + 2y^2-\brak{1+a}x-\brak{1-a}y=0$
+\begin{enumerate}
+\item [a.] $\brak{8,\infty}$
+    \item [b.] $\brak{4,\infty}$
+    \item [c.] $(0,4]$
+    \item [d.] $(2,12]$
+\end{enumerate}
+\item[7]: If $S = \{\brak{a,b}:a,b \in \mathbf{R}-\{0\},2\frac{a}{b}>0\}$ And T = $\{\brak{a,b}:a,b \in \mathbf{R}, a^2-b^2 \in \mathbf{Z}\}$:
+\begin{enumerate}
+ \item [a.] S is transitive but T is not 
+    \item [b.] T is symmetric but S is not 
+    \item [c.] Neither S nor T is transitive 
+    \item [d.] Both S and T are symmetric 
+\end{enumerate}
+\item[8]: The equation $e^{4x} + 8e^{3x} + 13e^{2x} - 8e^x + 1 = 0, x \in R$ has:
+\begin{enumerate}
+    \item [a.] two solutions and both are negative 
+    \item [b.] no solution 
+    \item [c.] four solutions two of which are negative 
+    \item [d.] two solutions and only one of them is negative
+\end{enumerate}
+\item[9]: The number of values of $r \in \{p,q,\neg p, \neg q\}$ for which $\brak{\brak{p\land q}\rightarrow\brak{r\lor q}} \land \brak{\brak{p\land r}\rightarrow q}$ is a tautology is: 
+\begin{enumerate}
+     \item [a.] 3
+    \item [b.] 2
+    \item [c.] 1
+    \item [d.] 4
+\end{enumerate}
+\item[10]: Let $f:\mathbf{R}-\{2,6\}\rightarrow \mathbf{R}$ be a real-valued function defined as $ f\brak{x}=\frac{x^2+2x+1}{x^2-8x+12}$ Then the range of f is  
+\begin{enumerate}
+     \item [a.] $\big(-\infty,-\frac{21}{4}\big]\cup[0,\infty)$
+    \item [b.] $\big(-\infty,-\frac{21}{4}\big]\cup(0,\infty)$
+    \item [c.] $\big(-\infty,-\frac{21}{4}\big]\cup\big[\frac{21}{4},\infty\big)$
+    \item [d.] $\big(-\infty,-\frac{21}{4}\big]\cup[1,\infty)$
+\end{enumerate}
+\item[11]:$\lim_{x\rightarrow\infty} \frac{\brak{\sqrt{3x+1}+\sqrt{3x-1}}^6+\brak{\sqrt{3x+1}-\sqrt{3x-1}}^6}{\brak{x+\sqrt{x^2-1}}^6+\brak{x-\sqrt{x^2-1}}^6}$
+\begin{enumerate}
+    \item [a.] is equal to 9
+    \item [b.] is equal to 27
+    \item [c.] does not exist
+    \item [d.] is equal to $\frac{27}{2}$
+\end{enumerate}
+
+\item[12]: Let P be the plane, passing through the point \brak{1,-1,-5} and perpendicular to the line joining the points \brak{4,1,-3} and \brak{2,4,3}. Then the distance of P from the point \brak{3,-2,2} is
+\begin{enumerate}
+     \item [a.] 6
+    \item [b.] 4
+    \item [c.] 5
+    \item [d.] 7
+\end{enumerate}
+\item[13]: The absolute minimum values of the function $f\brak{x}=\abs{x^2-x+1}+[x^2-x+1]$, where [t] denotes the greatest integer function, in the interval [-1,2] is
+\begin{enumerate}
+     \item [a.] $\frac{3}{4}$
+    \item [b.] $\frac{3}{2}$
+    \item [c.] $\frac{1}{2}$
+    \item [d.] $\frac{5}{4}$
+\end{enumerate}
+\item[14]: Let the plane $P:8x+\alpha _1y+\alpha _2z+12=0$ be parallel to the line $L:\frac{x+2}{2}=\frac{y-3}{3}=\frac{z+4}{5}$. If the intercept of P on the y-axis is 1, then the distance between P and L is 
+\begin{enumerate}
+\item [a.] $\sqrt{14}$
+    \item [b.]$\frac{6}{\sqrt{14}}$
+    \item [c.] $\sqrt{\frac{2}{7}}$
+    \item [d.] $\sqrt{\frac{7}{2}}$
+\end{enumerate}
+\item[15]: The foot of the perpendicular from the origin O to a plane P which meets to coordinate axes at the points A, B, C
+is \brak{2,a,4},  $a\in N$.if the volume of the tetrahedron OABC is $144 unit^3$, then which of the following points is NOT on P?
+\begin{enumerate}
+\item [a.] \brak{2,2,4}
+    \item [b.] \brak{0,4,4}
+    \item [c.] \brak{3,0,4}
+    \item [d.] \brak{0,6,3}
+\end{enumerate}
+\end{enumerate}
+\end{document}
+
