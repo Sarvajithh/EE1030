@@ -1,0 +1,24 @@
+
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{tikzpicture} % change from circuitikz to tikzpicture if not dealing with circuits
+    \tikzstyle{every node}=[font=\small]
+    \draw  (-20.75,20) rectangle (-18,19.75);
+    \draw  (-20,19.75) rectangle (-20.25,18);
+    \draw  (-18.75,19.75) rectangle (-18.5,18);
+    \draw  (-20.25,17.25) circle (0.25cm);
+    \draw  (-18.5,17.25) circle (0.25cm);
+    \draw (-21.25,19.25) -- (-17.25,19.25); % removed 'short'
+    \draw [<->, >=Stealth] (-20.75,19.25) -- (-20.75,18);
+    \draw (-21,18) -- (-20.5,18);
+    \node [font=\small] at (-21,18.75) {10m};
+    \draw  (-20.25,16.25) circle (0.25cm);
+    \draw  (-18.5,16.25) circle (0.25cm);
+    \draw [<->, >=Stealth] (-20.5,15.75) -- (-18.5,15.75);
+    \node [font=\small] at (-19.75,15.5) {1.2m c/c};
+    \draw [<->, >=Stealth] (-18,17.25) -- (-18,16.25)node[pos=0.5, fill=white]{1.2m $\frac{c}{c}$};
+    \node [font=\small] at (-17.25,19) {0.4m diameter piles };
+    \node [font=\small] at (-17.5,18.75) {clay soil};
+    \node [font=\small] at (-17.5,18.25) {$C = 40\frac{\text{kN}}{\text{m}^2}$}; % updated unit
+    \end{tikzpicture}
+     }%
+   
