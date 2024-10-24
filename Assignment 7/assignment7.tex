@@ -1,3 +1,4 @@
+
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
@@ -61,11 +62,32 @@
   \item[35.]The right triangular truss is made of members having equal cross sectional area of
   $1550 mm^2$ and Young's modulus of $2 x 10^5$ MPa. The horizontal deflection of the
   joint $Q$ is 
-  \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.25\textwidth]{figs/Fig_1.png}  % Replace with your image file
-    \label{fig:sample1}
-\end{figure}
+  \begin{tikzpicture}
+    % Drawing the triangle
+    \draw[thick] (0,0) -- (4.5,0) -- (4.5,6) -- cycle;
+    
+    % Adding the support symbols
+    % Support at P (roller)
+    \draw (0,-0.3) -- (-0.3,0) -- (0.3,0) -- cycle;
+    \draw[thick] (-0.3,-0.4) circle [radius=0.1];
+    \draw[thick] (0,-0.4) circle [radius=0.1];
+    \draw[thick] (0.3,-0.4) circle [radius=0.1];
+    
+    % Support at R (pin)
+    \draw (4.5,-0.3) -- (4.2,0) -- (4.8,0) -- cycle;
+
+    % Force arrow at Q
+    \draw[thick, ->] (4.5,6) -- (7.5,6) node[midway, above] {135 kN};
+
+    % Labeling points
+    \node at (0,0) [below left] {P};
+    \node at (4.5,0) [below right] {R};
+    \node at (4.5,6) [above right] {Q};
+
+    % Adding dimension lines
+    \draw[<->] (4.7,0) -- (4.7,6) node[midway, right] {6 m};
+    \draw[<->] (0,-0.5) -- (4.5,-0.5) node[midway, below] {4.5 m};
+\end{tikzpicture}
   \begin{enumerate}
     \item [A.] 2.47mm
     \item [B.] 10.25mm
@@ -73,11 +95,12 @@
     \item [D.] 15.68mm
   \end{enumerate}
   \item[36.] The influence line diagram (ILD) shown is for the member
-  \item[]  \begin{figure}[h!]
+  \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.25\textwidth]{figs/Fig_2.png}  % Replace with your image file
-    \label{fig:sample2}
+    \includegraphics[width=0.25\textwidth]{figs/Fig_1.png}  % Replace with your image file
+    \label{fig:sample1}
 \end{figure}
+    
     \begin{enumerate}
         \item [A.] PS
         \item [B.] RS
@@ -138,11 +161,45 @@
   by three bolts each having a shear capacity of 15kN in holes having diameter
   11.5mm. If the allowable tensile stress in the flat is 150MPa, the maximum
   tension that can be applied to the flat is
-  \begin{figure}[h!]
+  \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.25\textwidth]{figs/Fig_3.png}  % Replace with your image file
-    \label{fig:sample3}
-\end{figure}
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw  (3.25,9.75) rectangle (7,7.75);
+    \draw [short] (4.75,9.75) -- (9,11);
+    \draw [short] (5,7.75) -- (9,6.75);
+    \draw [short] (5.25,8.75) -- (7.75,8.75);
+    \draw [short] (5.75,9.25) .. controls (6.75,9.25) and (6.75,9.25) .. (7.75,9.25);
+    \draw [short] (9,11) -- (9,6.75);
+    \draw [short] (5.75,8.25) -- (7.75,8.25);
+    \draw [short] (5.25,9.75) -- (5.25,7.75);
+    \draw [short] (6,9.5) -- (6,8);
+    \draw  (6,9.25) circle (0.25cm);
+    \draw  (6,8.25) circle (0.25cm);
+    \draw  (5.25,8.75) circle (0.25cm);
+    \node [font=\small] at (7.5,9.5) {15};
+    \node [font=\small] at (7.5,9) {20};
+    \node [font=\small] at (7.5,8.5) {20};
+    \node [font=\small] at (7.5,8) {15};
+    \node [font=\small] at (6,6.75) {35};
+    \draw [->, >=Stealth] (5,6.75) -- (5.75,6.75);
+    \draw [->, >=Stealth] (7,6.75) -- (6.25,6.75);
+    \draw [short] (5.75,7) -- (5.75,6.25);
+    \draw [short] (6.25,7) -- (6.25,6.25);
+    \draw [short] (9,10.75) -- (9.25,10.5);
+    \draw [short] (9,10.25) -- (9.25,10);
+    \draw [short] (9,9.75) -- (9.25,9.5);
+    \draw [short] (9,9.25) -- (9.25,9);
+    \draw [short] (9,8.75) -- (9.25,8.5);
+    \draw [short] (9,8.25) -- (9.25,8);
+    \draw [short] (9,7.75) -- (9.25,7.5);
+    \draw [short] (9,6.75) -- (9.25,6.5);
+    \draw [short] (9,7.25) -- (9.25,7);
+    \end{circuitikz}
+    }%
+    \label{fig:my_label1}
+    \end{figure}
   \begin{enumerate}
     \item [A.] 43.2kN
     \item [B.] 52.65kN
@@ -152,11 +209,45 @@
   \item[42.] A bracket connection is made with four bolts of 10mm diameter and supports a
   load of 10kN a an eccentricity of 100mm. the maximum force to be resisted by
   any bolt will be 
-  \begin{figure}[h!]
+  \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.25\textwidth]{figs/Fig_4.png}  % Replace with your image file
-    \label{fig:sample4}
-\end{figure}
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+      
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (3.25,10) -- (3.25,10);
+    \draw [short] (3.25,10) -- (5.25,10);
+    \draw [short] (3.25,10) -- (8,10);
+    \draw [short] (3.25,8.5) -- (6.5,8.5);
+    \draw [short] (3.25,10) -- (3.25,8.5);
+    \draw [short] (8,10) -- (8,9.5);
+    \draw [short] (6.5,8.5) -- (8,9.5);
+    \draw [short] (6.5,10) -- (6.5,8.5);
+    \draw [short] (4.25,10.75) -- (4.25,8.5);
+    \draw [short] (2.75,9.5) -- (5,9.5);
+    \draw [short] (2.5,9.25) -- (5.75,9.25);
+    \draw [short] (2.75,9) -- (5,9);
+    \draw [short] (5,9.75) -- (5,8.25);
+    \draw [short] (3.75,9.75) -- (3.75,8.25);
+    \draw [short] (4.25,9.25) -- (5,9.5);
+    \draw  (5,9.5) circle (0.25cm);
+    \draw  (5,9) circle (0.25cm);
+    \draw  (3.75,9.5) circle (0.25cm);
+    \draw  (3.75,9) circle (0.25cm);
+    \draw [<->, >=Stealth] (4.25,10.5) -- (8,10.5);
+    \draw [->, >=Stealth] (8,11.25) -- (8,10);
+    \node [font=\small] at (8.25,10.75) {10kN};
+    \node [font=\small] at (7.75,11) {P};
+    \node [font=\small] at (2.75,9.5) {30};
+    \node [font=\small] at (2.75,9) {30};
+    \node [font=\small] at (4,8.25) {40};
+    \node [font=\small] at (4.5,8.25) {40};
+    \end{circuitikz}
+    }%
+    
+    
+    \label{fig:my_label2}
+    \end{figure}
   \begin{enumerate}
     \item [A.] 5kN
     \item [B.] 6.5kN
@@ -165,11 +256,28 @@
   \end{enumerate}
   \item [43.] The plastic collapse load $W_p$ for the propped cantilever supporting two point loads
   as shown in the figure in terms of plastic moment capacity, $M_p$ is given by 
-  \begin{figure}[h!]
+  \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.25\textwidth]{figs/Fig_5.png}  % Replace with your image file
-    \label{fig:sample5}
-\end{figure}
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (4.75,8.75) -- (4.75,8.75);
+    \draw [short] (5,9.5) -- (7,9.5);
+    \draw [short] (5,9.5) -- (8.75,9.5);
+    \draw [->, >=Stealth] (6,10.5) -- (6,9.5);
+    \draw [->, >=Stealth] (7.25,10.5) -- (7.25,9.5);
+    \draw [short] (5,10.25) -- (5,8.75);
+    \draw [->, >=Stealth] (8.75,8.25) -- (8.75,9.5);
+    \node [font=\small] at (6,10.75) {W};
+    \node [font=\small] at (7.25,10.75) {W};
+    \node [font=\small] at (6.75,9.75) {L/3};
+    \node [font=\small] at (8.25,9.75) {L/3};
+    \node [font=\small] at (5.5,10) {L/3};
+    \end{circuitikz}
+    }%
+    
+    \label{fig:my_label3}
+    \end{figure}
   \begin{enumerate}
     \item [A.] $3\frac{M_p}{L}$
     \item [B.] $4\frac{M_p}{L}$
@@ -198,11 +306,35 @@
   \item [46.] The factor of safety of an infinite soil slope shown in the figure having the
   properties $c=0, c=0,\phi=35\deg,\gamma_{dry}=16\frac{kN}{m^3} \text{and} \gamma_{sat}=20\frac{kN}{m^3}$ is
   approximately equal to
-  \begin{figure}[h!]
+  \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.25\textwidth]{figs/Fig_6.png}  % Replace with your image file
-    \label{fig:sample6}
-\end{figure}
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (4,9) -- (4,9);
+    \draw [short] (2,8.75) -- (6.75,11.75);
+    \draw [short] (3,7.75) -- (8.25,11.25);
+    \draw [short] (4,6.25) -- (9.75,10);
+    \draw [short] (6.25,7.75) -- (9.5,7.75);
+    \draw [->, >=Stealth] (4,7.75) -- (4,10);
+    \draw [->, >=Stealth] (4,7.25) -- (4,6.25);
+    \draw [->, >=Stealth] (4.5,7.75) -- (4.5,8.5);
+    \draw [->, >=Stealth] (4.5,7.25) -- (4.5,6.75);
+    \node [font=\small] at (4,7.5) {10m};
+    \node [font=\small] at (4.5,7.5) {8m};
+    \draw [short] (6.75,11) -- (7.5,11);
+    \draw [short] (6.75,11) -- (7.25,10.5);
+    \draw [short] (7.5,11) -- (7.25,10.5);
+    \draw [short] (6.75,10) -- (8,10.75);
+    \draw [short] (7,10) -- (7.75,10.5);
+    \draw [short] (7.25,10) -- (7.75,10.25);
+    \node [font=\small] at (7.25,8) {30};
+    \draw [short] (6.75,8) -- (6.75,7.75);
+    \end{circuitikz}
+    }%
+    
+    \label{fig:my_label4}
+    \end{figure}
   \begin{enumerate}
     \item [A.] 0.70
     \item [B.] 0.80
@@ -242,11 +374,34 @@
   \end{enumerate}
   \item [49.] What is the ultimate capacity in kN of the pile group shown in the figure
   assuming the group to fail as a single block? 
-  \begin{figure}[h!]
+  \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.2\textwidth]{figs/Fig_7.png}  % Replace with your image file
-    \label{fig:sample7}
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{tikzpicture} % change from circuitikz to tikzpicture if not dealing with circuits
+    \tikzstyle{every node}=[font=\small]
+    \draw  (-20.75,20) rectangle (-18,19.75);
+    \draw  (-20,19.75) rectangle (-20.25,18);
+    \draw  (-18.75,19.75) rectangle (-18.5,18);
+    \draw  (-20.25,17.25) circle (0.25cm);
+    \draw  (-18.5,17.25) circle (0.25cm);
+    \draw (-21.25,19.25) -- (-17.25,19.25); % removed 'short'
+    \draw [<->, >=Stealth] (-20.75,19.25) -- (-20.75,18);
+    \draw (-21,18) -- (-20.5,18);
+    \node [font=\small] at (-21,18.75) {10m};
+    \draw  (-20.25,16.25) circle (0.25cm);
+    \draw  (-18.5,16.25) circle (0.25cm);
+    \draw [<->, >=Stealth] (-20.5,15.75) -- (-18.5,15.75);
+    \node [font=\small] at (-19.75,15.5) {1.2m c/c};
+    \draw [<->, >=Stealth] (-18,17.25) -- (-18,16.25)node[pos=0.5, fill=white]{1.2m c/c};
+    \node [font=\small] at (-17.25,19) {0.4m diameter piles };
+    \node [font=\small] at (-17.5,18.75) {clay soil};
+    \node [font=\small] at (-17.5,18.25) {$C = 40\,\text{kN}/\text{m}^2$}; % updated unit
+    \end{tikzpicture}
+     }%
+    \caption{Pile foundation in clay soil} % added caption
+    \label{fig:my_label5}
 \end{figure}
+
   \begin{enumerate}
     \item [A.] 921.6
     \item [B.] 1177.6
@@ -271,4 +426,5 @@
     \item [D.] 5.7$\frac{m^3}{s}$
   \end{enumerate}
 \end{enumerate}
+\bibliography{IEEEabrv,gvv_cite}
 \end{document}

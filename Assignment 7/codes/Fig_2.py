@@ -1,67 +1,62 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Set up the figure and axis
-fig, ax = plt.subplots(2, 1, figsize=(8, 6))
+# Create a figure and set of subplots with specified height ratios
+fig, ax = plt.subplots(2, 1, figsize=(10, 6), gridspec_kw={'height_ratios': [2, 1]})
 
-# ---------------------- Truss Diagram ---------------------- #
-# Coordinates for truss nodes
-truss_x = [0, 2, 4, 6, 8, 10, 12]
-truss_y = [0, 2, 0, 2, 0, 2, 0]
+# Truss structure points
+points = {
+    'R': (0, 0), 'P': (2, 2), 'S': (4, 0), 'Q': (6, 2), 'C': (8, 0)
+}
 
-# Draw truss members
-ax[0].plot([0, 2], [0, 2], 'k')  # PR
-ax[0].plot([2, 4], [2, 0], 'k')  # PQ
-ax[0].plot([4, 6], [0, 2], 'k')  # QS
-ax[0].plot([6, 8], [2, 0], 'k')  # ST
-ax[0].plot([8, 10], [0, 2], 'k') # RT
+# Define truss members as pairs of points
+members = [
+    ('R', 'P'), ('P', 'Q'), ('Q', 'C'),  # Top chord
+    ('R', 'S'), ('S', 'C'),              # Bottom chord
+    ('R', 'Q'), ('P', 'S'), ('S', 'Q')   # Diagonals
+]
 
-ax[0].plot([0, 4], [0, 0], 'k')  # Bottom chord PR -> RS
-ax[0].plot([4, 10], [0, 0], 'k') # Bottom chord RS -> T
-ax[0].plot([2, 6], [2, 2], 'k')  # Top chord PQ -> QS
+# Plot the truss members
+for start, end in members:
+    x_vals = [points[start][0], points[end][0]]
+    y_vals = [points[start][1], points[end][1]]
+    ax[0].plot(x_vals, y_vals, 'k', linewidth=1.5)
 
-# Plot the supports
-ax[0].plot(0, 0, marker='^', markersize=10, color='black')   # Left Support
-ax[0].plot(10, 0, marker='^', markersize=10, color='black')  # Right Support
+# Label the points
+for point, coord in points.items():
+    ax[0].text(coord[0], coord[1] + 0.1, point, fontsize=12, ha='center')
 
-# Label points
-ax[0].text(0, 0, 'R', fontsize=12, ha='center', va='top')
-ax[0].text(2, 2, 'P', fontsize=12, ha='center', va='bottom')
-ax[0].text(4, 0, 'S', fontsize=12, ha='center', va='top')
-ax[0].text(6, 2, 'Q', fontsize=12, ha='center', va='bottom')
-ax[0].text(10, 0, 'T', fontsize=12, ha='center', va='top')
+# Add supports
+ax[0].plot(points['R'][0], points['R'][1], 'k^', markersize=10)  # Pinned support at R
+ax[0].plot(points['C'][0], points['C'][1], 'ko', markersize=6)   # Roller support at C
 
-# Formatting
-ax[0].set_title('Truss Diagram')
-ax[0].set_xlim([-1, 12])
-ax[0].set_ylim([-1, 3])
+# Set limits and remove axes for the truss plot
+ax[0].set_xlim(-1, 9)
+ax[0].set_ylim(-1, 3)
 ax[0].axis('off')
 
-# ---------------------- ILD Diagram ---------------------- #
-# Influence line diagram data
-x_ild = [0, 2, 4, 6, 8, 10]
-y_ild = [0, 0.5, 1, 0.5, 0, 0] 
+# ILD: Define the influence line data
+x_ild = [0, 2, 4, 8]
+y_ild = [-0.5, 1, 0.3, 0]
 
-ax[1].plot(x_ild, y_ild, 'k', lw=1.5)
+# Plot the ILD line
+ax[1].plot(x_ild, y_ild, 'k', linewidth=1.5)
 
-# Mark compression and tension arrows
-ax[1].annotate('compression', xy=(1, 0.5), xytext=(-1, -0.5),
-               arrowprops=dict(facecolor='black', shrink=0.05),
-               fontsize=10)
+# Add the straight line connecting the start and end points of the ILD
+ax[1].plot([0, 8], [-0.5, 0], 'k', linewidth=1.5)  # Solid line for reference
 
-ax[1].annotate('tension', xy=(7, 0.5), xytext=(8, 1),
-               arrowprops=dict(facecolor='black', shrink=0.05),
-               fontsize=10)
+# Annotate ILD with arrows for compression and tension
+ax[1].annotate('compression', xy=(0, -0.5), xytext=(-0.5, -0.7),
+               arrowprops=dict(arrowstyle='->', lw=1.5), fontsize=10)
+ax[1].annotate('tension', xy=(4, 1), xytext=(5, 1.2),
+               arrowprops=dict(arrowstyle='->', lw=1.5), fontsize=10)
 
-# Label ILD
-ax[1].text(4, 1.1, 'ILD', fontsize=12, ha='center')
-
-# Formatting
-ax[1].set_title('Influence Line Diagram')
-ax[1].set_xlim([-1, 12])
-ax[1].set_ylim([-1, 2])
+# Set limits and remove axes for ILD plot
+ax[1].set_xlim(-1, 9)
+ax[1].set_ylim(-1, 1.5)
 ax[1].axis('off')
 
 # Show the plot
 plt.tight_layout()
 plt.show()
+
