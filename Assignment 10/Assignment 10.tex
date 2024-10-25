@@ -1,0 +1,166 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 10}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2010, AE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+ \item[14.] Consider an incompressible 2-D Couette flow of water between two walls spaced 1m apart. The lower wall is kept stationary. What is the shear stress acting on the lower wall if the upper wall is moving at a constant speed of $2\frac{m}{s}$?$\brak{\mu_{water}=7\times 10^{-1}\frac{Ns}{m^2}}$
+ \begin{figure}[!ht]
+    \centering
+    \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+    \caption{1}
+    \label{fig:1}
+\end{figure}
+ \begin{enumerate}[label=(\Alph*)]
+    \item $3.5\times 10^{-3}\frac{N}{m^2}$
+    \item $7\times 10^{-3}\frac{N}{m^2}$
+    \item $10.5\times 10^{-3}\frac{N}{m^2}$
+    \item $14.5\times 10^{-3}\frac{N}{m^2}$
+ \end{enumerate}
+ \item[15.] The angular momentum, about the centre of mass of the earth, of an artificial satellite in a highly elliptical orbit is 
+ \begin{enumerate}[label=(\Alph*)]
+    \item a maximum when the satellite is farthest from the earth
+    \item a constant
+    \item proprtional to the speed of satellite
+    \item proprtional to the square of the speed of the satellite
+ \end{enumerate}
+ \item[16.] A column of length $l$ and flexural rigidity $El$, has one end fixed and the other end hinged. The critical buckling load for the column is 
+ \begin{enumerate}[label=(\Alph*)]
+    \item $\frac{\pi^2El}{\brak{0.5l}^2}$
+    \item $\frac{\pi^2El}{\brak{0.7l}^2}$
+    \item $\frac{\pi^2El}{\brak{l}^2}$
+    \item $\frac{\pi^2El}{\brak{2l}^2}$
+ \end{enumerate}
+ \item[17.] A horizontal cantilevered steel beam of rectangular cross section having width $b$ and depth $d$ is vibrating in the vertical plane. The natural frequency of bending vibration is highest when
+ \begin{figure}[!ht]
+    \centering
+    \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+    \caption{2}
+    \label{fig:2}
+\end{figure}
+ \begin{enumerate}[label=(\Alph*)]
+    \item b = 10, d = 10
+    \item b = 20, d = 5
+    \item b = 5, d = 20
+    \item b = 25, d = 4
+ \end{enumerate}
+ \item[18.] Consider an incompressinle 2D viscous flow over a curved surface. let the pressure distribution on the surface be $p(s) = 2 + \sin\brak{\frac{\pi}{2}+s}\frac{N}{m^2}$, where s is the distance along te curved surface from the leading edge. The flow separates at
+ \begin{enumerate}[label=(\Alph*)]
+    \item $s=\frac{2}{3}\pi$m
+    \item $s=\frac{3}{2}\pi$m
+    \item $s=\frac{\pi}{2}$m
+    \item $s=\pi$m
+ \end{enumerate}
+ \item[19.] For a multi stage axial compressor with constant diameter hub
+ \begin{enumerate}[label=(\Alph*)]
+    \item Blade height decreases in the flow direction
+    \item Blade height increases in the flow direction
+    \item Blade height remains constant
+    \item Blade height first increases and then decreases in the flow direction
+ \end{enumerate}
+ \item[20.] In a 2-D, steady, fully developed, laminar boundary layer over a flat plate, if x is the stream wise coordinate, y is the wall normal coordinate and u is the streamwise velocity component, which of the following is true:
+ \begin{enumerate}[label=(\Alph*)]
+    \item $\frac{\partial u}{\partial x}>>\frac{\partial u}{\partial y}$
+    \item $\frac{\partial u}{\partial x}<<\frac{\partial u}{\partial y}$
+    \item $\frac{\partial u}{\partial x}=\frac{\partial u}{\partial y}$
+    \item $\frac{\partial u}{\partial x}=-\frac{\partial u}{\partial y}$
+ \end{enumerate}
+ \item[21.] How does the specific thrust, at constant turbine inlet temperature, produced by a turbofan engine change with an increase in compressor pressure ratio?
+ \begin{enumerate}[label=(\Alph*)]
+    \item increases
+    \item decrease
+    \item First increases and then decreases
+    \item First decreases and then increases
+ \end{enumerate}
+ \item[22.] If $\phi$ is the potential function for an incompressible irrational flow, and u and v are the cartesian velocity components, then which on of the following combinations is correct?
+ \begin{enumerate}[label=(\Alph*)]
+    \item $u=\frac{\partial \phi}{\partial x}, v=\frac{\partial \phi}{\partial x}$
+    \item $u=- \frac{\partial \phi}{\partial y}, v=\frac{\partial \phi}{\partial x}$
+    \item $u=- \frac{\partial \phi}{\partial y}, v=\frac{\partial \phi}{\partial y}$
+    \item $u=\frac{\partial \phi}{\partial x}, v=\frac{\partial \phi}{\partial y}$
+ \end{enumerate}
+ \item[23.] Among the choices given below, the specific impulse is maximum for a 
+ \begin{enumerate}[label=(\Alph*)]
+    \item Cryogenic Rocket
+    \item Solid Rocket
+    \item Liquid Rocket
+    \item Ramjet
+ \end{enumerate}
+\item[24.] For a flow across an oblique shock which of the follwing statements is true?
+\begin{enumerate}[label=(\Alph*)]
+    \item Component of velocity normal to shock decreases while tangential component increases
+    \item Component of velocity normal to shock increases while tangential component decreases
+    \item Component of velocity normal to shock is unchanged while tangential component decreases
+    \item Component of velocity normal to shock decreases while tangential component unchanged
+\end{enumerate}
+\item[25.] The maximum operating flow rate through a centrifugal compressor at a given RPM is limited by 
+\begin{enumerate}[label=(\Alph*)]
+    \item Impellor shell
+    \item Surge
+    \item Choking of diffuser throat
+    \item Intel flow distortion
+\end{enumerate}
+\textbf{Q.26-Q.55 carry two marks each}
+\item[26.] A spacecraft of mass 100kg, moving at an instantaneous speed of $1.8\times 10^4\frac{m}{s}$, picks up interstellar dust at the rate of $3.2\times 10^{-8}\frac{kg}{s}$. Assuming that the dust was initially at rest, the instantaneous rate of retardation of the spacecraft is
+\begin{enumerate}[label=(\Alph*)]
+    \item $7.9\times10^{-8}$
+    \item $2.3\times10^{-3}$
+    \item zero
+    \item $5.8\times10^{-6}$
+\end{enumerate}
+\end{enumerate}
+\end{document}
