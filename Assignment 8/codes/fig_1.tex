@@ -1,0 +1,26 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (3.25,9.25) to[short] (5.25,9.25);
+    \draw (3.25,8) to[short] (5.25,8);
+    \draw (5.25,9.25) to[R] (7.25,9.25);
+    \draw (5.25,8) to[R] (7.25,8);
+    \draw (7.25,9.25) to[D] (9.25,9.25);
+    \draw (7.25,8) to[D] (9.25,8);
+    \draw [short] (9.25,9.25) -- (9.25,8);
+    \draw (9.25,8.75) to[short] (11.25,8.75);
+    \draw (11,8.75) to[R] (11,6.5);
+    \node [font=\normalsize] at (3.25,9.5) {$V_1$};
+    \node [font=\normalsize] at (3.25,8.25) {$V_2$};
+    \node [font=\normalsize] at (6.25,9.75) {R};
+    \node [font=\normalsize] at (6.25,8.5) {R};
+    \node [font=\normalsize] at (11,9) {$V_0$};
+    \node [font=\normalsize] at (11.5,7.75) {$R_L$};
+    \node [font=\normalsize] at (11.25,6.5) {V(1)};
+    \end{circuitikz}
+    }%
+    
+    
+   

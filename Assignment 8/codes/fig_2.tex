@@ -1,0 +1,67 @@
+
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (1,9.25) to[short] (3,9.25);
+    \draw [short] (3,10.25) -- (3,9.25);
+    \draw [short] (3,10.25) -- (3.5,10.25);
+    \draw [short] (3.5,10.25) -- (3.5,9.25);
+    \draw [short] (3.5,9.25) -- (4,9.25);
+    \draw [short] (4,9.25) -- (4,10.25);
+    \draw [short] (4,10.25) -- (4.5,10.25);
+    \draw [short] (4.5,10.25) -- (4.5,9.25);
+    \draw [short] (4.5,9.25) -- (5,9.25);
+    \draw [short] (5,9.25) -- (5,10.25);
+    \draw [short] (5,10.25) -- (5.5,10.25);
+    \draw [short] (5.5,10.25) -- (5.5,9.25);
+    \draw [short] (5.5,9.25) -- (6.5,9.25);
+    \draw [short] (1,7.5) -- (3,7.5);
+    \draw [short] (3,7.5) -- (3,8.25);
+    \draw [short] (3,8.25) -- (4.5,8.25);
+    
+    
+    \draw [short] (4.5,8.25) -- (4.5,7.5);
+    \draw [short] (4.5,7.5) -- (5.25,7.5);
+    \draw [short] (5.25,7.5) -- (5.25,8.25);
+    \draw [short] (5.25,8.25) -- (6.5,8.25);
+    \draw [dashed] (3,9.25) -- (3,7.5);
+    \draw [dashed] (3.5,9.25) -- (3.5,7.5);
+    \draw [dashed] (4,9.25) -- (4,7.5);
+    \draw [dashed] (4.5,9.25) -- (4.5,7.5);
+    \draw [dashed] (5,9.25) -- (5,7.25);
+    \draw [dashed] (5.5,9.25) -- (5.5,7.5);
+    \node [font=\normalsize] at (1,9.5) {Clk};
+    \node [font=\normalsize] at (1,7.75) {Input};
+    \draw  (11,10) rectangle (12.75,8);
+    \draw  (14.75,10) rectangle (16.5,8);
+    \draw [short] (9,9.5) -- (11,9.5);
+    \draw [short] (12.75,9.5) -- (14.75,9.5);
+    \draw [short] (9.5,9.5) -- (9.5,8.5);
+    \draw [short] (9.5,8.5) -- (9.75,8.5);
+    \draw [short] (9.75,8.5) .. controls (9.5,7.75) and (11,7.75) .. (10.5,8.5);
+    \draw [short] (10.5,8.5) -- (11,8.5);
+    \draw [short] (10.25,9) -- (10.25,7);
+    \draw [short] (10.25,7) -- (13.25,7);
+    \draw [short] (13.25,7) -- (13.25,9);
+    \draw [->, >=Stealth] (9.75,9) -- (11.25,9);
+    \draw [->, >=Stealth] (13.25,9) -- (15,9);
+    \draw [short] (14,9.5) -- (14,9.25);
+    \draw [short] (14,9.25) .. controls (13.25,9.5) and (13.5,8.75) .. (14,8.75);
+    \draw [short] (14,8.75) -- (14,8.5);
+    \draw [short] (14,8.5) -- (14.75,8.5);
+    \draw  (14.5,9) circle (0.25cm);
+    \node [font=\normalsize] at (9,9.75) {Input};
+    \node [font=\normalsize] at (9.75,9.25) {Clk};
+    \node [font=\normalsize] at (12.25,8.5) {Q$\rightarrow$};
+    \node [font=\normalsize] at (12.25,9.5) {Q};
+    \node [font=\normalsize] at (11.25,9.5) {J};
+    \node [font=\normalsize] at (11.25,8.5) {K};
+    \node [font=\normalsize] at (15,9.5) {J};
+    \node [font=\normalsize] at (16,9.5) {Q};
+    \node [font=\normalsize] at (15,8.5) {K};
+    \node [font=\normalsize] at (16,8.5) {Q$\rightarrow$};
+    \end{circuitikz}
+    }%
+    
+    

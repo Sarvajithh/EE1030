@@ -1,0 +1,70 @@
+
+    \resizebox{0.6\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw (0.75,13.75) to[R] (0.75,13.75);
+    \draw (1.25,13.5) to[R] (3.25,13.5);
+    \draw (1.25,12.75) to[R] (3.25,12.75);
+    \draw (1.25,12) to[R] (3.25,12);
+    \draw (3.25,13.5) to[short] (3.25,12);
+    \draw (3.25,13.5) to[short] (4.5,13.5);
+    \draw (6,14) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (4.5,14.5);
+    \draw  (opamp2.-) to[short] (4.5,13.5);
+    \draw (7.2,14) to[short](7.5,14);
+    \draw (4.5,15.5) to[short] (4.5,14.5);
+    \draw (3.5,15.5) to[short] (5.5,15.5);
+    \draw (4,15.75) to[short] (5,15.75);
+    \draw (4,15.75) to[short] (5,15.75);
+    \draw (5,12.75) to[R] (7,12.75);
+    \draw [short] (5,13.5) -- (5,12.75);
+    \draw [short] (7,14) -- (7,12.75);
+    \draw (7.5,14) to[R] (9.5,14);
+    \draw (11,14.5) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (9.5,15);
+    \draw  (opamp2.-) to[short] (9.5,14);
+    \draw (12.2,14.5) to[short](12.5,14.5);
+    \draw [short] (9.5,16) -- (9.5,15);
+    \draw [short] (8.5,16) -- (10.5,16);
+    \draw [short] (9,16.25) -- (10.25,16.25);
+    \draw (9.75,13) to[R] (11.75,13);
+    \draw [short] (9.75,14) -- (9.75,13);
+    \draw [short] (11.75,14.5) -- (11.75,13);
+    \draw [short] (12.5,14.5) -- (12.5,12.25);
+    \draw (12.5,12.25) to[R] (14.5,12.25);
+    \draw (16,12.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (14.5,13.25);
+    \draw  (opamp2.-) to[short] (14.5,12.25);
+    \draw (17.2,12.75) to[short](17.5,12.75);
+    \draw (14.75,11.25) to[R] (16.75,11.25);
+    \draw [short] (14.75,12.25) -- (14.75,11.25);
+    \draw [short] (16.75,12.75) -- (16.75,11.25);
+    \draw [short] (14.5,16) -- (14.5,13.25);
+    \draw (14.5,17) to[R] (14.5,16);
+    \draw (14.5,15.5) to[R] (16.5,15.5);
+    \draw (14.5,15) to[R] (16.5,15);
+    \draw (14.5,14.25) to[R] (16.5,14.25);
+    \draw [short] (14.5,17) -- (14.5,17.5);
+    \draw [short] (14,17.75) -- (15,17.75);
+    \draw [short] (13.75,17.5) -- (15.75,17.5);
+    \node [font=\small] at (15,16.5) {R};
+    \node [font=\small] at (15.25,16) {R};
+    \node [font=\small] at (15.75,15) {R};
+    \node [font=\small] at (15.5,14) {R};
+    \node [font=\small] at (16.75,15.5) {$V_a$};
+    \node [font=\small] at (16.75,15) {$V_b$};
+    \node [font=\small] at (17,14.25) {$V_c$};
+    \node [font=\small] at (15.75,11) {3R};
+    \node [font=\small] at (17.75,12.75) {$V_{02}$};
+    \node [font=\small] at (13.5,11.75) {R};
+    \node [font=\small] at (12.75,14.5) {$V_{01}$};
+    \node [font=\small] at (10.75,12.5) {R};
+    \node [font=\small] at (8.5,13.75) {R};
+    \node [font=\small] at (6,12.25) {R};
+    \node [font=\small] at (2.25,14) {3R};
+    \node [font=\small] at (2,13) {3R};
+    \node [font=\small] at (2.25,11.75) {3R};
+    \end{circuitikz}
+    }%
+    
+  
