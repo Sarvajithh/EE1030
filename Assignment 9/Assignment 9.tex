@@ -1,0 +1,188 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}   
+\usepackage{multicol}                                          
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 9}
+ %\maketitle
+ %\newpage
+ %\bigskip
+{\let\newpage\relax\maketitle}
+\title{2009, PH}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[49.] The Lagrangian of a particle of mass m moving in one dimension is $ L = exp\brak{\alpha t}\big[\frac{m\dot{x}^2}{2}-\frac{kx^2}{2}],$ where $\alpha$ and k are positive constants. The equation of motion of the particle is 
+     \begin{enumerate}[label=(\Alph*)]
+        \item $\ddot{x}+\alpha \dot{x} = 0$
+        \item $\ddot{x}+\frac{k}{m}x = 0$
+        \item $\ddot{x}-\alpha \dot{x}+\frac{k}{m}x = 0$
+        \item $\ddot{x}+\alpha \dot{x}+\frac{k}{m}x = 0$
+     \end{enumerate}
+     \item[50.] Two monochromatic waves having frequencies $\omega$ and $\omega + \triangle \omega \brak{\Delta\omega<<<\omega}$ and corresonding wavelength $\lambda$ and $\lambda-\Delta\lambda\brak{\Delta\lambda<<<\lambda}$ of same polarization, travelling along x-axis are superimposed on each other. The phase velocity and group velocity of the resultant wave are respectively given by
+     \begin{enumerate}[label=(\Alph*)]
+         \item $\frac{\omega\lambda}{2\pi},\frac{\Delta\lambda ^2}{2\pi\Delta\lambda}$
+         \item $\omega\lambda,\frac{\Delta\lambda ^2}{\Delta\lambda}$
+         \item $\frac{\omega\Delta\lambda}{2\pi},\frac{\Delta\lambda}{2\pi\Delta\lambda}$
+         \item $\omega\Delta\lambda,\omega\Delta\lambda$
+     \end{enumerate}
+     \textbf{Common data questions}
+     Common data questions 51 and 52
+     Consider a two level quantum system with energies $\epsilon_1=0 \text{and} \epsilon_2 = \epsilon$
+     \item[51.] The Helmholtz free energy of the system is given by
+     \begin{enumerate}[label=(\Alph*)]
+        \item $-k_BTln\brak{1+e^{\frac{-\epsilon}{k_BT}}}$
+        \item $k_BTln\brak{1+e^{\frac{-\epsilon}{k_BT}}}$
+        \item $\frac{3}{2}k_B T$
+        \item $\epsilon - k_BT$
+     \end{enumerate}
+     \item [52.]  The specific heat of the system is given by
+     \begin{enumerate}[label=(\Alph*)]
+        \item $\frac{\epsilon}{k_BT}\frac{e^{\frac{-\epsilon}{k_BT}}}{\brak{1+e^{\frac{-\epsilon}{k_BT}}}^2}$
+        \item $\frac{\epsilon^2}{k_BT^2}\frac{e^{\frac{-\epsilon}{k_BT}}}{\brak{1+e^{\frac{-\epsilon}{k_BT}}}}$
+        \item $-\frac{\epsilon^2e^{\frac{-\epsilon}{k_BT}}}{\brak{1+e^{\frac{-\epsilon}{k_BT}}}^2}$
+        \item  $\frac{\epsilon^2}{k_BT^2}\frac{e^{\frac{-\epsilon}{k_BT}}}{\brak{1+e^{\frac{-\epsilon}{k_BT}}}^2}$
+     \end{enumerate}
+     Common data questions 53 and 54
+     A free particle of mass m moves along the x-direction. At t = 0, the normalized wave function of the particle is given by $\psi\brak{x,0}=\frac{1}{\brak{2\pi\alpha}^{1/4}}exp{-\frac{x^2}{4\alpha^2}+ix}$, where $\alpha$ is a real constant 
+     \item[53.] The expectation value of the momentum, in this state is 
+     \begin{enumerate}[label=(\Alph*)]
+        \item $\hslash \alpha$
+        \item $\hslash \sqrt{\alpha}$
+        \item $\alpha$
+        \item $\frac{\hslash}{\sqrt{\alpha}}$
+     \end{enumerate}
+     \item[54.] The expectation value of the particle energy is 
+     \begin{enumerate}[label=(\Alph*)]
+        \item $\frac{\hslash^2}{2m}\frac{1}{2\alpha^{3/2}}$
+        \item $\frac{\hslash^2}{2m}\alpha^2$
+        \item $\frac{\hslash^2}{2m}\frac{4\alpha^2+1}{4\alpha^{3/2}}$
+         \item $\frac{\hslash^2}{8m\alpha^{3/2} }$
+     \end{enumerate}
+     Common data questions 55 and 56
+     Consider the Zeeman splitting of a single electron system for the 3d to 3p electric dipole transition
+     \item[55.] The Zeeman spectrum is
+     \begin{enumerate}[label=(\Alph*)]
+        
+        \item Randomly polarized
+        \item only $\pi$ polarized
+        \item only $\sigma$ polarized
+        \item both $\pi$ and $\sigma$ polarized
+     \end{enumerate}
+     \item[56.]  The fine structure line having the longest wavelength will split into
+     \begin{enumerate}[label=(\Alph*)]
+        \item  17 components
+        \item  10 components
+        \item  8 components
+        \item  4 components
+     \end{enumerate}
+     \textbf{Linked Answer Questions}
+     Statement for Linked Answer Questions 57 ans 58:
+    The primitive translation vectors of the face centered cubic (fcc) lattice are 
+    $$\hat{a}_1 = \frac{a}{2}\brak{\hat{j}+\hat{k}};\hat{a}_2 = \frac{a}{2}\brak{\hat{i}+\hat{k}};\hat{a}_1 = \frac{a}{2}\brak{\hat{j}+\hat{i}}$$
+    \item[57.] The primitive transition vectors of the fccreciprocal lattice are 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\hat{b}_1 = \frac{2\pi}{a}\brak{\hat{j}+\hat{k}-\hat{i}};\hat{b}_2 = \frac{2\pi}{a}\brak{-\hat{j}+\hat{k}+\hat{i}};\hat{b}_3 = \frac{2\pi}{a}\brak{\hat{j}-\hat{k}+\hat{i}}$
+        \item $\hat{b}_1 = \frac{\pi}{a}\brak{\hat{j}+\hat{k}-\hat{i}};\hat{b}_2 = \frac{\pi}{a}\brak{-\hat{j}+\hat{k}+\hat{i}};\hat{b}_3 = \frac{\pi}{a}\brak{\hat{j}-\hat{k}+\hat{i}}$
+        \item $\hat{b}_1 = \frac{\pi}{2a}\brak{\hat{j}+\hat{k}-\hat{i}};\hat{b}_2 = \frac{\pi}{2a}\brak{-\hat{j}+\hat{k}+\hat{i}};\hat{b}_3 = \frac{\pi}{2a}\brak{\hat{j}-\hat{k}+\hat{i}}$
+        \item $\hat{b}_1 = \frac{3\pi}{a}\brak{\hat{j}+\hat{k}-\hat{i}};\hat{b}_2 = \frac{3\pi}{a}\brak{-\hat{j}+\hat{k}+\hat{i}};\hat{b}_3 = \frac{3\pi}{a}\brak{\hat{j}-\hat{k}+\hat{i}}$
+    \end{enumerate}
+    \item[58.] The volume of the primitive cell of the fcc reciprocal lattice is
+    \begin{enumerate}[label=(\Alph*)]
+        \item $4\brak{\frac{\pi}{a}}^3$
+        \item $4\brak{\frac{2\pi}{a}}^3$
+        \item $4\brak{\frac{\pi}{2a}}^3$
+        \item $4\brak{\frac{3\pi}{a}}^3$
+    \end{enumerate}
+    Statement for Linked Answer Questions 59 and 60:
+    The Karnaugh map of logic circuit shown is below 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{1}
+        \label{fig1}
+    \end{figure}
+    %image
+    \item[59.] The minimized logic expression for the above map is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $Y=\bar{PR} + \bar{Q}$
+        \item $Y=\bar{Q} .PR$
+        \item $Y=PR + \bar{Q}$
+        \item $Y=\bar{PR}.Q$
+    \end{enumerate}
+    \item[60.] The corresponding logic implementation using gates is given as:
+     \end{enumerate}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{option1}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \caption{option2}
+        %\label{fig3}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \caption{option3}
+       % \label{fig4}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \caption{option4}
+       % \label{fig5}
+    \end{figure}
+
+\end{document}

@@ -1,0 +1,32 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (6.5,12.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,12.25);
+    \draw (port.in) to[short] (6.25,12.25);
+    \draw (6.5,11) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,11);
+    \draw (port.in) to[short] (6.25,11);
+    \draw (6.5,9.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.75);
+    \draw (port.in) to[short] (6.25,9.75);
+    \draw [short] (8.25,12.25) -- (8.75,12);
+    \draw [short] (8.25,11) -- (8.75,11.5);
+    \draw [short] (8,9.75) -- (11.5,9.75);
+    \draw [short] (10.75,11.75) -- (11.5,11.75);
+    \draw [short] (11.5,11.75) -- (13,10.75);
+    \draw [short] (11.5,9.75) -- (13,10.25);
+    \draw [short] (15,10.5) -- (16,10.5);
+    \node [font=\normalsize] at (6,12.25) {P};
+    \node [font=\normalsize] at (6,11) {R};
+    \node [font=\normalsize] at (6,9.75) {Q};
+    \node [font=\normalsize] at (16.5,10.5) {Y};
+    \draw (8.75,12) to[short] (9,12);
+    \draw (8.75,11.5) to[short] (9,11.5);
+    \draw (9,12) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,11.75);
+    \draw (13,10.75) to[short] (13.25,10.75);
+    \draw (13,10.25) to[short] (13.25,10.25);
+    \draw (13.25,10.75) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,10.5);
+    \end{circuitikz}
+    }%
+    
+  
