@@ -1,0 +1,19 @@
+
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (-5.5,13.25) to[R] (-3.5,13.25);
+    \draw (-2,13.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (-3.5,14.25);
+    \draw  (opamp2.-) to[short] (-3.5,13.25);
+    \draw (-0.8,13.75) to[short](-0.5,13.75);
+    \draw (-3.5,14.25) to (-4,14.25) node[ground]{};
+    \draw [short] (-3,13.25) -- (-3,12.25);
+    \draw [short] (-1,13.75) -- (-1,12.25);
+    \draw (-3,12.25) to[empty Schottky diode] (-1,12.25);
+    \node [font=\normalsize] at (-2,11.75) {5.1V};
+    \end{circuitikz}
+    }%
+    
+   
