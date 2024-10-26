@@ -1,0 +1,164 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 11}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2010, AE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[14.] The linear Programming Problem:\\Maximize $z=x_1+x_2$\\subject to
+    \begin{align*}
+     x_1 + 2x_2 \leq 20\\
+     x_1 + x_2 \leq 15\\
+     x_2\leq 6\\
+     x_1, x_2 \geq 0
+    \end{align*}
+    \begin{enumerate}[label=(\Alph*)]
+        \item has exactly one optimum solution
+        \item has more than one optimum solution
+        \item has unbounded solution
+        \item has no solution
+    \end{enumerate}
+    \item[15.] Consider the Primal Linear Programming Problem:\\
+    P: $\begin{cases} \text{Maximize} z = c_1x_1+c_2x_2+\ldots+c_nx_n\\\text{subject to}\\a_{11}x_1+a_{12}x_2+\ldots+a_{1n}x_n \leq b_1\\a_{21}x_1+a_{22}x_2+\ldots+a_{2n}x_n \leq b_2\\.      .      .\\.      .      .\\.      .      .\\a_{m1}x_1+a_{m2}x_2+\ldots+a_{mn}x_n \leq b_m\\ x_j \geq 0, j=1,\ldots,n\end{cases}$
+    \\The Dual of P is\\
+    D: $\begin{cases} \text{Minimize} z' = b_1w_1+b_2w_2+\ldots+b_mw_n\\\text{subject to}\\a_{11}w_1+a_{21}w_2+\ldots+a_{m1}w_m \geq c_1\\a_{12}w_1+a_{22}w_2+\ldots+a_{m2}w_m \geq c_2\\.      .      .\\.      .      .\\.      .      .\\a_{1n}w_1+a_{2n}w_2+\ldots+a_{mn}w_m \geq c_n\\ w_i \geq 0, i=1,\ldots,m\end{cases}$
+    \begin{enumerate}[label=(\Alph*)]
+        \item $N_g<<N_e$
+        \item $N_g>>N_e$
+        \item $N_g\approx N_e\approx \frac{N}{2}$
+        \item $N_g-N_e\approx \frac{N}{2}$
+    \end{enumerate}
+    \item[16.] The number of irreducible quadratic polynomials over the field of 2 elements $F_2$ iw
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0
+        \item 1
+        \item 2
+        \item 3
+    \end{enumerate}
+    \item[17.] The number of elements in the conjugacy class of the 3-cycle$\brak{2 3 4}$ in symmetric group $S_6$ is
+    \begin{enumerate}[label=(\Alph*)]
+        \item 20
+        \item 40 
+        \item 120
+        \item 216
+    \end{enumerate}
+    \item[18.] The initial value Problem
+    $$x\frac{dy}{dx} = y + x^2, x>0; y\brak{0} = 0,$$ has
+    \begin{enumerate}[label=(\Alph*)]
+        \item infinitely many solutions
+        \item exactly two solutions
+        \item a unique solution
+        \item no solution
+    \end{enumerate}
+    \item[19.] The subspace $P = \{\brak{x,y,z}\in R^3 : z = x^2 + y^2 + 1\}$ is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item comapct and connected
+        \item compact but not connected
+        \item not compact but connected
+        \item neither compact nor connected
+    \end{enumerate}
+    \item[20.] Let $P = \brak{0,1}; Q=[0,1); U = (0,1], T = R \text{and} A = \{P,Q,U,S,T\}$. The equivalence relation 'homeomorphism' induces which one of the following as the partition of A? 
+    \begin{enumerate}[label=(\Alph*)]
+        \item \{P,Q,U,S\},\{T\}
+        \item \{P,T\},\{Q\},\{U\},\{S\}
+        \item \{P,T\},\{Q,U,S\}
+        \item \{P,T\},\{Q,U\},\{S\}
+    \end{enumerate}
+    \item[21.] Let $x =\brak{x_1, x_2,\ldots}\in l^4, x\neq 0.$ For which one of the following values of p, the series $\sum_{i=1}^{\infty}x_iy_i$ converges for every $y=\brak{y_1,y_2,\ldots}\in l^p$?
+    \begin{enumerate}[label=(\Alph*)]
+        \item 1
+        \item 2
+        \item 3
+        \item 4
+    \end{enumerate} 
+    \item[22.] Let $H$ be a complex Hilbert space and $H^*$ be its dual. The mapping $\phi:H\rightarrow H^*$ defined by $\phi\brak{y}f_y \text{where} f_y\brak{x} = \langle x,y \rangle$ is  
+    \begin{enumerate}[label=(\Alph*)]
+        \item not linear but onto
+        \item both linear and onto
+        \item linear but not onto
+        \item neither linear nor onto
+    \end{enumerate}
+    \item[23.] A horizontal lever is in static equilibrium under the application of vertical forces $F_1$ at a distance $l_1$ from the fulcrum and $F_2$ at a distance $l_2$ from the fulcrum. The equilibrium for the above quantities can be obtained if 
+     \begin{enumerate}[label=(\Alph*)]
+        \item $F_1L_1 = 2F_2L_2$
+        \item $2F_1L_1 = F_2L_2$
+        \item $F_1L_1 = F_2L_2$
+        \item $F_1L_1 < F_2L_2$
+     \end{enumerate}
+    \item[24.] Assume $F$ to be a twice continuously differentiable function. Let $J\brak{y}$ be a functional of the form $$\int_{0}^{1}F\brak{x,y'}dx, 0\leq x\leq 1$$ defined on the set of all continuously differentiable functions y on [0,1] satisfying $y\brak{0}=a,y\brak{1}=b.$ For some arbitrary constant c, a necessary condition for y to be an extremum of J is  
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\frac{\partial F}{\partial x}=c$
+        \item $\frac{\partial F}{\partial y'}=c$
+        \item $\frac{\partial F}{\partial y}=c$
+        \item $\frac{\partial F}{\partial x}=0$
+    \end{enumerate}
+    \item[25.] The eigenvalue $\lambda$ of the following Fredholm integral equation $$y\brak{x}= \lambda\int_{0}^{1}x^2ty\brak{t}dt$$ is
+    \begin{enumerate}[label=(\Alph*)]
+        \item -2
+        \item 2
+        \item 4
+        \item -4
+    \end{enumerate}
+    \textbf{Q.26-Q.55 carry two marks each.}
+    \item[26.] The application of Gram-Schmidt process of orthonormalization to $$u_1 = \brak{1,1,0}, u_2=\brak{1,0,0}, u_3 = \brak{1,1,1}$$ yields
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\frac{1}{\sqrt{2}}\brak{1,1,0},\brak{1,0,0},\brak{0,0,1}$
+        \item $\frac{1}{\sqrt{2}}\brak{1,1,0},\frac{1}{\sqrt{2}}\brak{1,-1,0},\frac{1}{\sqrt{2}}\brak{1,1,1}$ 
+        \item $\brak{0,1,0},\brak{1,0,0},\brak{0,0,1}$
+        \item $\frac{1}{\sqrt{2}}\brak{1,1,0},\frac{1}{\sqrt{2}}\brak{1,-1,0},\brak{0,0,1}$ 
+    \end{enumerate} 
+\end{enumerate}
+\end{document}
