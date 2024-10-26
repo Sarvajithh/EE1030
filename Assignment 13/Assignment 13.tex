@@ -1,0 +1,180 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 13}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2012, AE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[40.] The stagnation temperatures at the inlet and exit of a combustion chamber are 600 K and 1200 K,
+    respectively. If the heating value of the fuel is $44 \frac{MJ}{kg}$ and specific heat at constant pressure for
+    air and hot gases are $1.005\frac{kJ}{kg.K}$ and $1.147\frac{kJ}{kg.K}$ respectively, the fuel-to-air ratio is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0.0018
+        \item 0.018
+        \item 0.18
+        \item 1.18
+    \end{enumerate}
+    \item[41.] A solid propellant of density 1800 $\frac{kg}{m^3}$ has a burning rate law $r = 6.65 \times 10^{-3}p^{0.45} \frac{mm}{s}$, where p is pressure in Pascals. It is used in a rocket motor with a tubular grain with an initial burning area of $0.314 m^2$. The characteristic velocity is 1450 $\frac{m}{s}$. What should be the nozzle throat diameter to achieve an equilibrium chamber pressure of 50 bar at the end of the ignition transient?
+    \begin{enumerate}[label=(\Alph*)]
+        \item 35 mm
+        \item 38 mm
+        \item 41 mm
+        \item 45 mm
+    \end{enumerate}
+    \item[42.] A bipropellant liquid rocket motor operates at a chamber pressure of 40 bar with a nozzle throat
+    diameter of 50 mm. The characteristic velocity is 1540 $\frac{m}{s}$. If the fuel-oxidizer ratio of the
+    propellant is 1.8, and the fuel density is 900 $\frac{kg}{m^3}$, what should be the minimum fuel tank volume
+    for a burn time of 8 minutes
+    \begin{enumerate}[label=(\Alph*)]
+        \item $1.65m^3$
+        \item $1.75m^3$
+        \item $1.85m^3$
+        \item $1.95m^3$
+    \end{enumerate}
+    \item[43.] The propellant in a single stage sounding rocket occupies 60\% of its initial mass. If all of it is
+    expended instantaneously at an equivalent exhaust velocity of $3000\frac{m}{s}$, what would be the altitude
+    attained by the payload when launched vertically?\\
+    Neglect drag and assume acceleration due to gravity to be constant at 9.81 $\frac{m}{s^2}$.
+    \begin{enumerate}[label=(\Alph*)]
+        \item 315 km
+        \item 335 km
+        \item 365 km
+        \item 385 km
+    \end{enumerate}
+    \item[44.] The Airy stress function, $\phi = \alpha x^2 + \beta xy + \gamma y^2$ for a thin square panel of size $l\times l$ automatically
+    satisfies compatibility. If the panel is subjected to uniform tensile stress,$\sigma _0$ on all four edges, the
+    traction boundary conditions are satisfied by
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\alpha = \frac{\sigma_0}{2};\beta = 0;\gamma = \frac{\sigma_0}{2}$
+        \item $\alpha = \sigma_0;\beta = 0;\gamma = \sigma_0$
+        \item $\alpha = 0;\beta = \frac{\sigma_0}{4};\gamma = 0$
+        \item $\alpha = 0;\beta = \frac{\sigma_0}{2};\gamma = 0$
+    \end{enumerate}
+    \item[45.] The boundary condition of a rod under longitudinal vibration is changed from fixed-fixed to fixedfree. The fundamental natural frequency of the rod is now k times the original frequency, where k is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\frac{1}{2}$
+        \item 2
+        \item $\frac{1}{\sqrt{2}}$
+        \item $\sqrt{2}$
+    \end{enumerate}
+    \item[46.] A spring-mass system is viscously damped with a viscous damping constant c. The energy
+    dissipated per cycle when the system is undergoing a harmonic vibration $x\cos w_0t$ is given by
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\pi\omega_dcX^2$
+        \item $\pi\omega_dX^2$
+        \item $\pi\omega_dcX$
+        \item $\pi\omega_d^2cX$
+    \end{enumerate}
+    \item[47.] Buckling of the fuselage skin can be delayed by
+    \begin{enumerate}[label=(\Alph*)]
+        \item  increasing internal pressure. 
+        \item placing stiffeners farther apart. 
+        \item  reducing skin thickness. 
+        \item  placing stiffeners farther and decreasing internal pressure. 
+    \end{enumerate} 
+    \textbf{Common Data Questions}
+    Common Data for Questions 48 and 49:
+    A wing and tail are geometrically similar, while tail area is one-third of the wing area and distance between
+two aerodynamic centres is equal to wing semi-span $\brak{\frac{b}{2}}$. In addition, following data is applicable: 
+$\epsilon_{\alpha}=0.3,C_L = 1.0,C_{L_{\alpha}} = 0.08/deg, \bar{c}=2.5m, b=30m,C_{M_{ac}}=0, \eta_t = 1$. The symbols have their usual meanings.
+    \item[48.] The maximum distance that the centre of gravity can be behind aerodynamic centre without
+    destabilizing the wing-tail combination is     
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0.4m
+        \item 1.4m
+        \item 2.4m
+        \item 3.4m
+    \end{enumerate}
+    \item[49.] The angle of incidence of tail to trim the wing-tail combination for a 5\% static margin is 
+     \begin{enumerate}[label=(\Alph*)]
+        \item $-1.4^{\circ}$
+        \item $-0.4^{\circ}$
+        \item $0.4^{\circ}$
+        \item $1.4^{\circ}$
+     \end{enumerate}
+     \textbf{Common Data for Questions 50 and 51:}\\
+     A thin long circular pipe of 10 mm diameter has porous walls and spins at 60 rpm about its own axis. Fluid
+     is pumped out of the pipe such that it emerges radially relative to the pipe surface at a velocity of 1 $\frac{m}{s}$.
+     [Neglect the effect of gravity.] 
+    \item[50.] What is the radial component of the fluid's velocity at a radial location 0.5 m from the pipe axis?
+    \begin{enumerate}[label=(\Alph*)]
+        \item $0.01\frac{m}{s}$
+        \item $0.1\frac{m}{s}$
+        \item $1\frac{m}{s}$
+        \item $10\frac{m}{s}$
+    \end{enumerate}
+    \item[51.] What is the tangential component of the fluid's velocity at the same radial location as above? 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $0.01\frac{m}{s}$
+        \item $0.03\frac{m}{s}$
+        \item $0.10\frac{m}{s}$
+        \item $0.31\frac{m}{s}$
+    \end{enumerate}
+    \textbf{Linked Answer Questions 52 and 53}\\
+    \textbf{Statement for Linked Answer Questions 52 and 53:}\\
+    Air at a stagnation temperature of $15^{\circ}$C and stagnation pressure 100 kPa enters an axial compressor with an
+absolute velocity of $120\frac{m}{s}$. Inlet guide vanes direct this absolute velocity to the rotor inlet at an angle of
+$18^{\circ}$ to the axial direction. The rotor turning angle is $27^{\circ}$ and the mean blade speed is 200 $\frac{m}{s}$. The axial
+velocity is assumed constant through the stage.
+    \item[52.] The blade angle at the inlet of the rotor is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $25.5^{\circ}$ 
+        \item $38.5^{\circ}$ 
+        \item $48.5^{\circ}$ 
+        \item $59.5^{\circ}$ 
+    \end{enumerate} 
+\end{enumerate}
+\end{document}
