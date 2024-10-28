@@ -1,0 +1,27 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\Large]
+    \draw [short] (3,10) -- (3,6.75);
+    \draw (3,10) to[D] (5,10);
+    \draw (5,7.5) to[D] (3,7.5);
+    \draw (5,10) to[R] (5,9);
+    \draw (5,7.5) to[short, -o] (5,7.75) ;
+    \draw (5,9) to[short, -o] (5,8.5) ;
+    \draw (5,7.5) to[D] (6.75,7.5);
+    \draw (6.75,10) to[D] (5,10);
+    \draw (3,8.25) to[short, -o] (4,8.25) ;
+    \draw (6.75,8.25) to[short, -o] (6,8.25) ;
+    \draw [short] (6.75,10) -- (6.75,6.75);
+    \node [font=\normalsize] at (4.25,8.25) {W};
+    \node [font=\normalsize] at (5,8.25) {Y};
+    \node [font=\normalsize] at (5.25,7.75) {Z};
+    \node [font=\normalsize] at (5.75,8.25) {X};
+    \node [font=\normalsize] at (5,7.25) {1k$\Omega$};
+    \draw (3,6.75) to[R] (6.75,6.75);
+    \node [font=\Large] at (4.25,6.5) {+};
+    \node [font=\Large] at (5.5,6.5) {-};
+    \end{circuitikz}
+    }%
+    
+   

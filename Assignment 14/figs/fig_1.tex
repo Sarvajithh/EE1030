@@ -1,0 +1,23 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (-5,13.25) -- (-5,13.25);
+    \draw [short] (-3.5,13.75) -- (-1.5,13.75);
+    \draw [short] (-3.5,13.75) -- (-3.5,12.5);
+    \draw (-3.5,12.5) to[battery1] (-3.5,11.25);
+    \draw (-3.5,11.25) to[short] (-1.5,11.25);
+    \draw (-2,11.25) to (-2,11) node[ground]{};
+    \draw (-1.5,11.25) to[empty Schottky diode] (-1.5,12.75);
+    \draw (-1.5,13.75) to[R] (-1.5,12.75);
+    \draw [->, >=Stealth] (-1.5,12.5) -- (-0.75,12.5);
+    \draw [short] (-0.75,12.5) -- (-0.25,12.5);
+    \draw (-0.25,12.5) to[R] (-0.25,11.25);
+    \draw (-1.5,11.25) to[short] (-0.25,11.25);
+    \node [font=\small] at (-1,13.25) {100$\Omega$};
+    \node [font=\small] at (-4,12) {10V};
+    \node [font=\small] at (-2.25,12) {$V_z =5V$};
+    \node [font=\small] at (0.25,11.75) {$R_L$};
+    \end{circuitikz}
+    }%
+    

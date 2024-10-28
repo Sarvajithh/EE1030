@@ -1,0 +1,25 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (5.25,10.75) to[R] (5.25,9.25);
+    \draw (5.25,9.25) to[short, -o] (8,9.25) ;
+    \draw [short] (5.25,9.25) -- (5.25,9);
+    \draw [short] (5.25,9) -- (5,8.75);
+    \draw [short] (5,8.75) -- (5,8.5);
+    \draw [->, >=Stealth] (5,8.5) -- (5.5,8.25);
+    \draw (5.5,8.25) to (5.5,7) node[ground]{};
+    \draw (6.75,9.25) to[D] (6.75,6.75);
+    \draw (5,8.5) to[R] (2.25,8.5);
+    \node [font=\normalsize] at (5.75,10) {$R_1$};
+    \node [font=\normalsize] at (5.25,11) {$+V_{cc}$};
+    \node [font=\normalsize] at (6.75,6.5) {Y};
+    \node [font=\normalsize] at (7.75,9.5) {Z};
+    \node [font=\normalsize] at (3.75,9) {$R_2$};
+    \node [font=\normalsize] at (2,8.5) {X};
+    \node [font=\normalsize] at (5.5,8.75) {$Q_1$};
+    \node [font=\normalsize] at (7.5,8) {Diode};
+    \end{circuitikz}
+    }%
+    
+    

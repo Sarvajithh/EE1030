@@ -1,0 +1,229 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 14}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2013, EE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[27.] In the circuit shown below, the knee current of the ideal Zener diode is 10 mA. To maintain 5 V
+    across $R_L$, the minimum value of RL in Ω and the minimum power rating of the Zener diode in mW
+    respectively are
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{1}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 125 and 125
+        \item 125 and 250
+        \item 250 and 125
+        \item 250 and 250
+    \end{enumerate}
+    \item[28.] The open-loop transfer function of a dc motor is given as frac$\frac{\omega\brak{s}}{V_a\brak{s}} = \frac{10}{1+10s}.$ When connected in
+    feedback as shown below, the approximate value of $K_a$ that will reduce the time constant of the
+    closed loop system by one hundred times as compared to that of the open-loop system is 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{2}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 1
+        \item 5
+        \item 10
+        \item 100
+    \end{enumerate}
+    \item[29.] In the circuit shown below, if the source voltage $V_S = 100\angle53.13^{\circ} V$ then the Thevenin's equivalent
+    voltage in Volts as seen by the load resistance $R_L$ is 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \caption{3}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item $100\angle90^{\circ}$
+        \item $800\angle0^{\circ}$
+        \item $800\angle90^{\circ}$
+        \item $100\angle60^{\circ}$
+    \end{enumerate}
+    \item[30.] Three capacitors $C_1, C_2, \text{and} C_3$, whose values are $10\mu F, 5\mu F, \text{and} 2\mu F$ respectively, have
+    breakdown voltages of 10V, 5V, and 2V respectively. For the interconnection shown, the maximum
+    safe voltage in Volts that can be applied across the combination and the corresponding total charge
+    in $\mu C$ stored in the effective capacitance across the terminals are respectively
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \caption{4}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 2.8 and 36
+        \item 7 and 119
+        \item 1.8 and 32
+        \item 7 and 80
+    \end{enumerate}
+    \item[31.] A voltage $1000sin\omega t$ Volts is applied across YZ. Assuming ideal diodes, the voltage measured
+    across WX in Volts is 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \caption{5}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item $sin\omega t$
+        \item $\frac{sin\omega t+\abs{sin\omega t}}{2}$
+        \item  $\frac{sin\omega t-\abs{sin\omega t}}{2}$
+        \item 0 for all t
+    \end{enumerate}
+    \item[32.] The separately excited dc motor in the figure below has a rated armature current of 20 A and a rated
+    armature voltage of 150 V. An ideal chopper switching at 5 kHz is used to control the armature
+    voltage. If $L_a$= 0.1 mH, $R_a= 1\varOmega$ , neglecting armature reaction, the duty ratio of the chopper to
+    obtain 50\% of the rated torque at the rated speed and the rated field current is 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \caption{6}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0.4
+        \item 0.5
+        \item 0.6
+        \item 0.7
+    \end{enumerate}
+    \item[33.] For a power system network with n nodes, $Z_33$ of its bus impedance matrix is j0.5 per unit. The
+    voltage at node 3 is $1.3\angle-10^{\circ}$ per unit. If a capacitor having reactance of -j3.5 per unit is now
+    added to the network between node 3 and the reference node, the current drawn by the capacitor per
+    unit is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $0.325\angle-100^{\circ}$
+        \item $0.325\angle80^{\circ}$
+        \item $0.371\angle-100^{\circ}$
+        \item $0.433\angle80^{\circ}$
+    \end{enumerate}
+    \item[34.] A dielectric slab with $500mm\times500 mm$ cross-section is 0.4 m long. The slab is subjected to a uniform
+    electric field of $\mathbf{E}=6a_x + 8a_y \frac{kV}{mm}$. The relative permittivity of the dielectric material is equal to 2. The value of constant $\epsilon_0 $\text{is} $8.85\times 10^{-12}$. The energy stored in the dielectric in Joules is 
+    
+    \begin{enumerate}[label=(\Alph*)]
+        \item  $8.85\times 10^{-11}$ 
+        \item $8.85\times 10^{-5}$ 
+        \item  88.5
+        \item  885 
+    \end{enumerate} 
+    
+    \item[35.] A matrix has eigenvalues -1 and -2. The corresponding eigenvectors are $\begin{bmatrix}1\\-1\end{bmatrix}$ and $\begin{bmatrix}1\\2\end{bmatrix}$ respectively. The matrix is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\begin{bmatrix}1&1\\-1&-2\end{bmatrix}$
+        \item $\begin{bmatrix}1&2\\-2&-4\end{bmatrix}$
+        \item $\begin{bmatrix}-1&0\\0&-2\end{bmatrix}$
+        \item $\begin{bmatrix}0&1\\-2&-3\end{bmatrix}$
+    \end{enumerate}
+    \item[36.] $\int\frac{z^2-4}{z^2+4}$  evaluated anticlockwise around the circle $\abs{z-i}=2$, where $i=\sqrt{-1}$ is
+     \begin{enumerate}[label=(\Alph*)]
+        \item $-4\pi$
+        \item 0
+        \item $2+\pi$
+        \item $2+2i$
+     \end{enumerate}
+    \item[37.] The clock frequency applied to the digital circuit shown in the figure below is 1 kHz. If the initial
+    state of the output Q of the flip-flop is '0', then the frequency of the output waveform Q in kHz is
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_7.tex}  % Specify the path to your TikZ file
+        \caption{7}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0.25
+        \item 0.5
+        \item 1
+        \item 2
+    \end{enumerate}
+    \item[38.]  In the circuit shown below, $Q_1$ has negligible collector-to-emitter saturation voltage and the diode
+    drops negligible voltage across it under forward bias. If $V_{cc}$ is +5 V, X and Y are digital signals
+    with 0 V as logic 0 and $V_{cc}$ as logic 1, then the Boolean expression for Z is 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_8.tex}  % Specify the path to your TikZ file
+        \caption{8}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item XY
+        \item $\bar{X}Y$
+        \item $\bar{Y}X$
+        \item $\bar{XY}$
+    \end{enumerate}
+    
+    \item[39.] In the circuit shown below the op-amps are ideal. Then $V_{out}$ in Volts is
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_9.tex}  % Specify the path to your TikZ file
+        \caption{9}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 4
+        \item 6
+        \item 8
+        \item 10
+    \end{enumerate} 
+\end{enumerate}
+\end{document}

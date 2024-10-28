@@ -1,0 +1,45 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3,10.5) -- (9.75,10.5);
+    \draw [short] (9.75,10.5) -- (9.75,9.5);
+    \draw [short] (3,10.5) -- (3,9.75);
+    \draw (3,10) to[short] (3.5,10);
+    \draw (3,9.5) to[short] (3.5,9.5);
+    \draw (3.5,10) node[ieeestd xor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (5.5,9.75);
+    \draw [short] (3,9.5) -- (2,9.5);
+    \draw [short] (2,9.5) -- (2,7.75);
+    \draw (3.25,8.5) to[short] (3.5,8.5);
+    \draw (3.25,8) to[short] (3.5,8);
+    \draw (3.5,8.5) node[ieeestd xnor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (5.25,8.25);
+    \draw [short] (3,9.75) .. controls (3.25,9.75) and (3.5,9.5) .. (3,9.25);
+    \draw [short] (3,9.25) -- (3,8.5);
+    \draw [short] (3,8.5) -- (3.25,8.5);
+    \draw [short] (2,8) -- (3.25,8);
+    \draw [short] (2,8) -- (2,7.25);
+    \draw [short] (2,7.25) -- (9.75,7.25);
+    \draw [short] (5.5,9.75) -- (5.5,9.25);
+    \draw [short] (5.5,9.25) -- (6,9.25);
+    \draw [short] (5.25,8.25) -- (5.25,8.75);
+    \draw (5.75,9.25) to[short] (6,9.25);
+    \draw (5.75,8.75) to[short] (6,8.75);
+    \draw (6,9.25) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (7.75,9);
+    \draw [short] (5.25,8.75) -- (5.75,8.75);
+    \draw [short] (7.5,9) -- (8,9);
+    \draw  (8,9.25) rectangle (9.25,8);
+    \draw (9.25,9) to[short, -o] (10.75,9) ;
+    \draw (9.25,8.5) to[short, -o] (10.75,8.5) ;
+    \draw (7.25,8.5) to[short, -o] (8,8.5) ;
+    \draw [short] (9.75,7.25) -- (9.75,8.5);
+    \draw [short] (9.75,9.5) -- (9.75,9);
+    \node [font=\normalsize] at (7.75,9.25) {X};
+    \node [font=\normalsize] at (7.5,8.25) {Clk};
+    \node [font=\normalsize] at (8.25,9) {T};
+    \node [font=\normalsize] at (9,9) {Q};
+    \node [font=\normalsize] at (9,8.25) {Q};
+    \node [font=\normalsize] at (11,9.25) {Q};
+    \node [font=\normalsize] at (11,8.25) {Q};
+    \end{circuitikz}
+    }%
+    

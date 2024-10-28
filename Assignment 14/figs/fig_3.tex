@@ -1,0 +1,43 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw (3,9) to[R] (3,9);
+    \draw (3.5,9.25) to[R] (5.5,9.25);
+    \draw (5.5,9.25) to[L ] (7.5,9.25);
+    \draw (3.5,7.5) to[sinusoidal voltage source, sources/symbol/rotate=auto] (3.5,9.25);
+    \draw (3.5,7.5) to[short] (7.5,7.5);
+    \draw  (7.75,8.375) -- (7.5,8) -- (7.25,8.375) -- (7.5,8.75) -- cycle;
+    \draw [short] (7.5,9.25) -- (7.5,8.75);
+    \draw [short] (7.5,7.5) -- (7.5,8);
+    \draw [->, >=Stealth] (4.75,8.25) .. controls (5,9.25) and (5.75,8.75) .. (5.5,7.75) ;
+    \draw [<->, >=Stealth] (6,9) -- (7,9)node[pos=0.5, fill=white]{$V_{L1}$};
+    \node [font=\small] at (7,8.25) {$j40I_2$};
+    \node [font=\small] at (4.5,9.75) {$3\Omega$};
+    \node [font=\small] at (6.5,9.75) {$j4\Omega$};
+    \node [font=\small] at (7.5,8.5) {$+$};
+    \node [font=\small] at (7.5,8.25) {$-$};
+    \node [font=\large] at (6,9.5) {$+$};
+    \node [font=\large] at (7,9.5) {$-$};
+    \node [font=\normalsize] at (3,8.25) {$V_s$};
+    \draw [short] (7.5,7.5) -- (8.5,7.5);
+    \draw  (8.25,8.375) -- (8.5,8) -- (8.75,8.375) -- (8.5,8.75) -- cycle;
+    \draw [short] (8.5,8) -- (8.5,7.5);
+    \draw [short] (8.5,8.75) -- (8.5,9.25);
+    \draw (8.5,9.25) to[L ] (10.5,9.25);
+    \node [font=\normalsize] at (9.5,9.75) {j6$\Omega$};
+    \draw (10.5,9.25) to[R] (11.75,9.25);
+    \draw (11.75,7.5) to[R] (11.75,9.25);
+    \draw (8.5,7.5) to[short] (11.75,7.5);
+    \node [font=\small] at (8.5,8.5) {+};
+    \node [font=\small] at (8.5,8.25) {-};
+    \node [font=\small] at (11.25,9.5) {5$\Omega$};
+    \node [font=\small] at (12.5,8.25) {$R_L = 10\Omega$};
+    \draw [->, >=Stealth] (9.5,8.25) .. controls (10,9.25) and (11,8.75) .. (10.25,7.75) ;
+    \node [font=\small] at (10,7.75) {$I_2$};
+    \node [font=\small] at (5.25,8) {$I_1$};
+    \node [font=\small] at (9,8.75) {$10V_{L1}$};
+    \end{circuitikz}
+    }%
+    
+   

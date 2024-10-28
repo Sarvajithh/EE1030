@@ -1,0 +1,25 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw  (3.25,9.25) circle (0.5cm);
+    \draw [->, >=Stealth] (3.75,9.25) -- (4.75,9.25);
+    \draw [->, >=Stealth] (1.25,9.25) -- (2.75,9.25);
+    \draw [->, >=Stealth] (3.25,7.5) -- (3.25,8.75);
+    \draw [short] (3.25,7.5) -- (10.75,7.5);
+    \draw  (4.75,9.75) rectangle (6.25,8.5);
+    \node [font=\normalsize] at (5.5,9.25) {$K_a$};
+    \draw [->, >=Stealth] (6.25,9.25) -- (7.75,9.25);
+    \draw  (7.75,9.75) rectangle (9.75,8.5);
+    \node [font=\normalsize] at (8.75,9.25) {$\frac{10}{1+10s}$};
+    \draw [->, >=Stealth] (9.75,9.25) -- (11.5,9.25);
+    \draw [short] (10.75,7.5) -- (10.75,9.25);
+    \node [font=\normalsize] at (10.25,9.5) {$\omega$(s)};
+    \node [font=\normalsize] at (6.75,9.5) {$V_a(s)$};
+    \node [font=\normalsize] at (3,9.25) {+};
+    \node [font=\normalsize] at (3.25,9) {-};
+    \node [font=\normalsize] at (2,9.5) {R(s)};
+    \end{circuitikz}
+    }%
+    
+    
