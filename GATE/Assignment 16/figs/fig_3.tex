@@ -1,0 +1,35 @@
+
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (3.25,10.5) to[R] (7,10.5);
+    \draw (6.75,10.5) to[R] (6.75,8.5);
+    \draw [short] (6.75,10.5) -- (8,10.5);
+    \draw [short] (8,10.5) -- (8,9.75);
+    \draw  (8.25,9.375) -- (8,9) -- (7.75,9.375) -- (8,9.75) -- cycle;
+    \draw [short] (8,9) -- (8,8.5);
+    \draw [short] (8,8.5) -- (3.25,8.5);
+    \draw  (3.25,9.75) circle (0.25cm);
+    \draw [short] (3.25,10.5) -- (3.25,10);
+    \draw [short] (3.25,8.5) -- (3.25,9.5);
+    \draw [->, >=Stealth] (8,9) -- (8,9.75);
+    \node [font=\normalsize] at (8.5,9.5) {0.4I};
+    \node [font=\normalsize] at (7,9.75) {$R_2$};
+    \node [font=\normalsize] at (6,9.25) {14A};
+    \node [font=\normalsize] at (5,10) {17V};
+    \node [font=\normalsize] at (5,11) {$R_1$};
+    \node [font=\normalsize] at (3.75,10.75) {I};
+    \node [font=\normalsize] at (3.5,10) {+};
+    \node [font=\normalsize] at (2.5,9.75) {25V};
+    \node [font=\normalsize] at (3.5,9.5) {-};
+    \node [font=\normalsize] at (4.5,10.25) {+};
+    \node [font=\normalsize] at (5.75,10.25) {-};
+    \node [font=\normalsize] at (6.5,10) {+};
+    \node [font=\normalsize] at (6.5,9) {-};
+    \draw [->, >=Stealth] (5.5,9.5) -- (5.5,9);
+    \draw [short] (4,10.5) -- (3.75,10.75);
+    \draw [short] (4,10.5) -- (3.75,10.25);
+    \end{circuitikz}
+    }%
+    
+   

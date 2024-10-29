@@ -1,0 +1,33 @@
+
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (2.5,9.5) to[R] (4.5,9.5);
+    \draw (4.5,9.5) to[R] (7.75,9.5);
+    \draw (4.75,9.5) to[R] (4.75,6.25);
+    \draw (4.75,9.5) to[R] (6.5,7.75);
+    \draw (4.75,6.25) to[R] (6,7.5);
+    \draw (7.75,9.5) to[R] (7.75,6.25);
+    \draw (7.75,9.5) to[R] (11,9.5);
+    \draw (11,9.5) to[R] (11,6.25);
+    \draw (4.75,6.25) to[R] (2.5,6.25);
+    \draw [short] (6,7.5) .. controls (6.5,7.5) and (6.5,7.5) .. (6.5,8);
+    \draw [short] (6.5,8) -- (7.75,9.5);
+    \draw [short] (4.75,6.25) -- (6.75,6.25);
+    \draw [short] (4.75,6.25) -- (7.75,6.25);
+    \draw [short] (6.5,7.75) -- (7.75,6.25);
+    \draw [short] (7.75,6.25) -- (11,6.25);
+    \draw (2.5,9.5) to[short, -o] (1.75,9.5) ;
+    \draw (2.5,6.25) to[short, -o] (1.75,6.25) ;
+    \node [font=\normalsize] at (3.5,10) {1$\Omega$};
+    \node [font=\normalsize] at (6,9.75) {2$\Omega$};
+    \node [font=\normalsize] at (9.25,9.75) {1$\Omega$};
+    \node [font=\normalsize] at (10.5,8) {1$\Omega$};
+    \node [font=\normalsize] at (8.25,8) {6$\Omega$};
+    \node [font=\normalsize] at (6,9) {6$\Omega$};
+    \node [font=\normalsize] at (5.75,6.5) {3$\Omega$};
+    \node [font=\normalsize] at (4.25,8) {3$\Omega$};
+    \node [font=\normalsize] at (3.5,5.75) {0.8$\Omega$};
+    \end{circuitikz}
+    }%
+ 

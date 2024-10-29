@@ -1,0 +1,59 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    
+    \draw [short] (1.75,10.25) -- (7.75,10.25);
+    \draw [short] (1.75,10.25) -- (1.75,8.75);
+    \draw  (1.75,8.5) circle (0.25cm);
+    \draw [short] (1.75,8.25) -- (1.75,5.75);
+    \draw [short] (1.75,5.75) -- (4.5,5.75);
+    \draw (4,8.25) to[Tnpn, transistors/scale=1.19] (4,10.25);
+    \draw (4,5.75) to[Tnpn, transistors/scale=1.19] (4,8.25);
+    \draw (5.75,8) to[Tnpn, transistors/scale=1.19] (5.75,10.25);
+    \draw (7.75,8.25) to[Tnpn, transistors/scale=1.19] (7.75,10.25);
+    \draw (7.75,5.75) to[Tnpn, transistors/scale=1.19] (7.75,8.25);
+    \draw (5.75,5.75) to[Tnpn, transistors/scale=1.19] (5.75,8);
+    \draw (4.25,8.5) to[D] (4.25,9.75);
+    \draw (4.25,6.5) to[D] (4.25,7.75);
+    \draw (6,8.5) to[D] (6,9.75);
+    \draw (6,6.25) to[D] (6,7.5);
+    \draw (8,8.75) to[D] (8,10);
+    \draw (8,6.5) to[D] (8,7.5);
+    \draw [short] (4,9.75) -- (4.25,9.75);
+    \draw [short] (4,8.5) -- (4.25,8.5);
+    \draw [short] (4,7.75) -- (4.25,7.75);
+    \draw [short] (4,6.5) -- (4.25,6.5);
+    \draw [short] (5.75,9.75) -- (6,9.75);
+    \draw [short] (5.75,8.5) -- (6,8.5);
+    \draw [short] (5.75,7.5) -- (6,7.5);
+    \draw [short] (5.75,6.25) -- (6,6.25);
+    \draw [short] (7.75,6.5) -- (8,6.5);
+    \draw [short] (7.75,7.5) -- (8,7.5);
+    \draw [short] (7.75,8.75) -- (8,8.75);
+    \draw [short] (7.75,10) -- (8,10);
+    \draw [short] (4.5,5.75) -- (7.75,5.75);
+    \draw (12,8.25) to[R] (12,10);
+    \draw (12,8.25) to[R,l={ \normalsize 20$\Omega$}] (10.75,7);
+    \draw (12,8.25) to[R,l={ \normalsize 20$\Omega$}] (13.25,7);
+    \draw [short] (12,10) -- (10.5,10);
+    \draw [short] (10.5,10) -- (10.5,8.25);
+    \draw [short] (4,8) -- (5.5,8);
+    \draw [short] (6,8) -- (7.5,8);
+    \draw [short] (8,8) -- (10.5,8.25);
+    \draw [short] (7.5,8) .. controls (7,8.5) and (8.25,8.5) .. (8,8);
+    \draw [short] (5.5,8) .. controls (5,8.25) and (6.25,8.5) .. (6,8);
+    \draw [short] (5.75,7.75) -- (7.5,7.75);
+    \draw [short] (7.5,7.75) .. controls (7,8.25) and (8.5,8.25) .. (8,7.75);
+    \draw [short] (8,7.75) -- (10.5,7.75);
+    \draw [short] (10.5,7.75) -- (10.75,7);
+    \draw [short] (7.75,7.75) -- (10.25,6.25);
+    \draw [short] (10.25,6.25) -- (13.25,7);
+    \node [font=\normalsize] at (12.5,9.25) {20$\Omega$};
+    \node [font=\normalsize] at (1.5,8.75) {+};
+    \node [font=\normalsize] at (1.5,8.25) {-};
+    \node [font=\normalsize] at (1,8.5) {600V};
+    \end{circuitikz}
+    }%
+    
