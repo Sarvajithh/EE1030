@@ -1,0 +1,111 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 19}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2018, PH}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[40.] Inside a large nucleus, a nucleon with mass $939 MeVc^{-2}$ has Fermi momentum $1.40 fm^{-1}$
+    at absolute zero temperature. Its velocity is Xc , where the value of X is.............. (up
+    to two decimal places). \hfill (2018)
+    \item[41.] 4MeV $\gamma$ - rays emitted by the de-excitation of $^{19}F$ are attributed, assuming spherical
+    symmetry, to the transition of protons from $1d_{3/2}$ state to $1d_{5/2}$ state. If the contribution
+    of spin-orbit term to the total energy is written as C$\langle \overrightarrow{l}.\overrightarrow{s}\rangle$
+    the magnitude of C is ..........MeV (up to one decimal place). \hfill (2018)
+    \item[42.] An  $\alpha$ particle is emitted by a $^{230}_{90}Th$ nucleus. Assuming the potential to be purely
+    Coulombic beyond the point of separation, the height of the Coulomb barrier is.............. MeV (up to two decimal places).\hfill (2018)
+    \item[43.] For the transformation $$Q=\sqrt{2q}e^{-1+2\alpha}cosp, P = \sqrt{2q}e^{-1-\alpha}sinp$$ (where $\alpha$ is a constant) to be canonical, the value of $\alpha$ is .........\hfill (2018)
+    \item[44.] Given $$\frac{d^2f\brak{x}}{dx^2}-2\frac{df\brak{x}}{dx}+f\brak{x} = 0,$$ and boundary conditions $f\brak{0} = 1$ and $f\brak{1}=0$, the value of the $f\brak{0.5}$ is ............(upto 2 decimal places)\hfill (2018)
+    \item[45.] The absolute value of the integral $$\frac{5z^3 + 3z^2}{z^2-4}dz$$,over the circle $\abs{z-1.5}=1$ in complex plane, is ...........(upto 2 decimal places).\hfill (2018)
+    \item[46.] A uniform circular disc of mass m and radius R is rotating with angular
+    speed $\omega$ about an axis passing through its centre and making an angle
+    $\theta = 30^{\circ}$ with the axis of the disc. If the kinetic energy of the disc is $\alpha m\omega^2 R^2$, the value of $\alpha$ is..............(up to two decimal places). \hfill (2018)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{1}
+        %\label{fig2}
+    \end{figure}
+    \newpage
+    \item[47.] The ground state energy of a particle of mass m in an infinite potential well is $E_0$. It
+    changes to $E_0\brak{1+\alpha\times 10^{-3}}$, when there is a small potential pump of height $V_0 =\frac{\pi^2 \hslash^2}{50mL^2}$and width $a=\frac{L}{100}$ , as shown in the figure. The value of $\alpha$ is ........ (up to two
+    decimal places). \hfill (2018)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{2}
+        %\label{fig2}
+    \end{figure}
+    \item[48.] An electromagnetic plane wave is propagating with an intensity $I = 1.0\times 10^5 Wm^{-2}$ in a
+    medium with $\epsilon = 3\epsilon_0$ and $\mu = \mu_0$ . The amplitude of the electric field inside the medium
+    is ............ $\times0^3Vm^{-1}$ (up to one decimal place). \hfill (2018)
+    \item[49.]  A microcanonical ensemble consists of 12 atoms with each taking either energy 0 state,
+    or energy $\epsilon$ state. Both states are non-degenerate. If the total energy of this ensemble is
+    $4\epsilon$ , its entropy will be ........... $k_B$ (up to one decimal place), where $k_B$ is the
+    Boltzmann constant.\hfill (2018)
+    \item[50.] A two-state quantum system has energy eigenvalues $\pm \epsilon$ corresponding to the normalized
+    states $|\psi_{\pm}\rangle$. At time t = 0 , the system is in quantum state $\frac{1}{\sqrt{2}}[|\psi_{+}\rangle+|\psi_{-}\rangle]$ . The
+    probability that the system will be in the same state at $t=\frac{h}{6\epsilon}$ is .........  (up to
+    two decimal places). \hfill (2018)
+    \item[51.] An air-conditioner maintains the room temperature at $27^{\circ}$C while the outside temperature
+    is  $47^{\circ} C$ . The heat conducted through the walls of the room from outside to inside due to
+    temperature difference is 7000 W . The minimum work done by the compressor of the
+    air-conditioner per unit time is ........... W .\hfill (2018)
+    \item[52.] Two solid spheres A and B have same emissivity. The radius of A is four times the
+    radius of B and temperature of A is twice the temperature of B . The ratio of the rate of
+    heat radiated from A to that from B is ...........\hfill (2018)
+\end{enumerate}
+\end{document}
