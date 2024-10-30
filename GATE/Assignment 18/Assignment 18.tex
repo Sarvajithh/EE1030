@@ -1,0 +1,191 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 7}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2007, CE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[27.] A cantilever beam of length 2 m with a square section of side length 0.1 m is loaded vertically at the free end. The vertical displacement at the free end is 5mm. The beam is made of steel with Young's modulus of $2.0\times 10^{11}\frac{N}{m^2}$. The maximum bending stress at the fixed end of the cantilever is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item 20.0 MPa
+        \item 37.5 MPa
+        \item 60.0 MPa
+        \item 75.0 MPa
+    \end{enumerate}
+    \item[28.] A cylinder of radius 250mm and weight, W = 10kN is rolled up an obstacle of height 50mm by applying a horizontal force P at its centre as shown in the figure
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{1}
+        %\label{fig2}
+    \end{figure}
+    All interfaces are assumed frictionless. The minimum value of P is.
+    \begin{enumerate}[label=(\Alph*)]
+        \item 4.5kN
+        \item 5.0kN
+        \item 6.0kN
+        \item 7.5kN
+    \end{enumerate}
+    \item[29.] A plate in equilibrium is subjected to uniform stress along its edges with magnitude $\sigma_{xx}=30MPa$ and $\sigma_{yy}=50MPa$ as shown in the figure.
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{2}
+        %\label{fig2}
+    \end{figure}
+    The Young's Modulus of the material is $2\times 10^{11}\frac{N}{m^2}$ and the Poissons's ratio is 0.3. If $\sigma_{zz}$ is neglibly small and assumed to be zero, then the strain $\epsilon_{zz}$ is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $-120\times 10^{-6}$
+        \item $-60\times 10^{-6}$
+        \item $0.0$
+        \item $120\times 10^{-6}$
+    \end{enumerate}
+    \item[30.] The figure shows a simply supported beam PQ of uniform flexural rigidity $EI$ carrying two
+    moments M and 2M. 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \caption{3}
+        %\label{fig2}
+    \end{figure}
+    The slope at P will be
+    \begin{enumerate}[label= (\Alph*)]
+        \item 0
+        \item $\frac{ML}{9EI}$
+        \item $\frac{ML}{6EI}$
+        \item $\frac{ML}{3EI}$
+    \end{enumerate}
+    \item[31.] A $0.5 m \times 0.5 m$ square concrete pile is to be driven in a homogeneous clayey soil having
+    undrained shear strength, $c_u = 50 kPa$ and unit weight, $\gamma = 18.0 \frac{kN}{m^3}$. The design capacity
+    of the pile is 500 kN. The adhesion factor $\alpha$ is given as 0.75. The length of the pile required
+    for the above design load with a factor of safety of 2.0 is 
+    \begin{enumerate}[label = (\Alph*)]
+        \item 5.2m 
+        \item 5.8 m 
+        \item 11.8 m
+        \item 12.5 m 
+    \end{enumerate}
+    \item[32.] A closed tank contains 0.5 m thick layer of mercury (specific gravity = 13.6) at the bottom.
+    A 2.0 m thick layer of water lies above the mercury layer. A 3.0 m thick layer of oil
+    (specific gravity = 0.6) lies above the water layer. The space above the oil layer contains
+    air under pressure. The gauge pressure at the bottom of the tank is $196.2 \frac{kN}{m^2}$. The density of water is $1000 \frac{kg}{m^3}$
+    and the acceleration due to gravity is $9.81 \frac{m}{s^2}$. The value
+    of pressure in the air space is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item $92.214 \frac{kN}{m^2}$
+        \item $95.644 \frac{kN}{m^2}$
+        \item $98.922 \frac{kN}{m^2}$
+        \item $99.321 \frac{kN}{m^2}$
+    \end{enumerate} 
+    \item[33.] A rapid sand filter comprising a number of filter beds is required to produce 99 MLD of
+    potable water. Consider water loss during backwashing as 5\%, rate of filtration as $6.0 \frac{m}{h}$
+    and length to width ratio of filter bed as 1.35. The width of each filter bed is to be kept
+    equal to 5.2 m. One additional filter bed is to be provided to take care of break-down,
+    repair and maintenance. The total number of filter beds required will be
+    \begin{enumerate}[label=(\Alph*)]
+        \item 19
+        \item 20
+        \item 21
+        \item 22
+    \end{enumerate}
+    \item[34.] A priority intersection has a single-lane one-way traffic road crossing an undivided twolane two-way traffic road. The traffic stream speed on the single-lane road is 20 kmph and
+    the speed on the two-lane road is 50 kmph. The perception-reaction time is 2.5 s, coefficient of longitudinal friction is 0.38 and acceleration due to gravity is 9.81 m/s2
+    . A clear sight triangle has to be ensured at this intersection. The minimum lengths of the sides
+    of the sight triangle along the two-lane road and the single-lane road, respectively will be
+    \begin{enumerate}[label=(\Alph*)]
+        \item 50 m and 20 m 
+        \item 61 m and 18 m 
+        \item 111 m and 15 m 
+        \item 122 m and 36 m  
+    \end{enumerate}
+    \item[35.]The following details refer to a closed traverse:
+    \begin{table}[h!]
+        \centering
+        \input{tables/table.tex}
+        \caption{Consecutive coordinates for lines}
+    \end{table}
+    The length and direction(whole circle bearing) of closure, respectively are 
+    \begin{enumerate}[label=(\Alph*)]
+        \item 1 m and $90^{\circ}$
+        \item 2 m and $90^{\circ}$
+        \item 1 m and $270^{\circ}$
+        \item 2 m and $270^{\circ}$
+    \end{enumerate}
+    \item[36.] A square area (on the surface of the earth) with side 100 m and uniform height, appears as
+    $1 cm^2$ on a vertical aerial photograph. The topographic map shows that a contour of 650 m
+    passes through the area. If focal length of the camera lens is 150 mm, the height from
+    which the aerial photograph was taken, is
+    \begin{enumerate}[label=(\Alph*)]
+        \item 800 m 
+        \item 1500 m 
+        \item 2150 m 
+        \item 3150 m 
+    \end{enumerate}
+    \item[37.]The solution at x = 1,t = 1 of the partial differential equation $\frac{\partial ^2 u}{\partial x^2} = 25\frac{\partial^2u}{\partial t^2}$ subject to initial conditions of $u\brak{0} = 3x$ and $\frac{\partial u}{\partial t}\brak{0}=3$ is 
+    \begin{enumerate}[label=(\Alph*)]
+        \item 1
+        \item 2
+        \item 4
+        \item 6
+    \end{enumerate}
+    \item[38.] The solution (up to three decimal places) at x = 1 of the differential equation $\frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0$ subject to boundary conditions $y\brak{0}=1$ and $\frac{dy}{dx}\brak{0} = -1$ is 
+    \item[39.] Variation of water depth $\brak{y}$ in a gradually varied open channel flow is given by the first
+    order differential equation $$\frac{dy}{dx} = \frac{1-e^{-\frac{10}{3}\ln y}}{250-45e^{-3\ln y}}$$Given initial condition: $y(x = 0) = 0.8 m$. The depth (in m, up to three decimal places) of
+    flow at a downstream section at x = 1 m from one calculation step of Single Step Euler
+    Method is 
+     
+\end{enumerate}
+\end{document}
