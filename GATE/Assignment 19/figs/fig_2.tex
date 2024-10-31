@@ -1,26 +1,41 @@
 
-    \resizebox{0.3\textwidth}{!}{%
+    \resizebox{0.4\textwidth}{!}{%
     \begin{circuitikz}
     \tikzstyle{every node}=[font=\normalsize]
-    \draw [dashed] (15.5,10.75) -- (15.5,9.75);
-    \draw [dashed] (19.25,10.75) -- (19.25,9.75);
-    \draw [short] (15.5,9.75) -- (15.5,7.5);
-    \draw [short] (15.5,7.5) -- (17.25,7.5);
-    \draw [short] (19.25,9.75) -- (19.25,7.5);
-    \draw [short] (17.25,7.5) -- (17.25,8);
-    \draw [short] (17.25,8) -- (17.5,8);
-    \draw [short] (17.5,8) -- (17.5,7.5);
-    \draw [short] (17.5,7.5) -- (19.25,7.5);
-    \draw [->, >=Stealth] (18,8) -- (17.5,8);
-    \draw [->, >=Stealth] (16.75,8) -- (17.25,8);
-    \node [font=\normalsize] at (17.25,8.25) {a};
-    \draw [<->, >=Stealth] (15.5,7.25) -- (19.25,7.25)node[pos=0.5, fill=white]{L};
-    \draw [<->, >=Stealth] (18,8) -- (18,7.5);
-    \draw [->, >=Stealth] (13.75,9) -- (13.75,10.25);
-    \draw [->, >=Stealth] (13.75,9) -- (15,9);
-    \node [font=\normalsize] at (18.25,7.75) {$V_0$};
-    \node [font=\normalsize] at (14,10.25) {V(x)};
-    \node [font=\normalsize] at (15,9.25) {x};
+    \draw  (17.5,9) -- (13.25,9) -- (13.75,10.5) -- (18,10.5) -- cycle;
+    \draw [short] (13.25,9) -- (13.25,8.25);
+    \draw [short] (13.25,8.25) -- (17.5,8.25);
+    \draw [short] (17.5,9) -- (17.5,8.25);
+    \draw [short] (17.5,8.25) -- (18,10);
+    \draw [short] (18,10.5) -- (18,10);
+    \draw [short] (13.75,10.5) -- (13,10.5);
+    \draw [short] (13.25,9) -- (12.5,9);
+    \draw [short] (13.25,9) -- (12.75,6.5);
+    \draw [short] (17.5,9) -- (16.75,6.5);
+    \draw [->, >=Stealth] (15.75,11) -- (15.75,10.25);
+    \draw [->, >=Stealth] (17.25,11) -- (17.25,10);
+    \draw [->, >=Stealth] (17.25,11) -- (17,10.25);
+    \draw [->, >=Stealth] (17.25,11) -- (18.25,11);
+    \draw [->, >=Stealth] (14,9.5) -- (14.5,9.5);
+    \draw  (12.5,10) circle (0.25cm);
+    \draw  (14.5,6.5) circle (0.25cm);
+    \draw [short] (12.25,10) -- (12.5,9);
+    \draw [short] (12.5,10.25) -- (13,10.5);
+    \draw [short] (12.75,6.5) -- (14.25,6.5);
+    \draw [short] (14.75,6.5) -- (16.75,6.5);
+    \draw [<->, >=Stealth] (13.25,8) -- (17.5,8) node[pos=0.5, fill=white]{$l=10mm$};
+    \draw [<->, >=Stealth] (17.75,8.25) -- (18.25,10) node[pos=0.5, fill=white]{$w=4mm$};
+    
+    \draw [<->, >=Stealth] (18.25,10.5) -- (18.25,9.75);
+    \node [font=\normalsize] at (19,10) {$t=1mm$};
+    \node [font=\normalsize] at (18.5,11) {$x$};
+    \node [font=\normalsize] at (16.75,10.25) {$y$};
+    \node [font=\normalsize] at (17.25,9.75) {$z$};
+    \node [font=\normalsize] at (15.5,10.75) {$B$};
+    \node [font=\normalsize] at (13.75,9.5) {$I$};
+    \node [font=\normalsize] at (12.5,10) {$V_y$};
+    \node [font=\normalsize] at (14.5,6.5) {$V_x$};
     \end{circuitikz}
     }%
+ 
     

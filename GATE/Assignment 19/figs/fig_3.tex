@@ -1,0 +1,41 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (12,8.75) -- (12.75,8.75);
+    \draw [short] (12.75,8.75) -- (12.75,9.25);
+    \draw [short] (12.75,9.25) -- (13.25,9.25);
+    \draw [short] (13.25,9.25) -- (13.25,8.75);
+    \draw [short] (13.25,8.75) -- (13.75,8.75);
+    \draw (14.5,9) to[short, -o] (14,9) ;
+    \draw (14.5,9) to[R] (16.5,9);
+    \draw (16.25,9) to[R] (16.25,7.5);
+    \draw [->, >=Stealth] (16.5,9) -- (17.25,9);
+    \draw [short] (17.25,9.25) -- (17.25,8.75);
+    \draw [short] (17.25,9.25) -- (17.75,9.25);
+    \draw [short] (17.25,8.75) -- (17.75,8.75);
+    \draw (17.75,9.25) to[R] (17.75,12);
+    \draw (17.75,8.75) to[R] (17.75,6.75);
+    \draw (17.75,9.75) to[short, -o] (18.75,9.75) ;
+    \draw [short] (19,9) -- (19.75,9);
+    \draw [short] (19.75,9) -- (19.75,8.5);
+    \draw [short] (19.75,8.5) -- (20.5,8.5);
+    \draw [short] (20.5,8.5) -- (20.5,9);
+    \draw [short] (20.5,9) -- (21.25,9);
+    \draw (17.75,7) to (17.75,6.5) node[ground]{};
+    \node [font=\normalsize] at (12,8.5) {0 V};
+    \node [font=\normalsize] at (12,9.25) {5 V};
+    \node [font=\normalsize] at (21.5,9) {5V};
+    \node [font=\normalsize] at (21.5,8.5) {0 V};
+    \node [font=\normalsize] at (18.25,7.75) {100$\Omega$};
+    \node [font=\normalsize] at (18.25,10.5) {5k$\Omega$};
+    \node [font=\normalsize] at (18.25,11.5) {+5 V};
+    \node [font=\normalsize] at (14,9.5) {$V_{in}$};
+    \node [font=\normalsize] at (15.5,9.5) {R};
+    \node [font=\normalsize] at (15.75,8.25) {1k$\Omega$};
+    \node [font=\normalsize] at (16,7.25) {-12 V};
+    \node [font=\normalsize] at (19.25,9.75) {$V_{out}$};
+    \end{circuitikz}
+    }%
+    
+ 
