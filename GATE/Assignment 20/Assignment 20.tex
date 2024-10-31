@@ -1,0 +1,172 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 7}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2007, CE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[30.] In a four bar planar mechanism shown in the figure, AB = 5 cm, AD = 4 cm and DC = 2 cm. In the configuration shown, both AB and DC are perpendicular to AD. The bar AB rotates with an angular velocity of 10 $\frac{rad}{s}$. The magnitude of angular velocity (in $\frac{rad}{s}$) of bar DC at this instant is \hfill (2019)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{1}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 0
+        \item 10
+        \item 15
+        \item 25
+    \end{enumerate}
+    \item[31.] The rotor of a turbojet engine of an aircraft has a mass 180 kg and polar moment of inertia 10 kg·$m^2$ about the rotor axis. The rotor rotates at a constant speed of $1100 \frac{rad}{s}$ in the clockwise direction when viewed from the front of the aircraft. The aircraft while flying at a speed of 800 km per hour takes a turn with a radius of 1.5 km to the left. The gyroscopic moment exerted by the rotor on the aircraft structure and the direction of motion of the nose when the aircraft turns, are \hfill (2019)
+    \begin{enumerate}[label=(\Alph*)]
+        \item 1629.6 N-m and the nose goes up
+        \item 1629.6 N-m and the nose goes down
+        \item 162.9 N-m and the nose goes up
+        \item 162.9 N-m and the nose goes down
+    \end{enumerate}
+    \item[32.] The wall of a constant diameter pipe of length 1 m is heated uniformly with flux q''by wrapping a heater coil around it. The flow at the inlet to the pipe is hydrodynamically fully developed. The fluid is incompressible and the flow is assumed to be laminar and steady all through the pipe. The bulk temperature of the fluid is equal to  $0^{\circ}C$ at the inlet and $50^{\circ}C$ at the exit. The wall temperatures are measured at three locations, P, Q and R, as shown in the figure. The flow thermally develops  after some distance from the inlet. The following measurements are made:\hfill (2019)
+    \begin{table}
+        \centering
+        \input{tables/table_1.tex}  % Specify the path to your TikZ file
+        \caption{3}
+        %\label{fig2}
+    \end{table}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{2}
+        %\label{fig2}
+    \end{figure}
+    Among the location P,Q and R, the flow is thermally developed at\hfill (2019)
+    \begin{enumerate}[label=(\Alph*)]
+        \item  P,Q and R 
+        \item P and Q 
+        \item Q and R only 
+        \item R only 
+    \end{enumerate}
+    \item[33.] A gas is heated in a duct as it flows over a resistance heater. Consider a 101 kW electric heating system. The gas enters the heating section of the duct at 100 kPa and $27^{\circ}C$ with a volume flow rate of $15 \frac{m^3}{s}$. If heat is lost from the gas in the duct to the surroundings at a rate of 51 kW, the exit temperature of the gas is \hfill (2019)
+    \begin{enumerate}[label=(\Alph*)]
+        \item $32^{\circ}C$
+        \item $37^{\circ}C$
+        \item $53^{\circ}C$
+        \item $76^{\circ}C$
+    \end{enumerate}
+    \item[34.] A plane-strain compression (forging) of a block is shown in the figure. The strain in the z-direction is zero. The yield strength $(S_y)$ in uniaxial tension/compression of the material of the block is 300 MPa and it follows the Tresca (maximum shear stress) criterion. Assume that the entire block has started yielding. At a point where $\sigma_x =$40 MPa (compressive) and $\tau_{xy = 0}$,  the stress component $\sigma_y$ is\hfill (2019)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \caption{3}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label=(\Alph*)]
+        \item 340 MPa(compressive)
+        \item 340 MPa(tensile)
+        \item 260 MPa(compressive)
+        \item 260 MPa(tensile)
+    \end{enumerate}
+    \item[35.] In orthogonal turning of a cylindrical tube of wall thickness 5 mm, the axial and the tangential cutting forces were measured as 1259 N and 1601 N, respectively. The measured chip thickness after machining was found to be 0.3 mm. The rake angle was $10^{\circ}$ and the axial feed was $100 \frac{mm}{min}$. The rotational speed of the spindle was 1000 rpm. Assuming the material to be perfectly plastic and Merchant's first solution, the shear strength of the material is closest to\hfill (2019)
+    \begin{enumerate}[label=(\Alph*)]
+        \item 722 MPa
+        \item 920 MPa
+        \item 200 MPa
+        \item 875 MPa
+    \end{enumerate}
+    \item[36.] A circular shaft having diameter $65.00^{0.01}_{-0.05}$ mm is manufactured by turning process. A $50\mu m$ thick coating of TiN is deposited on the shaft. Allowed variation i TiN film thickness is $\pm 5\mu m$. The minimum hole diameter (in mm) to just provide clearance fit is \hfill (2019)
+    \begin{enumerate}[label=(\Alph*)]
+        \item 65.01
+        \item 65.12
+        \item 64.95
+        \item 65.10
+    \end{enumerate}
+    \item[37.] Match the following sand mold casting defects with their respective causes\hfill (2019)
+    \begin{table}[!ht]
+        \centering
+        \input{tables/table_2.tex}  % Specify the path to your TikZ file
+        \caption{3}
+        %\label{fig2}
+    \end{table}
+    \begin{enumerate}[label=(\Alph*)]
+        \item P-4, Q-3, R-1, S-2
+        \item P-3, Q-4, R-2, S-1
+        \item P-2, Q-4, R-1, S-3
+        \item P-3, Q-4, R-1, S-2
+    \end{enumerate}
+    \item[38.] A truss is composed of members AB, BC, CD, AD and BD, as shown in the figure. A vertical load of 10 kN is applied at point D. The magnitude of force (in kN) in the ........\hfill (2019)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \caption{4}
+        %\label{fig2}
+    \end{figure}
+    \item[39.] Consider an elastic straight beam of length $L=10\pi m$, with square cross-section of side $a=5mm$ and Young's modulus $E = 200 GPa$. This straight beam was bent in such a way that the two ends meet, to form a circle of mean radius R. Assuming that Euler-Bernouli beam theory is applicable to this bending problem, the maximum tensile bending stress in the bent beam is ..........MPa\hfill (2019)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \caption{5}
+        %\label{fig2}
+    \end{figure}
+    \item[40.] Consider a prismatic straight beam of length $L= \pi m$,pinned at the 2 ends as shown in the figure. The beam has a square cross section of side $p = 6mm$. The Young's modulus $E = 200GPa$, and the coefficient of thermal expansion $\alpha = 3\times 10^{-6}K^{-1}$. The minimum temperature rise required to cause Euler buckling of the beam is ..........K.\hfill (2019)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \caption{6}
+        %\label{fig2}
+    \end{figure}
+    \item[41.] In a UTM experiment, a sample of length 100 mm, was loaded in tension until failure. The failure load was 40 kN. The displacement, measured using the cross-head motion at failure, was 15 mm. The compliance of the UTM is constant and is given by $5\times 10^{-8}\frac{m}{N}$. The strain at failure in the sample is...........\%.\hfill (2019)
+    \item[42.] At a critical point in a component, the state of stress is given as $\sigma_{xx}=100MPa$, $\sigma_{yy} = 220MPa$, $\sigma_{xy}= \sigma_{yx}=80MPa$ and all other stress components are zero. The yield strength of the material is 468 MPa. The factor of safety on the basis of maximum shear stress theory is...............(round off to one decimal place).\hfill (2019)  
+\end{enumerate}
+\end{document}

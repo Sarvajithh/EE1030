@@ -1,0 +1,23 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (13.75,12.25) -- (13.75,10.75);
+    \draw [short] (13.75,10.75) -- (19.25,10.75);
+    \draw [short] (19.25,10.75) -- (19.25,12.25);
+    \draw [short] (15,10.75) -- (15,9.75);
+    \draw [short] (18.25,10.75) -- (18.25,9.75);
+    \draw [->, >=Stealth] (16.5,10.25) -- (16.5,12.75);
+    \draw [->, >=Stealth] (16.5,10.25) -- (20.5,10.25);
+    \draw [->, >=Stealth] (15.5,12.25) -- (15.5,11.25);
+    \draw [short] (13,9.75) -- (20.5,9.75);
+  
+    \node [font=\normalsize] at (16.25,10) {$O$};
+    \node [font=\normalsize] at (20.75,10.25) {$x$};
+    \node [font=\normalsize] at (16.5,13) {$y$};
+    \node [font=\normalsize] at (15,11) {$Moving platen$};
+    \draw [ fill={rgb,255:red,30; green,26; blue,26} ] (13,9.75) rectangle (20.5,8.5);
+    \node [font=\normalsize, color={rgb,255:red,244; green,240; blue,240}] at (16.5,9.25) {$Fixed platen$};
+    \end{circuitikz}
+    }%
+    

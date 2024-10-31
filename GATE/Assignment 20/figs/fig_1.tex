@@ -1,0 +1,25 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (15.5,9.25) -- (15.5,12.5);
+    \draw (15.5,12.25) to[short, -o] (15.5,12.75) ;
+    \draw [short] (15.5,12.75) -- (18,10.75);
+    \draw [short] (15.25,9) -- (16,9);
+    \draw [short] (17.75,9) -- (18.5,9);
+    \draw (15.5,9.75) to[short, -o] (15.5,9.25) ;
+    \draw (18,9.75) to[short, -o] (18,10.75) ;
+    \draw (18,10) to[short, -o] (18,9.25) ;
+    \draw [short] (15.25,9) .. controls (15,9.75) and (16.25,9.5) .. (15.75,9);
+    \draw [short] (17.75,9) .. controls (17.5,9.5) and (18.25,9.75) .. (18.25,9);
+    \draw [dashed] (15.5,9.25) -- (18,9.25);
+    \draw [->, >=Stealth] (15,10.75) .. controls (15.5,11.25) and (15.5,11) .. (16,10.75) ;
+    \node [font=\normalsize] at (15,9.25) {A};
+    \node [font=\normalsize] at (15.25,12.75) {B};
+    \node [font=\normalsize] at (18.25,10.75) {C};
+    \node [font=\normalsize] at (18.5,9.25) {D};
+    \node [font=\normalsize] at (14.5,11.25) {$10\frac{rad}{s}$};
+    \end{circuitikz}
+    }%
+    
+ 

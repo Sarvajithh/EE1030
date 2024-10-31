@@ -1,0 +1,25 @@
+
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (17.25,9.75) to[short, -o] (17.25,12) ;
+    \draw (17.25,10.75) to[short, -o] (17.25,8.5) ;
+    \draw (17.25,12) to[short, -o] (20.75,8.5) ;
+    \draw (17.25,12) to[short, -o] (13.75,8.5) ;
+    \draw [short] (13.75,8.5) -- (20.75,8.5);
+    \draw [->, >=Stealth] (17.25,13) -- (17.25,12.25);
+    \draw [short] (13,8.25) -- (14.5,8.25);
+    \draw [short] (13.25,8.25) .. controls (13.25,9) and (14.25,8.75) .. (14.25,8.25);
+    \draw [short] (20.25,8.25) -- (21.5,8.25);
+    \draw [short] (20.5,8.25) .. controls (20.5,8.5) and (20.75,9.25) .. (21.25,8.25);
+    \node [font=\normalsize] at (17.5,12.75) {10kN};
+    \node [font=\normalsize] at (17.5,12) {D};
+    \node [font=\normalsize] at (13.5,9) {A};
+    \node [font=\normalsize] at (17.25,8.25) {B};
+    \node [font=\normalsize] at (21,8.75) {C};
+    \draw [<->, >=Stealth] (14.25,9) .. controls (14.75,9) and (14.5,9) .. (14.5,8.5)node[pos=0.5,fill=white]{$45^{\circ}$};
+    \draw [<->, >=Stealth] (20.25,9) -- (20,8.5)node[pos=0.5,fill=white]{$45^{\circ}$};
+    \end{circuitikz}
+    }%
+    
+ 
