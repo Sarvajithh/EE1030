@@ -1,0 +1,155 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 21}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2020, AE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[30.] The three dimensional strain-stress relation for an isotropic material, written in a general matrix form, is
+    $$\myvec{\epsilon_{xx}\\\epsilon_{yy}\\\epsilon_{zz}\\\gamma_{yz}\\\gamma_{xz}\\\gamma_{xy}}=\begin{bmatrix}A&C&C&0&0&0\\C&A&C&0&0&0\\C&C&A&0&0&0\\0&0&0&B&0&0\\0&0&0&0&B&0\\0&0&0&0&0&B\end{bmatrix}\myvec{\sigma_{xx}\\\sigma_{yy}\\\sigma_{zz}\\\tau_{yz}\\\tau_{xz}\\\tau_{xy}\\}$$
+    A, B and C are compiances which depend on the elastic properties of the material. Which one of the following is correct?\hfill (2020)
+    \begin{enumerate}[label=(\Alph*)]
+        \item $C = \frac{A}{2} - B$
+        \item $C = \frac{A}{2} + B$
+        \item $C = \frac{B}{2} - A$
+        \item $C = -\frac{B}{2} + A$
+    \end{enumerate}
+    \item[31.] For three different airplanes A, B and C, the yawing moment coefficient $\brak{C_n}$ was measured in a wind-tunnel for three settings of sideslip angle $\beta$ and tabulated as
+    \begin{table}
+        \centering
+        \input{tables/table_1.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{table}
+    Which one of the following statements is true regarding directional static stability of the airplanes A,B and C?\hfill (2020)
+    \begin{enumerate}[label=(\Alph*)]
+        \item All three airplanes A, B and C are stable.
+        \item Only airplane C is stable, while both A and B are unstable.
+        \item Airplane C is unstable, A and B are stable with A being more stable than B.
+        \item Airplane C is unstable, A and B are both stable with A less stable than B.
+    \end{enumerate}
+    \item[32.] A closed curve is expressed in parametric form as $x =a\cos\theta$ and $y=b\sin\theta$, where a=7 m and b=5 m. Approximating $\pi = \frac{22}{7}$, which pf the following is the area enclosed by the curve?\hfill (2020)
+    \begin{enumerate}[label=(\Alph*)]
+        \item $110 m^2$
+        \item $74 m^2$
+        \item $35 m^2$
+        \item $144 m^2$
+    \end{enumerate}
+    \item[33.] An axial compressor is designed to operate at a rotor speed of 15000 rpm and an inlet stagnation temperature of 300 K. During compressor testing the inlet stagnation temperature of the compressor  measured was 280 K. What should be the rotor speed for the compressor to develop the same performance characteristics during this test as in the design condition?\hfill (2020)
+    \begin{enumerate}
+        \item 14000 rpm
+        \item 14491 rpm
+        \item 15526 rpm 
+        \item 16071 rpm
+    \end{enumerate} 
+    \item[34.] For the state of stress shown in the figure, which one of the follwoing represents the correct free body diagram showing the maximum shear stress and the associated normal stress?\hfill (2020)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{option1}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \caption{option2}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \caption{option3}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \caption{option4}
+        %\label{fig2}
+    \end{figure}
+    
+    \item[35.] In te equation $AX = B$, $$A = \begin{bmatrix}\frac{1}{\sqrt{2}}&0 \frac{1}{\sqrt{2}}\\0&1&0\\\frac{1}{\sqrt{2}}&0&\frac{-1}{\sqrt{2}}\end{bmatrix}, X =\begin{bmatrix}x\\y\\z \end{bmatrix}, B=\begin{bmatrix}0\\1\\-\sqrt{2} \end{bmatrix}$$, where A is an orthogonal matrix, the sum of the unknowns, x+y+z=.............(round off to one deciaml place).\hfill (2020)
+    \item[36.] If $\int_{0}^{1}\brak{x^2-2x+1}dx$ is evaluated numerically using trapezoidal rule wit four intervals, the difference betwen the numerically evaluated value and the analytical value of the integral is equal to..........(round off to three decimal places).\hfill (2020)
+    
+    \item[37.] The table shows the lift characteristics of an airfoil at low speeds. The maximum lift coefficient occurs at 16 degrees\hfill (2020)
+    \newpage
+    \begin{table}
+        \centering
+        \input{tables/table_2.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{table}
+    Using Prandtl-Glauert rule, the lift coefficient for the airfoil at the angle of attack of 6 degress and free steam Mach number of 0.6 is ........(round off to two decimal places).
+    \item[38.] A low speed uniform flow $U_0$ is incident on an airfoil of chord c. In the figure, the velocity profilr some distance downstream of the airfoil is idealized as shown for section B. The static pressure at sections A and B is the same. The drag coefficient of thhe airfoil is.........(round off to three decimal places).\hfill (2020)
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \item[39.] An oblique shock is incline at an angle of 35 degrees to the upstream flow of velocity $517.56\frac{m}{s}$. The deflection of the flow due to this shock is 5.75 degrees and the temperature downstream is 182.46K. Assuem the gas constant $R=287\frac{J}{kg K}$, specific heat ratio $\gamma = 1.4$, and specific heat at constant heat at constant pressure $C_p = 1005\frac{J}{kg K}$, Using conservation relations, the Mach number of the upstream flow can be obtained as .........(round off to one decimal place).\hfill (2020)
+    \item[40.] The thickness of a laminar boundary layer $\brak{\delta}$ over a flat plate is, $\frac{\delta}{x} = \frac{5.2}{\sqrt{Re_x}}$, where x is measured from the leading edge along the length of the plate. The velocity profile within the boundary layer is idealized as varying linearly with $y$.  For freestream velocity of $3\frac{m}{s}$ and kinematic viscosity of $1.5\times 10^{-5}\frac{m^2}{s}$, the displacement thickness at 0.5 m from the leading edge is .............mm (round off to two places).\hfill (2020)
+    \item[41.] A wing of 15m span with elliptic lift distribution is generating a lift of 80 kN at a speed of $90\frac{m}{s}$. The density of surrounding air is $1.2\frac{kg}{m^3}$. The induced angle of attack at this condition is ........degrees(round off to two decimal places).\hfill (2020)
+    \item[42.] A solid circular shaft, made of ductile material with yield stress $\sigma_Y = 280MPa$, is subjected to a torque of 10kNm. Using the Tresca failure theory, the smallest radius of the shaft to avoid failure is ..........cm (round off to two decimal places). \hfill (2020)
+     
+\end{enumerate}
+\end{document}
