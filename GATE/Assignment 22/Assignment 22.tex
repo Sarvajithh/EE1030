@@ -1,0 +1,146 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 22}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2022, XE}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[14.] Let $\Gamma$ be the positively oriented circle $x^2 + y^2 = 9$ in the xy-plane. If $$\oint_{\Gamma}\brak{3y + e^{xsinx}dx + \brak{7x+\sqrt{e^y + 2}}}dy =\alpha \pi,$$ where $\alpha$ is a real constant then $\alpha$ is equal to..............
+    \item[15.] Let $y_1\brak{x}$ and $y_2\brak{x}$ be two linearly independent solutions of $$x^2\frac{d^2y}{dx^2}-2x\frac{dy}{dx}+2y=, \hfill x>0.$$ Let $W\brak{y_1,y_2}\brak{x}$ denote the Wronskian of $y_1\brak{x}$ and $y_2\brak{x}$ at x. If $W\brak{y_1, y_2}\brak{1}=1$ then $W\brak{y_1, y_2}\brak{2}$ is equal to.........
+    \item[16.] Let $A = \begin{bmatrix}2 &0&1&1\\1&2&5&-5\\0&0&3&0\\0&0&1&3\end{bmatrix}$. Then the sum of the geometric multiplicities of the distinct eigenvalues of A is equal to ...........
+    \item[17.] In a cosmopolitan city, the population comprises of 30\% female and 70\% male.
+    Suppose that 5\% of female and 30\% of male in the population are foreigners. A person is selected at random from this population. Given that the selected person
+    is a foreigner, the probability that the person is a female is ............. (round off to
+    three decimal places). 
+    \item[18.] Let $f:\brak{0, \infty}\to \mathcal{R}$ be the continuous function such that $f\brak{x} = 2 + \frac{g\brak{x}}{x}$ for all $x>0$, where $g\brak{x}=\int_{1}^{x}f\brak{t}dt$ for all x>0. Then $f\brak{2}$ is equal to 
+    \begin{enumerate}[label = (\Alph*)]
+        \item $2+\ln 2$
+        \item $2-\ln 2$
+        \item $2+\ln 4$
+        \item $2-\ln 4$
+    \end{enumerate}
+    \item[19.] Let A and B be $n\times n$ matrices with real entries. Consider the following statements:\\
+    P: If A is symmetric then rank(A) = Number of nonzero eigenvalues(counting multiplicity) of A.
+    Q: If AB = 0 then $rank\brak{A} + rank\brak{B}\leq n$.\\
+    Then 
+    \begin{enumerate}[label = (\Alph*)]
+        \item both P and Q are TRUE
+        \item P is TRUE and Q is FALSE 
+        \item Q is TRUE and P is FALSE
+        \item both P and Q are FALSE  
+    \end{enumerate}
+    \item[20.] Let $f:\mathcal{R}^2\to R$ be given by $f\brak{x,y} = 4xy-2x^2-y^4+1$. The number of critical points where $f$ has local maximum is equal to ...........
+    \item[21.] If the quadrature rule $$\int_{-1}^{1}f\brak{x}dx\approx f\brak{\alpha} + \gamma f\brak{\beta},$$ where $\alpha,\beta$ and $\gamma$ are real constants, is exact for all polynomials for degree$\leq 3$, then $\gamma + 3\brak{\alpha^2 + \beta^2} + \brak{\alpha^3 + \beta^3}$ is equal to .............
+    \item[22.] A heavy horizontal cylinder of diameter D supports a mass of liqud having density $\rho$ as shown in the figure. Find out the vertical compononent of force exerted by the liquid per unit length of the cylinder if g is the acceleration due to gravity.
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item $\frac{\pi D^2}{4}\rho g$
+        \item $\frac{\pi D^2}{8}\rho g$
+        \item $\frac{\pi D^2}{2}\rho g$
+        \item $\frac{\pi D^2}{3}\rho g$
+    \end{enumerate} 
+    \item[23.] The figure shows the developing zone and the fully developed region in a pipe
+    flow where the steady flow takes place from left to right. The wall shear stress in
+    the sections A, B, C, and D are given by $\tau_A,\tau_B,\tau_C,\tau_D$, respectively. Select the
+    correct statement. 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item $\tau_A > \tau_B$
+        \item $\tau_B > \tau_A$
+        \item $\tau_C > \tau_B$
+        \item $\tau_C > \tau_D$
+    \end{enumerate}
+    \item[24.] The left hand column lists some non-dimensional numbers and the right hand column lists some physical phenomena. Indicate the correct combination 
+    \begin{table}
+        \centering
+        \input{tables/table_1.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{table}
+    \begin{enumerate}[label = (\Alph*)]
+        \item 1-iii, 2-i, 3-ii, 4-iv
+        \item 1-i, 2-ii, 3-iv, 4-iii
+        \item 1-iv, 2-iii, 3-iv, 4-iii
+        \item 2-iv, 1-iii, 3-ii, 4-i
+    \end{enumerate}
+    \item[25.] As temperature increases
+    \begin{enumerate}[label = (\Alph*)]
+        \item the dynamic viscosity of a gas increases. 
+        \item the dynamic viscosity of a liquid decreases.
+        \item the dynamic viscosity of a liquid does not change.
+        \item the dynamic viscosity of a gas decreases. 
+    \end{enumerate}
+    \item[26.] Which of the following statement(s) regarding a venturimeter is/are correct? 
+    \begin{enumerate}[label = (\Alph*)]
+        \item In the direction of flow, it consists of a converging section, a throat, and a
+        diverging section
+        \item In the direction of flow, it consists of a diverging section, a throat, and a
+        converging section.
+        \item It is used for flow measurement at a very low Reynolds number.
+        \item Pressure tappings are provided just upstream of the venturimeter and at the throat.
+    \end{enumerate}
+\end{enumerate}
+\end{document}
