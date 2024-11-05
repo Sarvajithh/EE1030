@@ -1,0 +1,29 @@
+
+    \resizebox{0.5\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (4.5,9.5) to[short, -o] (3.25,9.5) ;
+    \draw (4.5,9) to[short, -o] (3.25,9) ;
+    \draw (4.5,9.5) to[short] (4.75,9.5);
+    \draw (4.5,9) to[short] (4.75,9);
+    \draw (4.75,9.5) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (6.5,9.25);
+    \draw [short] (4,9.5) -- (4,11.25);
+    \draw [short] (4,11.25) -- (4.75,11.25);
+    \draw (4.75,11.5) to[short] (5,11.5);
+    \draw (4.75,11) to[short] (5,11);
+    \draw (5,11.5) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (6.75,11.25);
+    \draw [short] (4.75,11.5) -- (4.75,11);
+    \draw [short] (6.75,11.25) -- (8.25,11.25);
+    \draw [short] (8.25,11.25) -- (8.25,10);
+    \draw [short] (6.5,9.25) -- (8.75,9.25);
+    \draw [short] (8.25,10.25) -- (8.25,9.75);
+    \draw [short] (8.25,9.75) -- (8.75,9.75);
+    \draw (8.75,9.75) to[short] (9,9.75);
+    \draw (8.75,9.25) to[short] (9,9.25);
+    \draw (9,9.75) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,9.5);
+    \node [font=\normalsize] at (11,9.5) {$X$};
+    \node [font=\normalsize] at (2.75,9.5) {$P$};
+    \node [font=\normalsize] at (2.75,8.75) {$Q$};
+    \end{circuitikz}
+    }%
+    

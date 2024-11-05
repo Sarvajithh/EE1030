@@ -1,0 +1,240 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+ % Include tfrupee package
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+\usepackage{enumitem}
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+\author{AI24BTECH11008- Sarvajith
+}
+\title{Assignment 25}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+\title{2023, PH}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+    \item[14.] The atomic number of an atom is 6. What is the spectroscopic notation of its
+    ground state, according to Hund's rules?
+    \begin{enumerate}[label = (\Alph*)]
+        \item $^3P_0$
+        \item $^3P_1$
+        \item $^3D_3$
+        \item $^3S_1$
+    \end{enumerate}
+    \item[15.] H is the Hamiltonian, $\overrightarrow{H}$ the orbital angular momentum and $L_Z$
+    is the z-component of $\overrightarrow{L}$. The 1s state of the hydrogen atom in the non-relativistic
+    formalism is an eigen function of which one of the following sets of operators?
+    \begin{enumerate}[label = (\Alph*)]
+        \item $H, L^2, L_Z$
+        \item $H,\overrightarrow{L}, L^2, L_Z$
+        \item $ L^2, L_Z$ only 
+        \item H and $L_Z$ only 
+     \end{enumerate} 
+    \item[16.] The Hall experiment is carried out with a non-magnetic semiconductor. The
+    current $I$ is along the $x$-axis and the magnetic field $B$ is along the z-axis. Which
+    one of the following is the CORRECT representation of the variation of the
+    magnitude of the Hall resistivity $\rho_{xy}$ as a function of the magnetic field?
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \caption{option1}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \caption{option2}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \caption{option23}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \caption{option4}
+        %\label{fig2}
+    \end{figure}
+    \item[17.] Consider a two dimensional Cartesian coordinate system in which a rank 2
+    contravariant tensor is represented by the matrix $\begin{bmatrix}0&1\\1&0\end{bmatrix}$. The coordinate system
+    is rotated anticlockwise by an acute angle $\theta$ with the origin fixed. Which one of
+    the following matrices represents the tensor in the new coordinate system?
+    \begin{enumerate}[label = (\Alph*)]
+        \item $\begin{bmatrix}0&cos2\theta\\-sin2\theta&0\end{bmatrix}$
+        \item $\begin{bmatrix}sin2\theta&cos2\theta\\cos2\theta&-sin2\theta\end{bmatrix}$
+        \item $\begin{bmatrix}sin2\theta&-cos2\theta\\cos2\theta&sin2\theta\end{bmatrix}$
+        \item $\begin{bmatrix}sin2\theta&0\\0&-cos2\theta\end{bmatrix}$
+    \end{enumerate}
+    \item[18.] A compound consists of three ions X, Y and Z. The Z ions are arranged in an FCC
+    arrangement. The X ions occupy $\frac{1}{6}$ of the tetrahedral voids and the Y ions occupy
+    $\frac{1}{3}$ of the octahedral voids. Which one of the following is the CORRECT chemical
+    formula of the compound? 
+    \begin{enumerate}[label = (\Alph*)]
+        \item $XY_2Z_4$
+        \item $XYZ_3$
+        \item $XYZ_2$
+        \item $XYZ_4$
+    \end{enumerate}
+    \newpage
+    \item[19.] For a non-magnetic metal, which one of the following graphs best represents the
+    behaviour of $\frac{C}{T} \text{ vs. } T^2$ where C is the heat capacity and T is the temperature? 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \caption{option1}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \caption{option2}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_7.tex}  % Specify the path to your TikZ file
+        \caption{option3}
+        %\label{fig2}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_8.tex}  % Specify the path to your TikZ file
+        \caption{option4}
+        %\label{fig2}
+    \end{figure}
+    \newpage
+    \item[20.] For nonrelativistic electrons in solid, different energy dispersion relations (with effective masses $m_a^*,m_b^*,m_c^*$) are schematically shown in the plots. Which one of the following options is correct?
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_9.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item $m_a^*=m_b^*=m_c^*$
+        \item $m_b^*>m_c^*>m_a^*$
+        \item $m_c^*>m_b^*>m_a^*$
+        \item $m_a^*>m_b^*>m_c^*$
+    \end{enumerate}
+   
+    \item[21.] The figure schematically shows the M (magnetization) - H (magnetic field) plots
+    for certain types of materials. Here M and H are plotted in the same scale and
+    units. Which one of the following is the most appropriate combination? 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_10.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item (Q) - Paramagnet; (R) - Type-I Superconductor; (S) - Antiferromagnet
+        \item (P) - Paramagnet; (Q) - Diamagnet; (R) - Type-I Superconductor
+        \item (P) - Paramagnet; (Q) - Antiferromagnet; (R) - Type-I Superconductor
+        \item (P) - Diamagnet; (R) - Paramagnet; (S) - Type-I Superconductor
+    \end{enumerate}
+    \item[22.] Graphene is a two dimensional material, in which carbon atoms are arranged in a
+    honeycomb lattice with lattice constant $a$. As shown in the figure, $\overrightarrow{a}_1$ and $\overrightarrow{a}_2$
+    are two lattice vectors. Which one of the following is the area of the first Brillouin
+    zone for this lattice? 
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_11.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item $\frac{8\pi^2}{3\sqrt{3}a^2}$
+        \item $\frac{4\pi^2}{3\sqrt{3}a^2}$
+        \item $\frac{8\pi^2}{\sqrt{3}a^2}$
+        \item $\frac{4\pi^2}{\sqrt{3}a^2}$
+    \end{enumerate}
+    \item[23.] A $^{60}Co$ nucleus emits a $\beta$ particle and is converted to $^{60}Ni^*$ with $J^P = 4^+$, which in turn decays ot the $^{60}Ni^*$ ground state with $J^P = 0+$ by emitting two photons in succession, as shown in the figure. Which one of the folowing statements is correct?
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_12.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item $4^+\to 2^+$  is an electric octupole transition
+        \item $4^+\to 2^+$  is a magnetic quadrupole transition
+        \item $2^+\to 0^+$  is an electric quadrupole transition
+        \item $2^+\to 0^+$  is a magnetic quadrupole transition
+    \end{enumerate}
+    \item[24.] Which one of the following options is CORRECT for the given logic circuit?
+    \begin{figure}[!ht]
+        \centering
+        \input{figs/fig_13.tex}  % Specify the path to your TikZ file
+        \caption{}
+        %\label{fig2}
+    \end{figure}
+    \begin{enumerate}[label = (\Alph*)]
+        \item P = 1, Q = 1; X = 0
+        \item P = 1, Q = 0; X = 1
+        \item P = 0, Q = 1; X = 0
+        \item P = 0, Q = 0; X = 1
+    \end{enumerate}
+    \item[25.] An atom with non-zero magnetic moment has an angular momentum of magnitude $\sqrt{12}\hslash$. When a beam of such atoms is passed through a Stern-Gerlach apparatus, how many beams does it split into?
+    \begin{enumerate}[label = (\Alph*)]
+        \item 3
+        \item 7
+        \item 9
+        \item 25
+    \end{enumerate}
+    \item[26.] A $4\times4$ matrix M has the property $M^\dagger$ = -M and $M^4=1$,  where $\mathbf{1}$ is the $4\times4$ identity matrix. Which one of the following is the CORRECT set of eigen values of the matrix M?
+    \begin{enumerate}[label=(\Alph*)]
+        \item $\brak{1,1,-1,-1}$
+        \item $\brak{i,i,-i,-i}$
+        \item $\brak{i,i,i,-i}$
+        \item $\brak{1,1,-i,-i}$
+    \end{enumerate}
+\end{enumerate}
+\end{document}
