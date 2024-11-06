@@ -1,0 +1,20 @@
+\scriptsize
+    \frametitle{Python code for graph}
+\begin{minted}[fontsize=\tiny,linenos=true]{python}
+plt.plot(x_line1, y_line1,label='Line: 3x + y = 14',color='orange')
+plt.plot(x_line2, y_line2, label='Line: 2x + 5y = 18',color='purple')
+plt.scatter(*center, color='red', label='Center (1, -2)')
+plt.scatter(point_x,point_y,color='green', label=f'Point ({point_x}, {point_y})')
+
+# Set appropriate limits for better view
+plt.xlim(center[0]-radius-2,center[0]+radius+2)
+plt.ylim(center[1]-radius-2,center[1]+radius+2)
+
+plt.axhline(0,color='black',linewidth=0.5,ls='--')
+plt.axvline(0,color='black',linewidth=0.5,ls='--')
+plt.grid()
+plt.gca().set_aspect('equal', adjustable='box')
+plt.title()('Circle with Center (1, -2),Point from C Code, and Lines')
+plt.legend()
+plt.show()
+\end{minted}

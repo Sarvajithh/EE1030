@@ -1,0 +1,18 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+        \PYG{k+kn}{import} \PYG{n+nn}{ctypes}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{c+c1}{\PYGZsh{} Load the shared library}
+\PYG{n}{solution\PYGZus{}lib} \PYG{o}{=} \PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{CDLL}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{./libsolution.so}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Set the argument types for the \PYGZsq{}sol\PYGZsq{} function}
+
+\PYG{n}{solution\PYGZus{}lib}\PYG{o}{.}\PYG{n}{sol}\PYG{o}{.}\PYG{n}{argtypes} \PYG{o}{=}
+\PYG{p}{[}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int}\PYG{p}{,} \PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{POINTER}\PYG{p}{(}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int}\PYG{p}{)}\PYG{p}{,}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{POINTER}\PYG{p}{(}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int}\PYG{p}{)}\PYG{p}{,} \PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{POINTER}\PYG{p}{(}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int}\PYG{p}{)}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} Define input arrays}
+\PYG{n}{m} \PYG{o}{=} \PYG{l+m+mi}{3}
+\PYG{n}{a} \PYG{o}{=} \PYG{p}{(}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int} \PYG{o}{*} \PYG{n}{m}\PYG{p}{)}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{14}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} int a[3] = \PYGZob{}3, 1, \PYGZhy{}14\PYGZcb{}}
+\PYG{n}{b} \PYG{o}{=} \PYG{p}{(}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int} \PYG{o}{*} \PYG{n}{m}\PYG{p}{)}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} int b[3] = \PYGZob{}2, 5, \PYGZhy{}18\PYGZcb{}}
+\PYG{n}{x} \PYG{o}{=} \PYG{p}{(}\PYG{n}{ctypes}\PYG{o}{.}\PYG{n}{c\PYGZus{}int} \PYG{o}{*} \PYG{p}{(}\PYG{n}{m} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{)}\PYG{p}{(}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} int x[2];}
+\end{MintedVerbatim}
