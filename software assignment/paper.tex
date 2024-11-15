@@ -1,0 +1,251 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2024}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{listings}
+\usepackage{amsmath}
+\lstset{
+    language=C,
+    basicstyle=\ttfamily\small, % Code font size
+    keywordstyle=\color{purple}\bfseries, % Color for keywords
+    stringstyle=\color{red}, % Color for strings
+    commentstyle=\color{green!50!black}, % Color for comments
+    numbers=left, % Line numbers on the left
+    numberstyle=\tiny\color{gray}, % Line number styling
+    frame=single, % Frame around the code
+    breaklines=true, % Enable line breaking
+    captionpos=b, % Caption position (bottom)
+    tabsize=4 % Tabs as 4 spaces
+}
+
+
+%\renewenvironment{abstract}{\begin{center}\bfseries\large\end{center}\vspace{1em}}{}
+
+\title{Eigen Value Decomposition}
+
+\author{%
+G Sarvajith\\
+\texttt{ai24btech11008@iith.ac.in}\\
+}
+\begin{document}
+\maketitle
+\section{Eigen Value Decomposition}
+Eigenvalue decomposition (EVD) is a method of decomposing a square matrix into its eigenvalues and eigenvectors. It is one of the cornerstones of linear algebra, used extensively in mathematical modeling, numerical computation, and machine learning.\\
+\textbf{Eigenvalues}$(\lambda)$ are scalars associated with the transformation described by matrix.\\
+\textbf{Eigenvectors(v)} are vectors that remain in the same direction(or opposite) after the transformation of matrix.\\
+The relationship between a matrix(A), its eigenvalues and eigenvectors is$$Av=\lambda v$$
+The goal of Eigenvalue Decomposition is to express matrix A as:$$A =V\Lambda V^{-1}$$\\ 
+Where
+\begin{itemize}
+ \item A: Original $n\times n$ matrix.
+ \item V: A square $n\times n$ matrix whose columns are the eigenvectors of A.
+ \item $\Lambda$: A diagonal $n\times n$ matirx where each diagonal entry is an eigenvalue of A. 
+ \item $V^{-1}$: The inverse of V.
+\end{itemize}
+Conditions for Eigenvalue Decomposition\\
+\begin{itemize}
+    \item A matrix \textbf{A} should be diagonalizable(i.e it has a full set of n linearly independent eigenvectors).
+    \item If A doesn't have n linearly independent eigenvectors, it cannot be decomposed.
+\end{itemize}
+Eigenvalue decomposition provides a way to understand how the matrix A scales and rotates vectors. Eigenvectors determine the directions in which the transformation occurs.
+Eigenvalues determine the scaling factors along those directions.\\
+\section{QR algorithm }
+The QR algorithm for eigenvalue decomposition relies on repeatedly factoring a matrix into an orthogonal matrix \textbf{Q} and an upper triangular matrix \textbf{R}.
+
+QR decomposition is the process of decomposing a matrix A into:$$ A = QR$$\\
+\begin{itemize}
+    \item Q is an orthogonal matrix, and columns of Q are orthonormal vectors.
+    \item R is an upper triangular matrix.
+\end{itemize}
+There are many ways to compute the matrices Q, R. \textbf{Gram-Schmidt orthogonalization} process can be used to orthogonal matrix Q and Upper triangular matrix R.
+\section{Gram-Schmidt orthogonlization}
+Gram-Schmidt orthogonalization is a process to convert a set of linearly independent vectors into an orthonormal set of vectors, meaning the vectors are:
+\begin{itemize}
+    \item Orthogonal: Each pair of vectors is perpendicular (their dot product is zero).
+    \item Normalized: Each vector has unit length (magnitude of 1).
+\end{itemize}
+\subsection{Upper Triangular matrix(R) and Orthogonal Matrix(Q)}
+A matrix $A$ with columns as $a_1, a_2, a_3,....., a_n$ is given as an input.\\
+\begin{enumerate}
+\item In the first step the first column of A($a_1$) is normalized to give the vector $q_1$.$$q_1 =\frac{a_1}{||a_1||}$$
+\item For the other columns, it follows the following process:\\
+      for j=2,3,...,n:
+
+$$    q_j =\frac{u_j}{||u_j||}$$
+where
+$$u_j = a_j - \sum_{i=1}^{j-1}(q_i^T a_j)q_i $$
+
+\item $$R_{ij}=\begin{cases}q_i^T a_j & \text{if } i \leq j, \\  0 & \text{if } i > j.\end{cases}$$
+\item The matrix with columns \( q_1, q_2, \dots, q_n \) is \( Q \).
+\end{enumerate}
+\section{Iterative QR algorithm for Eigenvalues}
+Using QR decomposition iteratively transforms the matrix A into a nearly diagonal matrix, revealing its Eigenvalues.
+\begin{itemize}
+    \item We will start with a matrix $A_0$ = A.
+    \item QR Decomposition :$$A_k = Q_kR_k$$
+    \item Update $A_{k+1}:$ $$A_{k+1} = R_kQ_k$$.
+    \item Repeat these steps until $A_k$ converges to a diagonal matrix $\Lambda$, whose diagonal entries are the eigen values of A.
+\end{itemize}
+The matrix $A_k$(updated after each iteration) converges to an upper triangle matrix whose diagonal elements are the Eigenvalues of the original matrix A. This matrix is referred as \textbf{Schur form} when A is asymmetric and \textbf{diagonal matrix} when A is symmetric.
+\subsection{Details of convergence}
+\begin{enumerate}
+    \item If  A is symmetric, then it always converges to a diagonal matrix $A_k$.
+    \item If A is not symmetric, then the QR algorithm converges to an upper triangular matrix. The diagonal elements of this matrix are Eigenvalues.
+\end{enumerate}
+The iterative step in the QR algorithm stops when the matrix $A_k$ satisfies convergence criterion. This occurs when the off-diagonal elements of $A_k$ become sufficiently small or within chosen tolerance.
+\\Stopping criteria in the QR algorithm:
+\begin{itemize}
+    \item The algorithm stops when the off-diagonal elements of $A_k$ are smaller than a predefined threshold $\epsilon$
+    \item The algorithm can also stop when the difference between successive iterates becomes negligible:$$||A_{k+1}-A_k||<\epsilon$$
+    \item To avoid infinite loops in cases of slow convergence or divergence a maximum number of iterations $N_{max}$ is often imposed.
+\end{itemize}
+\section{C-Code}
+\subsection{Helper Functions}
+\begin{lstlisting}
+    double** allocateMatrix(int n) {
+    double** matrix = (double**)malloc(n * sizeof(double*));
+    for (int i = 0; i < n; i++) {
+        matrix[i] = (double*)malloc(n * sizeof(double));
+    }
+    return matrix;
+}
+\end{lstlisting}
+\begin{itemize}
+\item This function allocates a square matrix with double data type values, where the dimension of the to be created matrix (n) is taken as input.
+\end{itemize}
+\begin{lstlisting}
+    void freeMatrix(double** matrix, int n) {
+    for (int i = 0; i < n; i++) {
+        free(matrix[i]);
+    }
+    free(matrix);
+}
+\end{lstlisting}
+\begin{itemize}
+\item This function frees the dynamically allocated matrix, by the previous function. This is done to increase the memory efficiency.
+\end{itemize}
+\begin{lstlisting}
+    void multiplyMatrices(double** A, double** B, double** C, int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < n; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+}
+\end{lstlisting}
+As the function name suggests, it performs matrix multiplication.
+\begin{lstlisting}
+    void transposeMatrix(double** A, double** B, int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            B[j][i] = A[i][j];
+        }
+    }
+}
+\end{lstlisting}
+\begin{itemize}
+\item This function performs the transpose of a matrix.
+\item It takes a matrix as an input and stores it in another matrix.
+\end{itemize}
+\subsection{QR-Algorithm's Functions}
+\begin{lstlisting}
+    void qrDecomposition(double** A, double** Q, double** R, int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            Q[i][j] = A[i][j];
+        }
+    }
+
+
+    for (int j = 0; j < n; j++) {
+        R[j][j] = 0;
+        for (int i = 0; i < n; i++) {
+            R[j][j] += Q[i][j] * Q[i][j];
+        }
+        R[j][j] = sqrt(R[j][j]);
+        
+        for (int i = 0; i < n; i++) {
+            Q[i][j] /= R[j][j];
+        }
+        
+        for (int k = j + 1; k < n; k++) {
+            R[j][k] = 0;
+            for (int i = 0; i < n; i++) {
+                R[j][k] += Q[i][j] * Q[i][k];
+            }
+            for (int i = 0; i < n; i++) {
+                Q[i][k] -= R[j][k] * Q[i][j];
+            }
+        }
+    }
+}
+\end{lstlisting}
+\begin{itemize}
+\item This block of code implements the Gram-Schmidt process for QR decomposition.
+\item It takes an input matrix A and decomposes it into an orthogonal matrix Q and an upper triangular matrix R.
+\item Initially all the elements in A are copied into Q, and then the matrix Q gets modified.
+\item The values in Q gets modified into orthonormal vetcors.
+\item \textbf{Note:} This is not the iterativ process.
+\item After the completion of loop, Q becomes a matrix of orthogonal unit vectors.
+\item  R accumulates the norms and projection coefficients and forms an upper triangular matrix.
+\end{itemize}
+\begin{lstlisting}
+    void qrAlgorithm(double** A, int n) {
+    double** Q = allocateMatrix(n);
+    double** R = allocateMatrix(n);
+    double** temp = allocateMatrix(n);
+
+    for (int iter = 0; iter < MAX_ITER; iter++) {
+        qrDecomposition(A, Q, R, n);  // QR decomposition of A
+        multiplyMatrices(R, Q, temp, n);  // A = R * Q
+        
+        // Check convergence by looking at off-diagonal elements
+        int converged = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i != j && fabs(A[i][j]) > EPSILON) {
+                    converged = 0;
+                    break;
+                }
+            }
+            if (!converged) break;
+        }
+
+        if (converged) break;
+
+        // Update A with the new values
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                A[i][j] = temp[i][j];
+            }
+        }
+    }
+
+    printf("Eigenvalues:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%lf ", A[i][i]);  // Eigenvalues are on the diagonal
+    }
+    printf("\n");
+
+    freeMatrix(Q, n);
+    freeMatrix(R, n);
+    freeMatrix(temp, n);
+}
+\end{lstlisting}
+\begin{itemize}
+\item The actual QR algorithm is performed by this code. 
+\item It takes the targeted matrix A as its input, and starts with allocating matrices for Q,R.
+\item Then starts the iterative process for QR Decomposition.
+\item The loop goes on until it reaches Max number of iterations or it reaches the convergence criterion. 
+\end{itemize}
+\end{document}
