@@ -25,9 +25,6 @@
     tabsize=4 % Tabs as 4 spaces
 }
 
-
-%\renewenvironment{abstract}{\begin{center}\bfseries\large\end{center}\vspace{1em}}{}
-
 \title{Eigen Value Decomposition}
 
 \author{%
@@ -37,7 +34,7 @@ G Sarvajith\\
 \begin{document}
 \maketitle
 \section{Eigen Value Decomposition}
-Eigenvalue decomposition (EVD) is a method of decomposing a square matrix into its eigenvalues and eigenvectors. It is one of the cornerstones of linear algebra, used extensively in mathematical modeling, numerical computation, and machine learning.\\
+Eigenvalue decomposition (EVD) is a method of decomposing a square matrix into its eigenvalues and eigenvectors. \\It is one of the cornerstones of linear algebra, used extensively in mathematical modeling, numerical computation, and machine learning.\\
 \textbf{Eigenvalues}$(\lambda)$ are scalars associated with the transformation described by matrix.\\
 \textbf{Eigenvectors(v)} are vectors that remain in the same direction(or opposite) after the transformation of matrix.\\
 The relationship between a matrix(A), its eigenvalues and eigenvectors is$$Av=\lambda v$$
@@ -106,6 +103,44 @@ The iterative step in the QR algorithm stops when the matrix $A_k$ satisfies con
     \item The algorithm can also stop when the difference between successive iterates becomes negligible:$$||A_{k+1}-A_k||<\epsilon$$
     \item To avoid infinite loops in cases of slow convergence or divergence a maximum number of iterations $N_{max}$ is often imposed.
 \end{itemize}
+\section{Advantages of the QR Algorithm}
+
+The QR algorithm, has several advantages for computing eigenvalues of a matrix. Here are some of them :
+
+\begin{enumerate}
+    \item \textbf{General Applicability}
+    \begin{itemize}
+        \item The QR algorithm is applicable to any square matrix, whether symmetric, non-symmetric, real, or complex.
+        \item It does not require the matrix to have specific properties like diagonalizability or positive definiteness.
+    \end{itemize}
+
+    \item \textbf{Convergence to Eigenvalues}
+    \begin{itemize}
+        \item The QR algorithm iteratively reduces the matrix to an upper triangular form (or Schur form for complex matrices).
+        \item The eigenvalues of the matrix emerge on the diagonal, making it an effective method for eigenvalue computation.
+    \end{itemize}
+
+    \item \textbf{Stability}
+    \begin{itemize}
+        \item The QR algorithm is numerically stable, especially when combined with shifts (not present in your code but can be added).
+        \item Orthogonal transformations (QR decomposition) preserve the eigenvalues and improve numerical robustness.
+    \end{itemize}
+
+    \item \textbf{Iterative Nature}
+    \begin{itemize}
+        \item The iterative approach makes the QR algorithm flexible in terms of precision. You can control the number of iterations or convergence tolerance (\( \epsilon \)) to balance accuracy and computation time.
+    \end{itemize}
+
+    \item \textbf{Memory Efficiency}
+    \begin{itemize}
+        \item The algorithm operates in-place on the matrix \( A \), reducing the need for additional memory allocation for intermediate matrices.
+    \end{itemize}
+
+    \item \textbf{No Need for Direct Matrix Inversion}
+    \begin{itemize}
+        \item The algorithm avoids matrix inversion, which can be computationally expensive and numerically unstable for large matrices.
+    \end{itemize}
+\end{enumerate}
 \section{C-Code}
 \subsection{Helper Functions}
 \begin{lstlisting}
@@ -157,6 +192,7 @@ As the function name suggests, it performs matrix multiplication.
 \item This function performs the transpose of a matrix.
 \item It takes a matrix as an input and stores it in another matrix.
 \end{itemize}
+\newpage
 \subsection{QR-Algorithm's Functions}
 \begin{lstlisting}
     void qrDecomposition(double** A, double** Q, double** R, int n) {
@@ -199,6 +235,7 @@ As the function name suggests, it performs matrix multiplication.
 \item After the completion of loop, Q becomes a matrix of orthogonal unit vectors.
 \item  R accumulates the norms and projection coefficients and forms an upper triangular matrix.
 \end{itemize}
+\newpage
 \begin{lstlisting}
     void qrAlgorithm(double** A, int n) {
     double** Q = allocateMatrix(n);
@@ -248,4 +285,58 @@ As the function name suggests, it performs matrix multiplication.
 \item Then starts the iterative process for QR Decomposition.
 \item The loop goes on until it reaches Max number of iterations or it reaches the convergence criterion. 
 \end{itemize}
+
+\section{Time Complexity}
+
+\begin{enumerate}
+    \item \textbf{Matrix Allocations (\texttt{allocateMatrix})}
+    \begin{itemize}
+        \item Allocating memory for matrices involves \( O(n^2) \) operations for each matrix.
+        \item For three matrices \( Q \), \( R \), and \( \text{temp} \), this totals \( O(3n^2) \), but allocation is a one-time cost.
+    \end{itemize}
+    
+    \item \textbf{QR Decomposition (\texttt{qrDecomposition})}
+    \begin{itemize}
+        \item For \( R[j][j] \) calculation: \( O(n) \) operations for each \( j \).
+        \item For normalization of \( Q[i][j] \): \( O(n) \) operations for each \( i \) and \( j \), hence \( O(n^2) \) per column.
+        \item \( R[j][k] \) and updating \( Q[i][k] \): \( O(n^2) \) per pair of \( j \) and \( k \).
+        \item Total for QR decomposition: \( O(n^3) \) for all columns.
+    \end{itemize}
+    
+    \item \textbf{Matrix Multiplication (\texttt{multiplyMatrices})}
+    \begin{itemize}
+        \item Computing \( \text{temp}[i][j] = \sum A[i][k] \cdot B[k][j] \): \( O(n^2) \) for each \( i, j \), hence \( O(n^3) \) overall.
+    \end{itemize}
+    
+    \item \textbf{Convergence Check}
+    \begin{itemize}
+        \item Checking off-diagonal elements: \( O(n^2) \).
+    \end{itemize}
+    
+    \item \textbf{Overall Iterations}
+    \begin{itemize}
+        \item The QR algorithm requires up to \texttt{MAX\_ITER} iterations. In practice, convergence is faster and depends on the spectral gap of the matrix. For \( k \) iterations:
+        \begin{itemize}
+            \item Total cost per iteration: \( O(n^3) \) (QR decomposition + matrix multiplication + checks).
+            \item Overall: \( O(k \cdot n^3) \), where \( k \) is the number of iterations required to converge.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\section{Space Complexity}
+
+\begin{enumerate}
+    \item \textbf{Matrix Storage}
+    \begin{itemize}
+        \item Three matrices (\( Q, R, \text{temp} \)) require \( 3 \times O(n^2) = O(n^2) \) space.
+        \item Input matrix \( A \): \( O(n^2) \).
+        \item Total: \( O(4n^2) = O(n^2) \).
+    \end{itemize}
+    
+    \item \textbf{Other Storage}
+    \begin{itemize}
+        \item Scalar variables like \( i, j, k, \text{converged}, R[j][j] \): \( O(1) \).
+        \item Total additional space is negligible compared to matrix storage.
+    \end{itemize}
+\end{enumerate}
 \end{document}
