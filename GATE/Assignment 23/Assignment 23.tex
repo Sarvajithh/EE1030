@@ -1,4 +1,4 @@
-%\let\negmedspace\undefined
+\let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal]{IEEEtran}
 \usepackage[a5paper, margin=10mm, onecolumn]{geometry}
@@ -78,7 +78,29 @@
     PV = 5 cm. What is the length of RS in cm? (The diagram is representative.) 
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw  (8.75,7) -- (4.5,7) -- (5,10.25) -- (9.25,10.25) -- cycle;
+        \draw [short] (5,10.25) -- (5,7);
+        \draw [short] (5,10.25) -- (9,9.25);
+        \draw [short] (5,7.25) -- (5.25,7.25);
+        \draw [short] (5.25,7.25) -- (5.25,7);
+        \draw [short] (8.75,9.25) -- (8.75,9.5);
+        \draw [short] (8.75,9.5) -- (9,9.5);
+        \node [font=\normalsize] at (7.25,10.5) {7};
+        \node [font=\normalsize] at (7,9.5) {5};
+        \node [font=\normalsize] at (5.25,7.75) {4};
+        \node [font=\normalsize] at (4.75,10.25) {P};
+        \node [font=\normalsize] at (9.5,10.25) {S};
+        \node [font=\normalsize] at (4,6.75) {Q};
+        \node [font=\normalsize] at (9,7) {R};
+        \node [font=\normalsize] at (9.25,9.25) {V};
+        \node [font=\normalsize] at (5,6.75) {T};
+        \node [font=\normalsize] at (5.5,7.25) {$90^{\circ}$};
+        \node [font=\normalsize] at (8.75,9.75) {$90^{\circ}$};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}
@@ -107,7 +129,26 @@
     representative)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw  (3.75,10.25) rectangle (8.25,6);
+        \draw [short] (3.75,6) -- (10.25,12);
+        \draw [short] (4.75,10.25) -- (4.75,6);
+        \draw [short] (6,11.25) -- (6,4.25);
+        \draw [short] (7.25,10.25) -- (7.25,6);
+        \draw [short] (8.25,9.25) -- (3.75,9.25);
+        \draw [short] (8.25,8) -- (3.75,8);
+        \draw [short] (3.75,7) -- (8.25,7);
+        \draw [ fill={rgb,255:red,15; green,15; blue,15} ] (6,10.25) rectangle (7.25,9.25);
+        \draw [ fill={rgb,255:red,29; green,27; blue,27} ] (3.75,9.25) rectangle (4.75,8);
+        \draw [ fill={rgb,255:red,18; green,17; blue,17} ] (6,7) rectangle (7.25,6);
+        \node [font=\normalsize] at (6.25,4.5) {Q};
+        \node [font=\normalsize] at (6.25,11) {P};
+        \node [font=\normalsize] at (10,11) {N};
+        \node [font=\normalsize] at (3.5,5.75) {M};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}

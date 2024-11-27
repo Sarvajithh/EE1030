@@ -63,7 +63,28 @@
     \item[69.] The following circuit where(where $R_L>>>R$) performs the operation of \hfill (2008)
     \begin{figure}[!ht]
     \centering
-    \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (3.25,9.25) to[short] (5.25,9.25);
+    \draw (3.25,8) to[short] (5.25,8);
+    \draw (5.25,9.25) to[R] (7.25,9.25);
+    \draw (5.25,8) to[R] (7.25,8);
+    \draw (7.25,9.25) to[D] (9.25,9.25);
+    \draw (7.25,8) to[D] (9.25,8);
+    \draw [short] (9.25,9.25) -- (9.25,8);
+    \draw (9.25,8.75) to[short] (11.25,8.75);
+    \draw (11,8.75) to[R] (11,6.5);
+    \node [font=\normalsize] at (3.25,9.5) {$V_1$};
+    \node [font=\normalsize] at (3.25,8.25) {$V_2$};
+    \node [font=\normalsize] at (6.25,9.75) {R};
+    \node [font=\normalsize] at (6.25,8.5) {R};
+    \node [font=\normalsize] at (11,9) {$V_0$};
+    \node [font=\normalsize] at (11.5,7.75) {$R_L$};
+    \node [font=\normalsize] at (11.25,6.5) {V(1)};
+    \end{circuitikz}
+    }%
     \caption{1}
     \label{fig1}
      \end{figure}
@@ -77,33 +98,150 @@
      
      \begin{figure}[!ht]
       \centering
-      \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+      \resizebox{0.5\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (1,9.25) to[short] (3,9.25);
+    \draw [short] (3,10.25) -- (3,9.25);
+    \draw [short] (3,10.25) -- (3.5,10.25);
+    \draw [short] (3.5,10.25) -- (3.5,9.25);
+    \draw [short] (3.5,9.25) -- (4,9.25);
+    \draw [short] (4,9.25) -- (4,10.25);
+    \draw [short] (4,10.25) -- (4.5,10.25);
+    \draw [short] (4.5,10.25) -- (4.5,9.25);
+    \draw [short] (4.5,9.25) -- (5,9.25);
+    \draw [short] (5,9.25) -- (5,10.25);
+    \draw [short] (5,10.25) -- (5.5,10.25);
+    \draw [short] (5.5,10.25) -- (5.5,9.25);
+    \draw [short] (5.5,9.25) -- (6.5,9.25);
+    \draw [short] (1,7.5) -- (3,7.5);
+    \draw [short] (3,7.5) -- (3,8.25);
+    \draw [short] (3,8.25) -- (4.5,8.25);
+    
+    
+    \draw [short] (4.5,8.25) -- (4.5,7.5);
+    \draw [short] (4.5,7.5) -- (5.25,7.5);
+    \draw [short] (5.25,7.5) -- (5.25,8.25);
+    \draw [short] (5.25,8.25) -- (6.5,8.25);
+    \draw [dashed] (3,9.25) -- (3,7.5);
+    \draw [dashed] (3.5,9.25) -- (3.5,7.5);
+    \draw [dashed] (4,9.25) -- (4,7.5);
+    \draw [dashed] (4.5,9.25) -- (4.5,7.5);
+    \draw [dashed] (5,9.25) -- (5,7.25);
+    \draw [dashed] (5.5,9.25) -- (5.5,7.5);
+    \node [font=\normalsize] at (1,9.5) {Clk};
+    \node [font=\normalsize] at (1,7.75) {Input};
+    \draw  (11,10) rectangle (12.75,8);
+    \draw  (14.75,10) rectangle (16.5,8);
+    \draw [short] (9,9.5) -- (11,9.5);
+    \draw [short] (12.75,9.5) -- (14.75,9.5);
+    \draw [short] (9.5,9.5) -- (9.5,8.5);
+    \draw [short] (9.5,8.5) -- (9.75,8.5);
+    \draw [short] (9.75,8.5) .. controls (9.5,7.75) and (11,7.75) .. (10.5,8.5);
+    \draw [short] (10.5,8.5) -- (11,8.5);
+    \draw [short] (10.25,9) -- (10.25,7);
+    \draw [short] (10.25,7) -- (13.25,7);
+    \draw [short] (13.25,7) -- (13.25,9);
+    \draw [->, >=Stealth] (9.75,9) -- (11.25,9);
+    \draw [->, >=Stealth] (13.25,9) -- (15,9);
+    \draw [short] (14,9.5) -- (14,9.25);
+    \draw [short] (14,9.25) .. controls (13.25,9.5) and (13.5,8.75) .. (14,8.75);
+    \draw [short] (14,8.75) -- (14,8.5);
+    \draw [short] (14,8.5) -- (14.75,8.5);
+    \draw  (14.5,9) circle (0.25cm);
+    \node [font=\normalsize] at (9,9.75) {Input};
+    \node [font=\normalsize] at (9.75,9.25) {Clk};
+    \node [font=\normalsize] at (12.25,8.5) {Q$\rightarrow$};
+    \node [font=\normalsize] at (12.25,9.5) {Q};
+    \node [font=\normalsize] at (11.25,9.5) {J};
+    \node [font=\normalsize] at (11.25,8.5) {K};
+    \node [font=\normalsize] at (15,9.5) {J};
+    \node [font=\normalsize] at (16,9.5) {Q};
+    \node [font=\normalsize] at (15,8.5) {K};
+    \node [font=\normalsize] at (16,8.5) {Q$\rightarrow$};
+    \end{circuitikz}
+    }%
       \caption{ 2}
       \label{fig2}
      \end{figure}
     
      \begin{figure}[!ht]
       \centering
-      \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+      \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+   
+    \draw [short] (9.5,9.5) -- (11.5,9.5);
+    
+    \draw [short] (11.5,9.5) -- (11.5,10.25);
+    \draw [short] (11.5,10.25) -- (12.75,10.25);
+    \draw [short] (12.75,10.25) -- (12.75,9.5);
+    \draw [short] (12.75,9.5) -- (14.25,9.5);
+    \draw [short] (14.25,9.5) -- (14.25,10.25);
+    \draw [short] (14.25,10.25) -- (15,10.25);
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
       %\caption{ 2}
       %\label{fig2}
      \end{figure}
         \begin{figure}[!ht]
           \centering
-          \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+          \resizebox{0.3\textwidth}{!}{%
+          \begin{circuitikz}
+          \tikzstyle{every node}=[font=\normalsize]
+          
+      
+          \draw [short] (9.5,9.5) -- (11.75,9.5);
+          
+          \draw [short] (11.75,9.5) -- (11.75,10.25);
+          \draw [short] (11.75,10.25) -- (13,10.25);
+          \draw [short] (13,10.25) -- (13,9.5);
+          \draw [short] (13,9.5) -- (14.5,9.5);
+          \draw [short] (14.5,9.5) -- (14.5,10.25);
+          \draw [short] (14.5,10.25) -- (15,10.25);
+          \end{circuitikz}
+          }% % Specify the path to your TikZ file
        %   \caption{ 4}
          % \label{fig 4}
             \end{figure}
             
       \begin{figure}[!ht]
         \centering
-        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        
+       
+        \draw [short] (9.5,9.5) -- (12.5,9.5);
+        
+        \draw [short] (12.5,9.5) -- (12.5,10.25);
+        \draw [short] (12.5,10.25) -- (13,10.25);
+        \draw [short] (13,10.25) -- (13,9.5);
+        \draw [short] (13,9.5) -- (14.5,9.5);
+        \draw [short] (14.5,9.5) -- (14.75,9.5);
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         %\caption{ 5}
         %\label{fig 5}
     \end{figure}
     \begin{figure}[!ht]
       \centering
-      \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+      \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+   
+    \draw [short] (9.5,9.5) -- (11,9.5);
+    
+    \draw [short] (11,9.5) -- (11,10.25);
+    \draw [short] (11,10.25) -- (13,10.25);
+    \draw [short] (13,10.25) -- (13,9.5);
+    \draw [short] (13,9.5) -- (14.5,9.5);
+    \draw [short] (14.5,9.5) -- (14.75,9.5);
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
       %\caption{ 6}
       %\label{fig 6}
        \end{figure}
@@ -113,7 +251,21 @@
     \textbf{Common data for questions 71, 72 and 73}: A beam of identical particles of mass m and energy E is incident from left on a potential barrier of width L (between $0 < x < L$) and height $V_0$ as shown in the figure $\brak{E < V_0}$
     \begin{figure}[!ht]
       \centering
-      \input{figs/fig_7.tex}  % Specify the path to your TikZ file
+      \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [->, >=Stealth] (10.5,9.25) -- (18.25,9.25);
+    \draw [->, >=Stealth] (13.75,9.25) -- (13.75,13.25);
+    \draw [<->, >=Stealth] (13.75,9) -- (14.5,9)node[pos=0.5, fill=white]{L};
+    \draw [<->, >=Stealth] (12.75,10.25) -- (12.75,9.25);
+    \draw [<->, >=Stealth] (14,11) -- (14,9.25)node[pos=0.5, fill=white]{$V_0$};
+    \draw  (13.75,11) rectangle (14.5,9.25);
+    \draw [dashed] (10.75,10.25) -- (13.75,10.25);
+    \node [font=\normalsize] at (18.5,9.25) {x};
+    \node [font=\normalsize] at (13.5,13.25) {V(x)};
+    \node [font=\normalsize] at (13.5,9) {0};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
       \caption{ 7}
       \label{fig 7}
   \end{figure}
@@ -142,7 +294,28 @@
     \textbf{Common Data for questions 74 and 75}: Consider two concentric conducting spherical shells with inner and outer radii a, b and c, d as shown in the figure. Both the shells are given Q amount of positive charges.
     \begin{figure}[!ht]
       \centering
-      \input{figs/fig_8.tex}  % Specify the path to your TikZ file
+      \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw  (4,11) circle (0cm);
+    \draw  (4,11) circle (2cm);
+    \draw [ dashed] (4,11) circle (1.5cm);
+    \draw  (4,11) circle (2cm);
+    \draw  (4,11) circle (2cm);
+    \draw  (4,11) circle (0.75cm);
+    \draw [ dashed] (4,11) circle (0.5cm);
+    \draw [->, >=Stealth] (4,11) -- (4,11.5);
+    \draw [->, >=Stealth] (4,11) -- (4.75,11.25);
+    \draw [->, >=Stealth] (4,11) -- (5.5,10.5);
+    \draw [->, >=Stealth] (4,11) -- (4,9);
+    \node [font=\normalsize] at (3.5,11) {Q};
+    \node [font=\normalsize] at (5.75,11) {Q};
+    \node [font=\normalsize] at (3.75,11.25) {a};
+    \node [font=\normalsize] at (4.25,11.25) {b};
+    \node [font=\normalsize] at (5,10.75) {c};
+    \node [font=\normalsize] at (4,9.75) {d};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
       \caption{ 8}
       \label{fig 8}
   \end{figure}
@@ -213,7 +386,73 @@
     The following circuit contains three operational amplifiers and resistors \hfill (2008)
     \begin{figure}[!ht]
       \centering
-      \input{figs/fig_9.tex}  
+      \resizebox{0.6\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw (0.75,13.75) to[R] (0.75,13.75);
+    \draw (1.25,13.5) to[R] (3.25,13.5);
+    \draw (1.25,12.75) to[R] (3.25,12.75);
+    \draw (1.25,12) to[R] (3.25,12);
+    \draw (3.25,13.5) to[short] (3.25,12);
+    \draw (3.25,13.5) to[short] (4.5,13.5);
+    \draw (6,14) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (4.5,14.5);
+    \draw  (opamp2.-) to[short] (4.5,13.5);
+    \draw (7.2,14) to[short](7.5,14);
+    \draw (4.5,15.5) to[short] (4.5,14.5);
+    \draw (3.5,15.5) to[short] (5.5,15.5);
+    \draw (4,15.75) to[short] (5,15.75);
+    \draw (4,15.75) to[short] (5,15.75);
+    \draw (5,12.75) to[R] (7,12.75);
+    \draw [short] (5,13.5) -- (5,12.75);
+    \draw [short] (7,14) -- (7,12.75);
+    \draw (7.5,14) to[R] (9.5,14);
+    \draw (11,14.5) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (9.5,15);
+    \draw  (opamp2.-) to[short] (9.5,14);
+    \draw (12.2,14.5) to[short](12.5,14.5);
+    \draw [short] (9.5,16) -- (9.5,15);
+    \draw [short] (8.5,16) -- (10.5,16);
+    \draw [short] (9,16.25) -- (10.25,16.25);
+    \draw (9.75,13) to[R] (11.75,13);
+    \draw [short] (9.75,14) -- (9.75,13);
+    \draw [short] (11.75,14.5) -- (11.75,13);
+    \draw [short] (12.5,14.5) -- (12.5,12.25);
+    \draw (12.5,12.25) to[R] (14.5,12.25);
+    \draw (16,12.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (14.5,13.25);
+    \draw  (opamp2.-) to[short] (14.5,12.25);
+    \draw (17.2,12.75) to[short](17.5,12.75);
+    \draw (14.75,11.25) to[R] (16.75,11.25);
+    \draw [short] (14.75,12.25) -- (14.75,11.25);
+    \draw [short] (16.75,12.75) -- (16.75,11.25);
+    \draw [short] (14.5,16) -- (14.5,13.25);
+    \draw (14.5,17) to[R] (14.5,16);
+    \draw (14.5,15.5) to[R] (16.5,15.5);
+    \draw (14.5,15) to[R] (16.5,15);
+    \draw (14.5,14.25) to[R] (16.5,14.25);
+    \draw [short] (14.5,17) -- (14.5,17.5);
+    \draw [short] (14,17.75) -- (15,17.75);
+    \draw [short] (13.75,17.5) -- (15.75,17.5);
+    \node [font=\small] at (15,16.5) {R};
+    \node [font=\small] at (15.25,16) {R};
+    \node [font=\small] at (15.75,15) {R};
+    \node [font=\small] at (15.5,14) {R};
+    \node [font=\small] at (16.75,15.5) {$V_a$};
+    \node [font=\small] at (16.75,15) {$V_b$};
+    \node [font=\small] at (17,14.25) {$V_c$};
+    \node [font=\small] at (15.75,11) {3R};
+    \node [font=\small] at (17.75,12.75) {$V_{02}$};
+    \node [font=\small] at (13.5,11.75) {R};
+    \node [font=\small] at (12.75,14.5) {$V_{01}$};
+    \node [font=\small] at (10.75,12.5) {R};
+    \node [font=\small] at (8.5,13.75) {R};
+    \node [font=\small] at (6,12.25) {R};
+    \node [font=\small] at (2.25,14) {3R};
+    \node [font=\small] at (2,13) {3R};
+    \node [font=\small] at (2.25,11.75) {3R};
+    \end{circuitikz}
+    }%
       \caption{9} 
       \label{fig9} 
   \end{figure}

@@ -63,7 +63,28 @@
   joint $Q$ is \hfill (2007)
   \begin{figure}[!ht]
     \centering
-    \input{codes/fig_1.tex}  % Specify the path to your TikZ file
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{tikzpicture} % change from circuitikz to tikzpicture if not dealing with circuits
+    \tikzstyle{every node}=[font=\small]
+    \draw  (-20.75,20) rectangle (-18,19.75);
+    \draw  (-20,19.75) rectangle (-20.25,18);
+    \draw  (-18.75,19.75) rectangle (-18.5,18);
+    \draw  (-20.25,17.25) circle (0.25cm);
+    \draw  (-18.5,17.25) circle (0.25cm);
+    \draw (-21.25,19.25) -- (-17.25,19.25); % removed 'short'
+    \draw [<->, >=Stealth] (-20.75,19.25) -- (-20.75,18);
+    \draw (-21,18) -- (-20.5,18);
+    \node [font=\small] at (-21,18.75) {10m};
+    \draw  (-20.25,16.25) circle (0.25cm);
+    \draw  (-18.5,16.25) circle (0.25cm);
+    \draw [<->, >=Stealth] (-20.5,15.75) -- (-18.5,15.75);
+    \node [font=\small] at (-19.75,15.5) {1.2m c/c};
+    \draw [<->, >=Stealth] (-18,17.25) -- (-18,16.25)node[pos=0.5, fill=white]{1.2m $\frac{c}{c}$};
+    \node [font=\small] at (-17.25,19) {0.4m diameter piles };
+    \node [font=\small] at (-17.5,18.75) {clay soil};
+    \node [font=\small] at (-17.5,18.25) {$C = 40\frac{\text{kN}}{\text{m}^2}$}; % updated unit
+    \end{tikzpicture}
+     }%
     \caption{ 1}
     \label{fig:triangle_diagram}
 \end{figure}
@@ -74,15 +95,36 @@
     \item [D.] 15.68mm
   \end{enumerate}
   \item[36.] The influence line diagram (ILD) shown is for the member \hfill (2007)
-  \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.3\textwidth]{figs/image.png}  % Replace with your image file
-    
-    \label{fig:sample2}
-\end{figure}
+  
  \begin{figure}[h!]
  \centering
- \input{codes/fig_2.tex}
+ \resizebox{1\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (4,9.5) -- (8.75,9.5);
+    \draw [short] (2.25,7.75) -- (10.75,7.75);
+    \draw [short] (2.25,7.75) -- (4,9.5);
+    \draw [short] (8.75,9.5) -- (10.75,7.75);
+    \draw [short] (4,9.5) -- (4,7.75);
+    \draw [short] (8.75,9.5) -- (8.75,7.75);
+    \draw [short] (4,9.5) -- (5,7.75);
+    \draw [short] (5,7.75) -- (5,9.5);
+    \draw [short] (5,9.5) -- (6.25,7.75);
+    \draw [short] (6.25,7.75) -- (7,9.5);
+    \draw [short] (7,9.5) -- (7,7.75);
+    \draw [short] (7,7.75) -- (8.75,9.5);
+    \draw [short] (2.25,7.75) -- (2.5,7.5);
+    \draw [short] (2.25,7.75) -- (2,7.5);
+    \draw [short] (2,7.5) -- (2.5,7.5);
+    \draw [short] (10.75,7.75) -- (11,7.5);
+    \draw [short] (10.75,7.75) -- (10.5,7.5);
+    \draw [short] (10.5,7.5) -- (11,7.5);
+    \node [font=\LARGE] at (4,9.75) {P};
+    \node [font=\LARGE] at (5,10) {Q};
+    \node [font=\LARGE] at (4,7.5) {R};
+    \node [font=\LARGE] at (5,7.5) {S};
+    \end{circuitikz}
+    }%
  \label{fig:sample1}
  \end{figure}
     
@@ -148,7 +190,41 @@
   tension that can be applied to the flat is \hfill (2007)
   \begin{figure}[!ht]
     \centering
-    \input{codes/fig_3.tex}  % Specify the path to your TikZ file
+    \resizebox{0.3\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (3.25,9.75) rectangle (7,7.75);
+\draw [short] (4.75,9.75) -- (9,11);
+\draw [short] (5,7.75) -- (9,6.75);
+\draw [short] (5.25,8.75) -- (7.75,8.75);
+\draw [short] (5.75,9.25) .. controls (6.75,9.25) and (6.75,9.25) .. (7.75,9.25);
+\draw [short] (9,11) -- (9,6.75);
+\draw [short] (5.75,8.25) -- (7.75,8.25);
+\draw [short] (5.25,9.75) -- (5.25,7.75);
+\draw [short] (6,9.5) -- (6,8);
+\draw  (6,9.25) circle (0.25cm);
+\draw  (6,8.25) circle (0.25cm);
+\draw  (5.25,8.75) circle (0.25cm);
+\node [font=\small] at (7.5,9.5) {15};
+\node [font=\small] at (7.5,9) {20};
+\node [font=\small] at (7.5,8.5) {20};
+\node [font=\small] at (7.5,8) {15};
+\node [font=\small] at (6,6.75) {35};
+\draw [->, >=Stealth] (5,6.75) -- (5.75,6.75);
+\draw [->, >=Stealth] (7,6.75) -- (6.25,6.75);
+\draw [short] (5.75,7) -- (5.75,6.25);
+\draw [short] (6.25,7) -- (6.25,6.25);
+\draw [short] (9,10.75) -- (9.25,10.5);
+\draw [short] (9,10.25) -- (9.25,10);
+\draw [short] (9,9.75) -- (9.25,9.5);
+\draw [short] (9,9.25) -- (9.25,9);
+\draw [short] (9,8.75) -- (9.25,8.5);
+\draw [short] (9,8.25) -- (9.25,8);
+\draw [short] (9,7.75) -- (9.25,7.5);
+\draw [short] (9,6.75) -- (9.25,6.5);
+\draw [short] (9,7.25) -- (9.25,7);
+\end{circuitikz}
+}
     \caption{3 }
     \label{3 }
   \end{figure}
@@ -163,7 +239,39 @@
   any bolt will be  \hfill (2007)
   \begin{figure}[!ht]
     \centering
-    \input{codes/fig_4.tex}  % Specify the path to your TikZ file
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+      
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (3.25,10) -- (3.25,10);
+    \draw [short] (3.25,10) -- (5.25,10);
+    \draw [short] (3.25,10) -- (8,10);
+    \draw [short] (3.25,8.5) -- (6.5,8.5);
+    \draw [short] (3.25,10) -- (3.25,8.5);
+    \draw [short] (8,10) -- (8,9.5);
+    \draw [short] (6.5,8.5) -- (8,9.5);
+    \draw [short] (6.5,10) -- (6.5,8.5);
+    \draw [short] (4.25,10.75) -- (4.25,8.5);
+    \draw [short] (2.75,9.5) -- (5,9.5);
+    \draw [short] (2.5,9.25) -- (5.75,9.25);
+    \draw [short] (2.75,9) -- (5,9);
+    \draw [short] (5,9.75) -- (5,8.25);
+    \draw [short] (3.75,9.75) -- (3.75,8.25);
+    \draw [short] (4.25,9.25) -- (5,9.5);
+    \draw  (5,9.5) circle (0.25cm);
+    \draw  (5,9) circle (0.25cm);
+    \draw  (3.75,9.5) circle (0.25cm);
+    \draw  (3.75,9) circle (0.25cm);
+    \draw [<->, >=Stealth] (4.25,10.5) -- (8,10.5);
+    \draw [->, >=Stealth] (8,11.25) -- (8,10);
+    \node [font=\small] at (8.25,10.75) {10kN};
+    \node [font=\small] at (7.75,11) {P};
+    \node [font=\small] at (2.75,9.5) {30};
+    \node [font=\small] at (2.75,9) {30};
+    \node [font=\small] at (4,8.25) {40};
+    \node [font=\small] at (4.5,8.25) {40};
+    \end{circuitikz}
+    }%
     \caption{ }
     \label{4 }
   \end{figure}
@@ -177,7 +285,23 @@
   as shown in the figure in terms of plastic moment capacity, $M_p$ is given\\ by \hfill (2007)
   \begin{figure}[!ht]
     \centering
-    \input{codes/fig_5.tex}  % Specify the path to your TikZ file
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (4.75,8.75) -- (4.75,8.75);
+    \draw [short] (5,9.5) -- (7,9.5);
+    \draw [short] (5,9.5) -- (8.75,9.5);
+    \draw [->, >=Stealth] (6,10.5) -- (6,9.5);
+    \draw [->, >=Stealth] (7.25,10.5) -- (7.25,9.5);
+    \draw [short] (5,10.25) -- (5,8.75);
+    \draw [->, >=Stealth] (8.75,8.25) -- (8.75,9.5);
+    \node [font=\small] at (6,10.75) {W};
+    \node [font=\small] at (7.25,10.75) {W};
+    \node [font=\small] at (6.75,9.75) {L/3};
+    \node [font=\small] at (8.25,9.75) {L/3};
+    \node [font=\small] at (5.5,10) {L/3};
+    \end{circuitikz}
+    }%
     \caption{ }
     \label{5 }
   \end{figure}
@@ -211,7 +335,30 @@
   approximately equal to \hfill (2007)
   \begin{figure}[!ht]
     \centering
-    \input{codes/fig_6.tex}  % Specify the path to your TikZ file
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\small]
+    \draw [short] (4,9) -- (4,9);
+    \draw [short] (2,8.75) -- (6.75,11.75);
+    \draw [short] (3,7.75) -- (8.25,11.25);
+    \draw [short] (4,6.25) -- (9.75,10);
+    \draw [short] (6.25,7.75) -- (9.5,7.75);
+    \draw [->, >=Stealth] (4,7.75) -- (4,10);
+    \draw [->, >=Stealth] (4,7.25) -- (4,6.25);
+    \draw [->, >=Stealth] (4.5,7.75) -- (4.5,8.5);
+    \draw [->, >=Stealth] (4.5,7.25) -- (4.5,6.75);
+    \node [font=\small] at (4,7.5) {10m};
+    \node [font=\small] at (4.5,7.5) {8m};
+    \draw [short] (6.75,11) -- (7.5,11);
+    \draw [short] (6.75,11) -- (7.25,10.5);
+    \draw [short] (7.5,11) -- (7.25,10.5);
+    \draw [short] (6.75,10) -- (8,10.75);
+    \draw [short] (7,10) -- (7.75,10.5);
+    \draw [short] (7.25,10) -- (7.75,10.25);
+    \node [font=\small] at (7.25,8) {30};
+    \draw [short] (6.75,8) -- (6.75,7.75);
+    \end{circuitikz}
+    }%
     \caption{ }
     \label{fig:6}
   \end{figure}
@@ -257,7 +404,28 @@
   assuming the group to fail as a single block? \hfill (2007)
   \begin{figure}[!ht]
     \centering
-    \input{codes/fig_7.tex}  % Specify the path to your TikZ file
+    \resizebox{0.3\textwidth}{!}{%
+    \begin{tikzpicture} % change from circuitikz to tikzpicture if not dealing with circuits
+    \tikzstyle{every node}=[font=\small]
+    \draw  (-20.75,20) rectangle (-18,19.75);
+    \draw  (-20,19.75) rectangle (-20.25,18);
+    \draw  (-18.75,19.75) rectangle (-18.5,18);
+    \draw  (-20.25,17.25) circle (0.25cm);
+    \draw  (-18.5,17.25) circle (0.25cm);
+    \draw (-21.25,19.25) -- (-17.25,19.25); % removed 'short'
+    \draw [<->, >=Stealth] (-20.75,19.25) -- (-20.75,18);
+    \draw (-21,18) -- (-20.5,18);
+    \node [font=\small] at (-21,18.75) {10m};
+    \draw  (-20.25,16.25) circle (0.25cm);
+    \draw  (-18.5,16.25) circle (0.25cm);
+    \draw [<->, >=Stealth] (-20.5,15.75) -- (-18.5,15.75);
+    \node [font=\small] at (-19.75,15.5) {1.2m c/c};
+    \draw [<->, >=Stealth] (-18,17.25) -- (-18,16.25)node[pos=0.5, fill=white]{1.2m $\frac{c}{c}$};
+    \node [font=\small] at (-17.25,19) {0.4m diameter piles };
+    \node [font=\small] at (-17.5,18.75) {clay soil};
+    \node [font=\small] at (-17.5,18.25) {$C = 40\frac{\text{kN}}{\text{m}^2}$}; % updated unit
+    \end{tikzpicture}
+     }%  % Specify the path to your TikZ file
     \caption{7 }
     \label{fig:7}
   \end{figure}

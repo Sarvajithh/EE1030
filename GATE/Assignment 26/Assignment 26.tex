@@ -93,17 +93,48 @@
     \item[30.] Consider sorting the followin array of integers in ascending order using an in-place Quicksort algorithm that uses the last element as the pivot 
     \begin{table}
         \centering
-        \input{tables/table_1.tex}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            60&70&80&90&100\\
+            \hline 
+        \end{tabular}
     \end{table}
     The minimum number of swaps performed during this Quicksort is ..........
     \item[31.] Consider the following two tables named Raider and Team in a relational database maintained by a Kabaddi league. The attribute ID in table team references the primary key of the Raider table, ID. 
     \begin{table}
         \centering
-        \input{tables/table_2.tex}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \multicolumn{4}{|c|}{\textbf{Raider}} \\
+            \hline
+            \textbf{ID} & \textbf{Name} & \textbf{Raids} & \textbf{RaidPoints} \\
+            \hline
+            1 & Arjun & 200 & 250 \\
+            2 & Ankush & 190 & 219 \\
+            3 & Sunil & 150 & 200 \\
+            4 & Reza & 150 & 190 \\
+            5 & Pratham & 175 & 220 \\
+            6 & Gopal & 193 & 215 \\
+            \hline
+        \end{tabular}
     \end{table}
     \begin{table}
         \centering
-        \input{tables/table_3.tex}
+        \renewcommand{\arraystretch}{1.2} % Increase row height for better spacing
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{\textbf{Team}} \\
+\hline
+\textbf{City} & \textbf{ID} & \textbf{BidPoints} \\
+\hline
+Jaipur & 2 & 200 \\
+Patna & 3 & 195 \\
+Hyderabad & 5 & 175 \\
+Jaipur & 1 & 250 \\
+Patna & 4 & 200 \\
+Jaipur & 6 & 200 \\
+\hline
+\end{tabular}
     \end{table}
     The SQL query described below is execuuted on this database:\\
     SELECT *\\

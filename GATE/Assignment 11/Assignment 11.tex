@@ -103,25 +103,90 @@
     \item[20.] In one of the following circuits, negative feedback does not operate for a negative input. Which one is it? The opamps are running from $\pm$15V supplies. \hfill (2010)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw (-6,13.5) to[R] (-6,13.5);
+    \draw (-5.5,13.25) to[R] (-3.5,13.25);
+    \draw (-2,13.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+    \draw (opamp2.+) to[short] (-3.5,14.25);
+    \draw  (opamp2.-) to[short] (-3.5,13.25);
+    \draw (-0.8,13.75) to[short](-0.5,13.75);
+    \draw (-3.5,14.25) to (-4,14.25) node[ground]{};
+    \draw (-3,12.25) to[R] (-1,12.25);
+    \draw [short] (-3,13.25) -- (-3,12.25);
+    \draw [short] (-1,13.75) -- (-1,12.25);
+    \end{circuitikz}
+    }%
+      % Specify the path to your TikZ file
         \caption{option1}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        
+        \draw (-5.5,13.25) to[R] (-3.5,13.25);
+        \draw (-2,13.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+        \draw (opamp2.+) to[short] (-3.5,14.25);
+        \draw  (opamp2.-) to[short] (-3.5,13.25);
+        \draw (-0.8,13.75) to[short](-0.5,13.75);
+        \draw (-3.5,14.25) to (-4,14.25) node[ground]{};
+        \draw [short] (-3,13.25) -- (-3,12.25);
+        \draw [short] (-1,13.75) -- (-1,12.25);
+        \draw (-3,12.25) to[empty Schottky diode] (-1,12.25);
+        \node [font=\normalsize] at (-2,11.75) {5.1V};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{option2}
         %\label{fig3}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        
+        \draw (-5.5,13.25) to[R] (-3.5,13.25);
+        \draw (-2,13.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+        \draw (opamp2.+) to[short] (-3.5,14.25);
+        \draw  (opamp2.-) to[short] (-3.5,13.25);
+        \draw (-0.8,13.75) to[short](-0.5,13.75);
+        \draw (-3.5,14.25) to (-4,14.25) node[ground]{};
+        \draw [short] (-3,13.25) -- (-3,12.25);
+        \draw [short] (-1,13.75) -- (-1,12.25);
+        \draw (-3,12.25) to[D] (-1,12.25);
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{option3}
        % \label{fig4}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+       
+        \draw (-5.5,13.25) to[R] (-3.5,13.25);
+        \draw (-2,13.75) node[op amp,scale=1, yscale=-1 ] (opamp2) {};
+        \draw (opamp2.+) to[short] (-3.5,14.25);
+        \draw  (opamp2.-) to[short] (-3.5,13.25);
+        \draw (-0.8,13.75) to[short](-0.5,13.75);
+        \draw (-3.5,14.25) to (-4,14.25) node[ground]{};
+        \draw [short] (-3,13.25) -- (-3,12.25);
+        \draw [short] (-1,13.75) -- (-1,12.25);
+        \draw [short] (-3,12.25) -- (-3,11.75);
+        \draw [short] (-1,12.25) -- (-1,11.75);
+        \draw (-2.5,12) to[D] (-1.5,12);
+        \draw (-1.5,11.25) to[D] (-2.5,11.25);
+        \draw [short] (-3,11.75) -- (-2.5,11.25);
+        \draw [short] (-1.5,11.25) -- (-1,11.75);
+        \draw [short] (-1.5,12) -- (-1,11.75);
+        \draw [short] (-2.5,12) -- (-3,11.75);
+        \end{circuitikz}
+        }%% Specify the path to your TikZ file
         \caption{option4}
        % \label{fig5}
     \end{figure}

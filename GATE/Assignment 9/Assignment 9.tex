@@ -148,7 +148,29 @@
     \newpage
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw  (1.75,10) rectangle (4.75,6);
+    \draw [short] (3.25,10) -- (3.25,6);
+    \draw [short] (1.75,9) -- (4.75,9);
+    \draw [short] (1.75,8) -- (4.75,8);
+    \draw [short] (1.75,7) -- (4.75,7);
+    \draw [short] (1,10.75) -- (1.75,10);
+    \node [font=\normalsize] at (2.5,10.25) {$\bar{R}$};
+    \node [font=\normalsize] at (4,10.25) {R};
+    \node [font=\normalsize] at (1.25,9.5) {$\bar{P}\bar{Q}$};
+    \node [font=\normalsize] at (1.25,7.5) {PQ};
+    \node [font=\normalsize] at (1.25,6.5) {$P\bar{Q}$};
+    \node [font=\normalsize] at (1.25,8.5) {$\bar{P}$Q};
+    \node [font=\normalsize] at (2.5,9.5) {1};
+    \node [font=\normalsize] at (4,9.5) {1};
+    \node [font=\normalsize] at (2.5,8.5) {1};
+    \node [font=\normalsize] at (2.5,6.5) {1};
+    \node [font=\normalsize] at (4,6.5) {1};
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{1}
         \label{fig1}
     \end{figure}
@@ -164,25 +186,137 @@
      \end{enumerate}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+   
+    \draw (6.5,12.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,12.25);
+    \draw (port.in) to[short] (6.25,12.25);
+    \draw (6.5,11) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,11);
+    \draw (port.in) to[short] (6.25,11);
+    \draw (6.5,9.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.75);
+    \draw (port.in) to[short] (6.25,9.75);
+    \draw (8.75,12) to[short] (9,12);
+    \draw (8.75,11.5) to[short] (9,11.5);
+    \draw (9,12) node[ieeestd nor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,11.75);
+    \draw [short] (8.25,12.25) -- (8.75,12);
+    \draw [short] (8.25,11) -- (8.75,11.5);
+    \draw [short] (8,9.75) -- (11.5,9.75);
+    \draw [short] (10.75,11.75) -- (11.5,11.75);
+    \draw [short] (11.5,11.75) -- (13,10.75);
+    \draw [short] (11.5,9.75) -- (13,10.25);
+    \draw (13,10.75) to[short] (13.25,10.75);
+    \draw (13,10.25) to[short] (13.25,10.25);
+    \draw (13.25,10.75) node[ieeestd nor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,10.5);
+    \draw [short] (15,10.5) -- (16,10.5);
+    \node [font=\normalsize] at (6,12.25) {P};
+    \node [font=\normalsize] at (6,11) {R};
+    \node [font=\normalsize] at (6,9.75) {Q};
+    \node [font=\normalsize] at (16.5,10.5) {Y};
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{option1}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        
+        \draw (6.5,12.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,12.25);
+        \draw (port.in) to[short] (6.25,12.25);
+        \draw (6.5,11) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,11);
+        \draw (port.in) to[short] (6.25,11);
+        \draw (6.5,9.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.75);
+        \draw (port.in) to[short] (6.25,9.75);
+        \draw [short] (8.25,12.25) -- (8.75,12);
+        \draw [short] (8.25,11) -- (8.75,11.5);
+        \draw [short] (8,9.75) -- (11.5,9.75);
+        \draw [short] (10.75,11.75) -- (11.5,11.75);
+        \draw [short] (11.5,11.75) -- (13,10.75);
+        \draw [short] (11.5,9.75) -- (13,10.25);
+        \draw [short] (15,10.5) -- (16,10.5);
+        \node [font=\normalsize] at (6,12.25) {P};
+        \node [font=\normalsize] at (6,11) {R};
+        \node [font=\normalsize] at (6,9.75) {Q};
+        \node [font=\normalsize] at (16.5,10.5) {Y};
+        \draw (8.75,12) to[short] (9,12);
+        \draw (8.75,11.5) to[short] (9,11.5);
+        \draw (9,12) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,11.75);
+        \draw (13,10.75) to[short] (13.25,10.75);
+        \draw (13,10.25) to[short] (13.25,10.25);
+        \draw (13.25,10.75) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,10.5);
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{option2}
         %\label{fig3}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (6.5,12.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,12.25);
+    \draw (port.in) to[short] (6.25,12.25);
+    \draw (6.5,11) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,11);
+    \draw (port.in) to[short] (6.25,11);
+    \draw (6.5,9.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.75);
+    \draw (port.in) to[short] (6.25,9.75);
+    \draw [short] (8.25,12.25) -- (8.75,12);
+    \draw [short] (8.25,11) -- (8.75,11.5);
+    \draw [short] (8,9.75) -- (11.5,9.75);
+    \draw [short] (10.75,11.75) -- (11.5,11.75);
+    \draw [short] (11.5,11.75) -- (13,10.75);
+    \draw [short] (11.5,9.75) -- (13,10.25);
+    \draw [short] (15,10.5) -- (16,10.5);
+    \node [font=\normalsize] at (6,12.25) {P};
+    \node [font=\normalsize] at (6,11) {R};
+    \node [font=\normalsize] at (6,9.75) {Q};
+    \node [font=\normalsize] at (16.5,10.5) {Y};
+    \draw (8.75,12) to[short] (9,12);
+    \draw (8.75,11.5) to[short] (9,11.5);
+    \draw (9,12) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,11.75);
+    \draw (13,10.75) to[short] (13.25,10.75);
+    \draw (13,10.25) to[short] (13.25,10.25);
+    \draw (13.25,10.75) node[ieeestd nor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,10.5);
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{option3}
        % \label{fig4}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw (6.5,12.25) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,12.25);
+    \draw (port.in) to[short] (6.25,12.25);
+    \draw (6.5,11) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,11);
+    \draw (port.in) to[short] (6.25,11);
+    \draw (6.5,9.75) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (8.25,9.75);
+    \draw (port.in) to[short] (6.25,9.75);
+    \draw [short] (8.25,12.25) -- (8.75,12);
+    \draw [short] (8.25,11) -- (8.75,11.5);
+    \draw [short] (8,9.75) -- (11.5,9.75);
+    \draw [short] (10.75,11.75) -- (11.5,11.75);
+    \draw [short] (11.5,11.75) -- (13,10.75);
+    \draw [short] (11.5,9.75) -- (13,10.25);
+    \draw [short] (15,10.5) -- (16,10.5);
+    \node [font=\normalsize] at (6,12.25) {P};
+    \node [font=\normalsize] at (6,11) {R};
+    \node [font=\normalsize] at (6,9.75) {Q};
+    \node [font=\normalsize] at (16.5,10.5) {Y};
+    \draw (8.75,12) to[short] (9,12);
+    \draw (8.75,11.5) to[short] (9,11.5);
+    \draw (9,12) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,11.75);
+    \draw (13,10.75) to[short] (13.25,10.75);
+    \draw (13,10.25) to[short] (13.25,10.25);
+    \draw (13.25,10.75) node[ieeestd xor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (15,10.5);
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{option4}
        % \label{fig5}
     \end{figure}

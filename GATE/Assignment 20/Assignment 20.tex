@@ -61,7 +61,28 @@
     \item[30.] In a four bar planar mechanism shown in the figure, AB = 5 cm, AD = 4 cm and DC = 2 cm. In the configuration shown, both AB and DC are perpendicular to AD. The bar AB rotates with an angular velocity of 10 $\frac{rad}{s}$. The magnitude of angular velocity (in $\frac{rad}{s}$) of bar DC at this instant is \hfill (2019)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (15.5,9.25) -- (15.5,12.5);
+    \draw (15.5,12.25) to[short, -o] (15.5,12.75) ;
+    \draw [short] (15.5,12.75) -- (18,10.75);
+    \draw [short] (15.25,9) -- (16,9);
+    \draw [short] (17.75,9) -- (18.5,9);
+    \draw (15.5,9.75) to[short, -o] (15.5,9.25) ;
+    \draw (18,9.75) to[short, -o] (18,10.75) ;
+    \draw (18,10) to[short, -o] (18,9.25) ;
+    \draw [short] (15.25,9) .. controls (15,9.75) and (16.25,9.5) .. (15.75,9);
+    \draw [short] (17.75,9) .. controls (17.5,9.5) and (18.25,9.75) .. (18.25,9);
+    \draw [dashed] (15.5,9.25) -- (18,9.25);
+    \draw [->, >=Stealth] (15,10.75) .. controls (15.5,11.25) and (15.5,11) .. (16,10.75) ;
+    \node [font=\normalsize] at (15,9.25) {A};
+    \node [font=\normalsize] at (15.25,12.75) {B};
+    \node [font=\normalsize] at (18.25,10.75) {C};
+    \node [font=\normalsize] at (18.5,9.25) {D};
+    \node [font=\normalsize] at (14.5,11.25) {$10\frac{rad}{s}$};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{1}
         %\label{fig2}
     \end{figure}
@@ -81,13 +102,106 @@
     \item[32.] The wall of a constant diameter pipe of length 1 m is heated uniformly with flux q''by wrapping a heater coil around it. The flow at the inlet to the pipe is hydrodynamically fully developed. The fluid is incompressible and the flow is assumed to be laminar and steady all through the pipe. The bulk temperature of the fluid is equal to  $0^{\circ}C$ at the inlet and $50^{\circ}C$ at the exit. The wall temperatures are measured at three locations, P, Q and R, as shown in the figure. The flow thermally develops  after some distance from the inlet. The following measurements are made:\hfill (2019)
     \begin{table}
         \centering
-        \input{tables/table_1.tex}  % Specify the path to your TikZ file
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \textbf{Point} & P & Q & R \\
+            \hline
+            \textbf{Wall Temp ($^{\circ}$C)} & 50 & 80 & 90 \\
+            \hline
+         \end{tabular}  % Specify the path to your TikZ file
         \caption{3}
         %\label{fig2}
     \end{table}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (13.25,10) -- (22,10);
+    \draw [short] (14,11) -- (21.25,11);
+    \draw [short] (14,9.25) -- (21.25,9.25);
+    \draw [->, >=Stealth] (14,11.5) -- (14,11);
+    \draw [->, >=Stealth] (14.25,11.5) -- (14.25,11);
+    \draw [->, >=Stealth] (14.5,11.5) -- (14.5,11);
+    \draw [->, >=Stealth] (14.75,11.5) -- (14.75,11);
+    \draw [->, >=Stealth] (15,11.5) -- (15,11);
+    \draw [->, >=Stealth] (15.25,11.5) -- (15.25,11);
+    \draw [->, >=Stealth] (15.5,11.5) -- (15.5,11);
+    \draw [->, >=Stealth] (15.75,11.5) -- (15.75,11);
+    \draw [->, >=Stealth] (16,11.5) -- (16,11);
+    \draw [->, >=Stealth] (16.25,11.5) -- (16.25,11);
+    \draw [->, >=Stealth] (16.5,11.5) -- (16.5,11);
+    \draw [->, >=Stealth] (16.75,11.5) -- (16.75,11);
+    \draw [->, >=Stealth] (17,11.5) -- (17,11);
+    \draw [->, >=Stealth] (17.25,11.5) -- (17.25,11);
+    \draw [->, >=Stealth] (17.5,11.5) -- (17.5,11);
+    \draw [->, >=Stealth] (17.75,11.5) -- (17.75,11);
+    \draw [->, >=Stealth] (18,11.5) -- (18,11);
+    \draw [->, >=Stealth] (18.25,11.5) -- (18.25,11);
+    \draw [->, >=Stealth] (18.5,11.5) -- (18.5,11);
+    \draw [->, >=Stealth] (18.75,11.5) -- (18.75,11);
+    \draw [->, >=Stealth] (19,11.5) -- (19,11);
+    \draw [->, >=Stealth] (19.25,11.5) -- (19.25,11);
+    \draw [->, >=Stealth] (19.5,11.5) -- (19.5,11);
+    \draw [->, >=Stealth] (19.75,11.5) -- (19.75,11);
+    \draw [->, >=Stealth] (20,11.5) -- (20,11);
+    \draw [->, >=Stealth] (20.25,11.5) -- (20.25,11);
+    \draw [->, >=Stealth] (20.5,11.5) -- (20.5,11);
+    \draw [->, >=Stealth] (20.75,11.5) -- (20.75,11);
+    \draw [->, >=Stealth] (21,11.5) -- (21,11);
+    \draw [->, >=Stealth] (21.25,11.5) -- (21.25,11);
+    \draw [->, >=Stealth] (21.25,8.75) -- (21.25,9.25);
+    \draw [->, >=Stealth] (21,8.75) -- (21,9.25);
+    \draw [->, >=Stealth] (20.75,8.75) -- (20.75,9.25);
+    \draw [->, >=Stealth] (20.5,8.75) -- (20.5,9.25);
+    \draw [->, >=Stealth] (20.25,8.75) -- (20.25,9.25);
+    \draw [->, >=Stealth] (20,8.75) -- (20,9.25);
+    \draw [->, >=Stealth] (19.75,8.75) -- (19.75,9.25);
+    \draw [->, >=Stealth] (19.5,8.75) -- (19.5,9.25);
+    \draw [->, >=Stealth] (19.25,8.75) -- (19.25,9.25);
+    \draw [->, >=Stealth] (19,8.75) -- (19,9.25);
+    \draw [->, >=Stealth] (18.5,8.75) -- (18.5,9.25);
+    \draw [->, >=Stealth] (18.75,8.75) -- (18.75,9.25);
+    \draw [->, >=Stealth] (18.25,8.75) -- (18.25,9.25);
+    \draw [->, >=Stealth] (18,8.75) -- (18,9.25);
+    \draw [->, >=Stealth] (17.75,8.75) -- (17.75,9.25);
+    \draw [->, >=Stealth] (17.5,8.75) -- (17.5,9.25);
+    \draw [->, >=Stealth] (17.25,8.75) -- (17.25,9.25);
+    \draw [->, >=Stealth] (17,8.75) -- (17,9.25);
+    \draw [->, >=Stealth] (16.75,8.75) -- (16.75,9.25);
+    \draw [->, >=Stealth] (16.5,8.75) -- (16.5,9.25);
+    \draw [->, >=Stealth] (16.25,8.75) -- (16.25,9.25);
+    \draw [->, >=Stealth] (16,8.75) -- (16,9.25);
+    \draw [->, >=Stealth] (15.75,8.75) -- (15.75,9.25);
+    \draw [->, >=Stealth] (15.5,8.75) -- (15.5,9.25);
+    \draw [->, >=Stealth] (15.25,8.75) -- (15.25,9.25);
+    \draw [->, >=Stealth] (15,8.75) -- (15,9.25);
+    \draw [->, >=Stealth] (14.75,8.75) -- (14.75,9.25);
+    \draw [->, >=Stealth] (14.5,8.75) -- (14.5,9.25);
+    \draw [->, >=Stealth] (14.25,8.75) -- (14.25,9.25);
+    \draw [->, >=Stealth] (14,8.75) -- (14,9.25);
+    \draw [<->, >=Stealth] (14,11.5) -- (15.5,11.5);
+    \draw [<->, >=Stealth] (15.5,11.5) -- (17.25,11.5);
+    \draw [<->, >=Stealth] (17.25,11.5) -- (18.75,11.5);
+    \draw [<->, >=Stealth] (18.75,11.5) -- (20,11.5);
+    \draw [<->, >=Stealth] (20,11.5) -- (21.25,11.5);
+    \draw [<->, >=Stealth] (14,8.75) -- (15.25,8.75);
+    \draw [<->, >=Stealth] (15.25,8.75) -- (17,8.75);
+    \draw [<->, >=Stealth] (17,8.75) -- (18.75,8.75);
+    \draw [<->, >=Stealth] (18.75,8.75) -- (20,8.75);
+    \draw [<->, >=Stealth] (20,8.75) -- (21.25,8.75);
+    \node [font=\normalsize] at (14.75,11.75) {0.2 m};
+    \node [font=\normalsize] at (16.5,11.75) {0.2 m};
+    \node [font=\normalsize] at (18,11.75) {0.2 m};
+    \node [font=\normalsize] at (19.5,11.75) {0.2 m};
+    \node [font=\normalsize] at (20.5,11.75) {0.2 m};
+    \node [font=\normalsize] at (17.25,10.75) {P};
+    \node [font=\normalsize] at (18.75,10.75) {Q};
+    \node [font=\normalsize] at (20,10.75) {R};
+    \node [font=\normalsize] at (21.5,10.25) {$50^{\circ}C$};
+    \node [font=\normalsize] at (13.5,10.25) {$0^{\circ}C$};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{2}
         %\label{fig2}
     \end{figure}
@@ -108,7 +222,27 @@
     \item[34.] A plane-strain compression (forging) of a block is shown in the figure. The strain in the z-direction is zero. The yield strength $(S_y)$ in uniaxial tension/compression of the material of the block is 300 MPa and it follows the Tresca (maximum shear stress) criterion. Assume that the entire block has started yielding. At a point where $\sigma_x =$40 MPa (compressive) and $\tau_{xy = 0}$,  the stress component $\sigma_y$ is\hfill (2019)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (13.75,12.25) -- (13.75,10.75);
+    \draw [short] (13.75,10.75) -- (19.25,10.75);
+    \draw [short] (19.25,10.75) -- (19.25,12.25);
+    \draw [short] (15,10.75) -- (15,9.75);
+    \draw [short] (18.25,10.75) -- (18.25,9.75);
+    \draw [->, >=Stealth] (16.5,10.25) -- (16.5,12.75);
+    \draw [->, >=Stealth] (16.5,10.25) -- (20.5,10.25);
+    \draw [->, >=Stealth] (15.5,12.25) -- (15.5,11.25);
+    \draw [short] (13,9.75) -- (20.5,9.75);
+  
+    \node [font=\normalsize] at (16.25,10) {$O$};
+    \node [font=\normalsize] at (20.75,10.25) {$x$};
+    \node [font=\normalsize] at (16.5,13) {$y$};
+    \node [font=\normalsize] at (15,11) {$Moving platen$};
+    \draw [ fill={rgb,255:red,30; green,26; blue,26} ] (13,9.75) rectangle (20.5,8.5);
+    \node [font=\normalsize, color={rgb,255:red,244; green,240; blue,240}] at (16.5,9.25) {$Fixed platen$};
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{3}
         %\label{fig2}
     \end{figure}
@@ -135,7 +269,16 @@
     \item[37.] Match the following sand mold casting defects with their respective causes\hfill (2019)
     \begin{table}[!ht]
         \centering
-        \input{tables/table_2.tex}  % Specify the path to your TikZ file
+        \begin{tabular}{|c|l|c|l|}
+            \hline
+            \textbf{} & \textbf{Defect} & \textbf{} & \textbf{Cause} \\
+            \hline
+            P & Blow hole & 1 & Poor collapsibility \\
+            Q & Misrun & 2 & Mold erosion \\
+            R & Hot tearing & 3 & Poor permeability \\
+            S & Wash & 4 & Insufficient fluidity \\
+            \hline
+        \end{tabular} % Specify the path to your TikZ file
         \caption{3}
         %\label{fig2}
     \end{table}
@@ -148,21 +291,70 @@
     \item[38.] A truss is composed of members AB, BC, CD, AD and BD, as shown in the figure. A vertical load of 10 kN is applied at point D. The magnitude of force (in kN) in the ........\hfill (2019)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (17.25,9.75) to[short, -o] (17.25,12) ;
+    \draw (17.25,10.75) to[short, -o] (17.25,8.5) ;
+    \draw (17.25,12) to[short, -o] (20.75,8.5) ;
+    \draw (17.25,12) to[short, -o] (13.75,8.5) ;
+    \draw [short] (13.75,8.5) -- (20.75,8.5);
+    \draw [->, >=Stealth] (17.25,13) -- (17.25,12.25);
+    \draw [short] (13,8.25) -- (14.5,8.25);
+    \draw [short] (13.25,8.25) .. controls (13.25,9) and (14.25,8.75) .. (14.25,8.25);
+    \draw [short] (20.25,8.25) -- (21.5,8.25);
+    \draw [short] (20.5,8.25) .. controls (20.5,8.5) and (20.75,9.25) .. (21.25,8.25);
+    \node [font=\normalsize] at (17.5,12.75) {10kN};
+    \node [font=\normalsize] at (17.5,12) {D};
+    \node [font=\normalsize] at (13.5,9) {A};
+    \node [font=\normalsize] at (17.25,8.25) {B};
+    \node [font=\normalsize] at (21,8.75) {C};
+    \draw [<->, >=Stealth] (14.25,9) .. controls (14.75,9) and (14.5,9) .. (14.5,8.5)node[pos=0.5,fill=white]{$45^{\circ}$};
+    \draw [<->, >=Stealth] (20.25,9) -- (20,8.5)node[pos=0.5,fill=white]{$45^{\circ}$};
+    \end{circuitikz}
+    }%% Specify the path to your TikZ file
         \caption{4}
         %\label{fig2}
     \end{figure}
     \item[39.] Consider an elastic straight beam of length $L=10\pi m$, with square cross-section of side $a=5mm$ and Young's modulus $E = 200 GPa$. This straight beam was bent in such a way that the two ends meet, to form a circle of mean radius R. Assuming that Euler-Bernouli beam theory is applicable to this bending problem, the maximum tensile bending stress in the bent beam is ..........MPa\hfill (2019)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw  (12.75,11) rectangle (18.75,10.75);
+    \draw [<->, >=Stealth] (12.75,11.25) -- (18.75,11.25)node[pos=0.5, fill=white]{L};
+    \draw  (23.25,11.75) circle (1cm);
+    \draw  (23.25,11.75) circle (1.75cm);
+    \draw [ dashed] (23.25,11.75) circle (1.5cm);
+    \draw [->, >=Stealth] (23.25,11.75) -- (24,13);
+    \draw [->, >=Stealth] (23,10.25) -- (20.5,10.25);
+    \draw [short] (23.25,10.75) -- (23.25,10);
+    \node [font=\normalsize] at (23.5,12) {R};
+    \node [font=\normalsize] at (19.25,10.25) {ends of the beam};
+    \end{circuitikz}
+    }%% Specify the path to your TikZ file
         \caption{5}
         %\label{fig2}
     \end{figure}
     \item[40.] Consider a prismatic straight beam of length $L= \pi m$,pinned at the 2 ends as shown in the figure. The beam has a square cross section of side $p = 6mm$. The Young's modulus $E = 200GPa$, and the coefficient of thermal expansion $\alpha = 3\times 10^{-6}K^{-1}$. The minimum temperature rise required to cause Euler buckling of the beam is ..........K.\hfill (2019)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw  (15.5,13) rectangle (23.25,12.5);
+        \draw [short] (23.25,12.75) -- (23.75,13.25);
+        \draw [short] (23.25,12.75) -- (23.75,12.25);
+        \draw [short] (23.75,13.25) -- (23.75,12.25);
+        \draw [short] (15.5,12.75) -- (15,13.25);
+        \draw [short] (15,13.25) -- (15,12.25);
+        \draw [short] (15,12.25) -- (15.5,12.75);
+        \draw [short] (15.5,12.75) -- (15.5,11.5);
+        \draw [short] (23.25,12.75) -- (23.25,11.75);
+        \draw [<->, >=Stealth] (15.5,12) -- (23.25,12)node[pos=0.5, fill=white]{$L$};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{6}
         %\label{fig2}
     \end{figure}

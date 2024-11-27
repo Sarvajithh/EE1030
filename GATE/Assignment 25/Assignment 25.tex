@@ -81,25 +81,62 @@
     magnitude of the Hall resistivity $\rho_{xy}$ as a function of the magnetic field?
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw [short] (3.75,10.25) -- (3.75,7.75);
+        \draw [short] (3.75,7.75) -- (7.25,7.75);
+        \draw [short] (4,8.75) -- (7,8.75);
+        \node [font=\normalsize] at (7.25,7.5) {B};
+        \node [font=\normalsize] at (3.25,10) {$\rho_{xy}$};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{option1}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (7.25,7.5) {B};
+    \node [font=\normalsize] at (3.25,10) {$\rho_{xy}$};
+    \draw [short] (3.75,7.75) -- (6.25,9.75);
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{option2}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (7.25,7.5) {B};
+    \node [font=\normalsize] at (3.25,10) {$\rho_{xy}$};
+    \draw [short] (4,10) .. controls (5,8.5) and (5,8.5) .. (6.25,8);
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{option23}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (7.25,7.5) {B};
+    \node [font=\normalsize] at (3.25,10) {$\rho_{xy}$};
+    \draw [short] (3.75,7.75) .. controls (4.75,8.75) and (4.25,8.75) .. (4.5,9.75);
+    \draw [short] (4.5,9.75) .. controls (6,10.25) and (5.75,10) .. (6.75,10);
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{option4}
         %\label{fig2}
     \end{figure}
@@ -128,25 +165,61 @@
     behaviour of $\frac{C}{T} \text{ vs. } T^2$ where C is the heat capacity and T is the temperature? 
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (3.75,10.5) {$\frac{C}{T}$};
+    \draw [short] (3.75,8.25) .. controls (5.75,9) and (5.75,9.25) .. (6.5,10.5);
+    \node [font=\normalsize] at (7.5,7.75) {$T^2$};
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{option1}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (3.75,10.5) {$\frac{C}{T}$};
+    \node [font=\normalsize] at (7.5,7.75) {$T^2$};
+    \draw [short] (3.75,8.25) -- (6.5,10);
+    \end{circuitikz}
+    }%% Specify the path to your TikZ file
         \caption{option2}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_7.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (3.75,10.5) {$\frac{C}{T}$};
+    \node [font=\normalsize] at (7.5,7.75) {$T^2$};
+    \draw [short] (3.75,8.25) .. controls (4.75,9.75) and (5,10) .. (6.5,10);
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{option3}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_8.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (3.75,10.25) -- (3.75,7.75);
+    \draw [short] (3.75,7.75) -- (7.25,7.75);
+    \node [font=\normalsize] at (3.75,10.5) {$\frac{C}{T}$};
+    \node [font=\normalsize] at (7.5,7.75) {$T^2$};
+    \draw [short] (3.75,7.75) -- (6.25,10.25);
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{option4}
         %\label{fig2}
     \end{figure}
@@ -154,7 +227,23 @@
     \item[20.] For nonrelativistic electrons in solid, different energy dispersion relations (with effective masses $m_a^*,m_b^*,m_c^*$) are schematically shown in the plots. Which one of the following options is correct?
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_9.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (2.75,7) -- (8.75,7);
+    \draw [short] (3.25,7.75) .. controls (4.5,7.25) and (4.25,7.25) .. (6,7);
+    \draw [short] (6,7) .. controls (8,7.25) and (7.75,7.25) .. (8.75,7.75);
+    \draw [dashed] (3,9.5) .. controls (4.25,8) and (4.25,8) .. (6,7);
+    \draw [dashed] (6,7) .. controls (8,8.25) and (7.75,8.25) .. (8.75,9.5);
+    \draw [dashed] (4.75,10.5) .. controls (5,8.75) and (5,8.75) .. (6,7);
+    \draw [dashed] (6,7) .. controls (7,8.75) and (6.75,8.75) .. (7,10.5);
+    \draw [short] (6,7) -- (6,11);
+    \node [font=\normalsize] at (9,7.75) {$m_a^*$};
+    \node [font=\normalsize] at (9,9.5) {$m_b^*$};
+    \node [font=\normalsize] at (7.25,10.5) {$m_c^*$};
+    \node [font=\normalsize] at (6,11.25) {E};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}
@@ -170,7 +259,23 @@
     units. Which one of the following is the most appropriate combination? 
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_10.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw [short] (3.75,11.25) -- (3.75,3.75);
+        \draw [short] (1.25,8.75) -- (10.5,8.75);
+        \draw [dashed] (3.75,8.75) -- (8.75,9.25);
+        \draw [dashed] (3.75,8.75) -- (8.25,8.5);
+        \draw [dashed] (3.75,8.75) -- (4.5,5.25);
+        \draw [short] (3.75,8.75) -- (7,6.25);
+        \node [font=\normalsize] at (9,9.25) {P};
+        \node [font=\normalsize] at (8.5,8.5) {Q};
+        \node [font=\normalsize] at (7.25,6.25) {R};
+        \node [font=\normalsize] at (4.5,5) {S};
+        \node [font=\normalsize] at (3.75,11.5) {M};
+        \node [font=\normalsize] at (10.75,8.75) {H};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}
@@ -186,7 +291,45 @@
     zone for this lattice? 
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_11.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (4.5,10) -- (6.25,10);
+    \draw [short] (4.5,10) -- (4,9);
+    \draw [short] (4,9) -- (4.5,8);
+    \draw [short] (6.25,10) -- (6.75,9);
+    \draw [short] (6.75,9) -- (6.25,8);
+    \draw [short] (4.5,8) -- (6.25,8);
+    \draw [short] (6.75,9) -- (8,9);
+    \draw [short] (8,9) -- (8.5,8);
+    \draw [short] (6.25,8) -- (6.75,7.25);
+    \draw [short] (6.75,7.25) -- (8,7.25);
+    \draw [short] (8,7.25) -- (8.5,8);
+    \draw [short] (4.5,8) -- (4,7.25);
+    \draw [short] (4,7.25) -- (4.5,6.5);
+    \draw [short] (4.5,6.5) -- (6.25,6.5);
+    \draw [short] (6.25,6.5) -- (6.75,7.25);
+    \draw [short] (8,7.25) -- (8.5,6.5);
+    \draw [short] (6.25,6.5) -- (6.75,5.75);
+    \draw [short] (6.75,5.75) -- (8,5.75);
+    \draw [short] (8,5.75) -- (8.5,6.5);
+    \draw [short] (4.5,6.5) -- (4,5.75);
+    \draw [short] (4,5.75) -- (4.5,5);
+    \draw [short] (4.5,5) -- (6.25,5);
+    \draw [short] (6.25,5) -- (6.75,5.75);
+    \draw [short] (4,7.25) -- (2.75,7.25);
+    \draw [short] (2.75,7.25) -- (2.25,6.5);
+    \draw [short] (2.25,6.5) -- (2.75,5.75);
+    \draw [short] (2.75,5.75) -- (4,5.75);
+    \draw [short] (4,9) -- (2.75,9);
+    \draw [short] (2.75,9) -- (2,8);
+    \draw [short] (2,8) -- (2.75,7.25);
+    \draw [->, >=Stealth] (6.25,6.5) -- (6.75,7.25);
+    \draw [->, >=Stealth] (6.25,6.5) -- (6.75,5.75);
+    \node [font=\normalsize] at (5.5,7.25) {$\overrightarrow{a}_1$};
+    \node [font=\normalsize] at (5.5,6) {$\overrightarrow{a}_2$};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}
@@ -199,7 +342,29 @@
     \item[23.] A $^{60}Co$ nucleus emits a $\beta$ particle and is converted to $^{60}Ni^*$ with $J^P = 4^+$, which in turn decays ot the $^{60}Ni^*$ ground state with $J^P = 0+$ by emitting two photons in succession, as shown in the figure. Which one of the folowing statements is correct?
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_12.tex}  % Specify the path to your TikZ file
+        \resizebox{0.5\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw [short] (3.25,10.25) -- (6.25,10.25);
+        \draw [short] (5.25,8) -- (7.75,8);
+        \draw [short] (5.25,6.75) -- (7.75,6.75);
+        \draw [short] (5.25,5.75) -- (7.75,5.75);
+        \draw [->, >=Stealth, dashed] (4.75,10.25) -- (6,8);
+        \draw [->, >=Stealth, dashed] (6.25,8) -- (6.25,6.75);
+        \draw [->, >=Stealth, dashed] (6.5,6.75) -- (6.5,5.75);
+        \node [font=\normalsize] at (4,10.5) {$^{60}Co$};
+        \node [font=\normalsize] at (5.5,9.25) {$\beta$};
+        \node [font=\normalsize] at (5.5,7) {$^{60}Ni$};
+        \node [font=\normalsize] at (5.5,6) {$^{60}Ni$};
+        \node [font=\normalsize] at (6.75,7) {$\gamma$};
+        \node [font=\normalsize] at (6.75,6) {$\gamma$};
+        \node [font=\normalsize] at (6.75,8.25) {$^{60}Ni$};
+        \node [font=\normalsize] at (6.25,10.5) {$5^+$};
+        \node [font=\normalsize] at (8,8) {$4+$};
+        \node [font=\normalsize] at (8,6.75) {$2+$};
+        \node [font=\normalsize] at (8,5.75) {$0+$};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}
@@ -212,7 +377,33 @@
     \item[24.] Which one of the following options is CORRECT for the given logic circuit?
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_13.tex}  % Specify the path to your TikZ file
+        \resizebox{0.5\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (4.5,9.5) to[short, -o] (3.25,9.5) ;
+    \draw (4.5,9) to[short, -o] (3.25,9) ;
+    \draw (4.5,9.5) to[short] (4.75,9.5);
+    \draw (4.5,9) to[short] (4.75,9);
+    \draw (4.75,9.5) node[ieeestd and port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (6.5,9.25);
+    \draw [short] (4,9.5) -- (4,11.25);
+    \draw [short] (4,11.25) -- (4.75,11.25);
+    \draw (4.75,11.5) to[short] (5,11.5);
+    \draw (4.75,11) to[short] (5,11);
+    \draw (5,11.5) node[ieeestd nand port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (6.75,11.25);
+    \draw [short] (4.75,11.5) -- (4.75,11);
+    \draw [short] (6.75,11.25) -- (8.25,11.25);
+    \draw [short] (8.25,11.25) -- (8.25,10);
+    \draw [short] (6.5,9.25) -- (8.75,9.25);
+    \draw [short] (8.25,10.25) -- (8.25,9.75);
+    \draw [short] (8.25,9.75) -- (8.75,9.75);
+    \draw (8.75,9.75) to[short] (9,9.75);
+    \draw (8.75,9.25) to[short] (9,9.25);
+    \draw (9,9.75) node[ieeestd or port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (10.75,9.5);
+    \node [font=\normalsize] at (11,9.5) {$X$};
+    \node [font=\normalsize] at (2.75,9.5) {$P$};
+    \node [font=\normalsize] at (2.75,8.75) {$Q$};
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}

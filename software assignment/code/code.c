@@ -80,10 +80,8 @@ void qrAlgorithm(double** A, int n) {
     double** temp = allocateMatrix(n);
 
     for (int iter = 0; iter < MAX_ITER; iter++) {
-        qrDecomposition(A, Q, R, n);  // QR decomposition of A
-        multiplyMatrices(R, Q, temp, n);  // A = R * Q
-        
-        // Check convergence by looking at off-diagonal elements
+        qrDecomposition(A, Q, R, n);  
+        multiplyMatrices(R, Q, temp, n);
         int converged = 1;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {

@@ -68,7 +68,20 @@
     \item[28.] A cylinder of radius 250mm and weight, W = 10kN is rolled up an obstacle of height 50mm by applying a horizontal force P at its centre as shown in the figure
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw  (11.25,9.75) circle (1cm);
+        \draw [short] (10,8.75) -- (12.25,8.75);
+        \draw [short] (12.25,8.75) -- (12.25,9.5);
+        \draw [short] (12.25,9.5) -- (13.75,9.5);
+        \draw [->, >=Stealth] (10.25,9.75) -- (11.25,9.75);
+        \draw [->, >=Stealth] (11.25,9.75) -- (11.25,9);
+        \node [font=\normalsize] at (10,9.75) {\textbf{P}};
+        \node [font=\normalsize] at (11.5,9.25) {\textbf{W}};
+        \draw [<->, >=Stealth] (13.75,9.5) -- (13.75,8.75)node[pos=0.5, fill=white]{\textbf{50mm}};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{1}
         %\label{fig2}
     \end{figure}
@@ -82,7 +95,67 @@
     \item[29.] A plate in equilibrium is subjected to uniform stress along its edges with magnitude $\sigma_{xx}=30MPa$ and $\sigma_{yy}=50MPa$ as shown in the figure.
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw  (11,9.25) rectangle (14,6.5);
+    \draw [->, >=Stealth] (14,9.25) -- (14,9.75);
+    \draw [->, >=Stealth] (13.5,9.25) -- (13.5,9.75);
+    \draw [->, >=Stealth] (13,9.25) -- (13,9.75);
+    \draw [->, >=Stealth] (12.5,9.25) -- (12.5,9.75);
+    \draw [->, >=Stealth] (12,9.25) -- (12,9.75);
+    \draw [->, >=Stealth] (11.5,9.25) -- (11.5,9.75);
+    \draw [->, >=Stealth] (11.25,9.25) -- (11.25,9.75);
+    \draw [->, >=Stealth] (14,9) -- (14.5,9);
+    \draw [->, >=Stealth] (14,8.75) -- (14.5,8.75);
+    \draw [->, >=Stealth] (14,8.5) -- (14.5,8.5);
+    \draw [->, >=Stealth] (14,8.25) -- (14.5,8.25);
+    \draw [->, >=Stealth] (14,8) -- (14.5,8);
+    \draw [->, >=Stealth] (14,7.75) -- (14.5,7.75);
+    \draw [->, >=Stealth] (14,7.5) -- (14.5,7.5);
+    \draw [->, >=Stealth] (14,7.25) -- (14.5,7.25);
+    \draw [->, >=Stealth] (14,7) -- (14.5,7);
+    \draw [->, >=Stealth] (14,6.75) -- (14.5,6.75);
+    \draw [->, >=Stealth] (14,6.5) -- (14.5,6.5);
+    \draw [->, >=Stealth] (14,6.5) -- (14,6);
+    \draw [->, >=Stealth] (13.75,6.5) -- (13.75,6);
+    \draw [->, >=Stealth] (13.5,6.5) -- (13.5,6);
+    \draw [->, >=Stealth] (13.25,6.5) -- (13.25,6);
+    \draw [->, >=Stealth] (13,6.5) -- (13,6);
+    \draw [->, >=Stealth] (12.75,6.5) -- (12.75,6);
+    \draw [->, >=Stealth] (12.5,6.5) -- (12.5,6);
+    \draw [->, >=Stealth] (12.25,6.5) -- (12.25,6);
+    \draw [->, >=Stealth] (12,6.5) -- (12,6);
+    \draw [->, >=Stealth] (11.75,6.5) -- (11.75,6);
+    \draw [->, >=Stealth] (11.5,6.5) -- (11.5,6);
+    \draw [->, >=Stealth] (11.25,6.5) -- (11.25,6);
+    \draw [->, >=Stealth] (11,6.5) -- (11,6);
+    \draw [->, >=Stealth] (11,6.5) -- (10.5,6.5);
+    \draw [->, >=Stealth] (11,6.75) -- (10.5,6.75);
+    \draw [->, >=Stealth] (11,7) -- (10.5,7);
+    \draw [->, >=Stealth] (11,7.25) -- (10.5,7.25);
+    \draw [->, >=Stealth] (11,7.75) -- (10.5,7.75);
+    \draw [->, >=Stealth] (11,7.5) -- (10.5,7.5);
+    \draw [->, >=Stealth] (11,8) -- (10.5,8);
+    \draw [->, >=Stealth] (11,8.25) -- (10.5,8.25);
+    \draw [->, >=Stealth] (11,8.5) -- (10.5,8.5);
+    \draw [->, >=Stealth] (11,8.75) -- (10.5,8.75);
+    \draw [->, >=Stealth] (11,9) -- (10.5,9);
+    \draw [->, >=Stealth] (11,9.25) -- (10.5,9.25);
+    \draw [->, >=Stealth] (11,9.25) -- (11,9.75);
+    \draw [->, >=Stealth] (11.75,9.25) -- (11.75,9.75);
+    \draw [->, >=Stealth] (12.25,9.25) -- (12.25,9.75);
+    \draw [->, >=Stealth] (12.75,9.25) -- (12.75,9.75);
+    \draw [->, >=Stealth] (13.25,9.25) -- (13.25,9.75);
+    \draw [->, >=Stealth] (13.75,9.25) -- (13.75,9.75);
+    \node [font=\normalsize] at (15.5,8) {$\sigma_{xx} = 30MPa$};
+    \node [font=\normalsize] at (12.25,10.25) {\textbf{$\sigma_{yy}=50MPa$}};
+    \draw [->, >=Stealth, dashed] (12.5,8) -- (12.5,9);
+    \draw [->, >=Stealth, dashed] (12.5,8) -- (13.5,8);
+    \node [font=\normalsize] at (12.25,8.75) {$y$};
+    \node [font=\normalsize] at (13.25,7.75) {$x$};
+    \end{circuitikz}
+    }%% Specify the path to your TikZ file
         \caption{2}
         %\label{fig2}
     \end{figure}
@@ -97,7 +170,29 @@
     moments M and 2M. 
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (8,10) -- (9,10);
+    \draw [short] (8.25,10) -- (8.5,9.5);
+    \draw [short] (8.5,9.5) -- (8.75,10);
+    \draw [short] (8.25,9.5) -- (18,9.5);
+    \draw [short] (17.25,9.5) -- (17,9);
+    \draw [short] (17.25,9.5) -- (17.75,9);
+    \draw [short] (16.5,9) -- (18,9);
+    \draw [short] (8.5,9) -- (8.5,8.25);
+    \draw [short] (11.25,9) -- (11.25,8.25);
+    \draw [short] (14,9) -- (14,8.25);
+    \draw [short] (17.25,9) -- (17.25,8.25);
+    \draw [<->, >=Stealth] (8.5,8.5) -- (11.25,8.5)node[pos=0.5, fill=white]{$\frac{L}{3}$};
+    \draw [<->, >=Stealth] (11.25,8.75) -- (14,8.75)node[pos=0.5, fill=white]{$\frac{L}{3}$};
+    \draw [<->, >=Stealth] (14,8.75) -- (17.25,8.75)node[pos=0.5, fill=white]{$\frac{L}{3}$};
+    \draw [->, >=Stealth] (10.75,10) .. controls (11.75,10) and (12,10) .. (11.25,9.25) ;
+    \draw [->, >=Stealth] (13.75,10) .. controls (14.75,10) and (14.75,10) .. (14.5,9) ;
+    \node [font=\normalsize] at (7.75,9.75) {P};
+    \node [font=\normalsize] at (18.25,9.25) {Q};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{3}
         %\label{fig2}
     \end{figure}
@@ -154,7 +249,15 @@
     \item[35.]The following details refer to a closed traverse:
     \begin{table}[h!]
         \centering
-        \input{tables/table.tex}
+        \begin{tabular}{|c|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{3cm}|}
+            \hline
+            \textbf{Line} & \multicolumn{4}{c|}{\textbf{Consecutive coordinate}} \\ \hline
+            & \textbf{Northing (m)} & \textbf{Southing (m)} & \textbf{Easting (m)} & \textbf{Westing (m)} \\ \hline
+            PQ & ---- & 437 & 173 & ---- \\ \hline
+            QR & 101 & ---- & 558 & ---- \\ \hline
+            RS & 419 & ---- & ---- & 96 \\ \hline
+            SP & ---- & 83 & ---- & 634 \\ \hline
+        \end{tabular}
         \caption{Consecutive coordinates for lines}
     \end{table}
     The length and direction(whole circle bearing) of closure, respectively are \hfill (2018)

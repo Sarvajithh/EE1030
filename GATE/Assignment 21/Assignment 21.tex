@@ -70,7 +70,13 @@
     \item[31.] For three different airplanes A, B and C, the yawing moment coefficient $\brak{C_n}$ was measured in a wind-tunnel for three settings of sideslip angle $\beta$ and tabulated as
     \begin{table}
         \centering
-        \input{tables/table_1.tex}  % Specify the path to your TikZ file
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            $\beta$ & Airplane A & Airplane B & Airplane C \\ \hline
+            $\beta = -5^\circ$ & -0.030 & -0.025 & 0.040 \\ \hline
+            $\beta = 0^\circ$ & 0 & 0 & 0 \\ \hline
+            $\beta = 5^\circ$ & 0.030 & 0.025 & -0.040 \\ \hline
+        \end{tabular}  % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{table}
@@ -98,31 +104,130 @@
     \item[34.] For the state of stress shown in the figure, which one of the follwoing represents the correct free body diagram showing the maximum shear stress and the associated normal stress?\hfill (2020)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw  (17,13.75) rectangle (18.25,12.75);
+        \draw [->, >=Stealth] (18.5,12.75) -- (18.5,13.75);
+        \draw [->, >=Stealth] (17,14) -- (18.25,14);
+        \draw [->, >=Stealth] (16.75,13.75) -- (16.75,12.75);
+        \draw [->, >=Stealth] (18.25,12.5) -- (17,12.5);
+        \draw [->, >=Stealth] (18.75,13.25) -- (20,13.25);
+        \draw [->, >=Stealth] (17.5,14.25) -- (17.5,15);
+        \draw [->, >=Stealth] (16.5,13.25) -- (15.5,13.25);
+        \draw [->, >=Stealth] (17.5,12.25) -- (17.5,11.5);
+        \draw [->, >=Stealth] (17.25,13) -- (17.25,13.5);
+        \draw [->, >=Stealth] (17.25,13) -- (18,13);
+        \node [font=\normalsize] at (17.5,13.5) {y};
+        \node [font=\normalsize] at (17.75,13.25) {x};
+        \node [font=\normalsize] at (18.25,14.5) {12MPa};
+        \node [font=\normalsize] at (18.75,14) {4MPa};
+        \node [font=\normalsize] at (19.75,13) {18MPa};
+        \end{circuitikz}
+        }%% Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (13.5,16) -- (15.5,16);
+    \draw  (13.5,16) -- (14.75,17.25) -- (16,16) -- (14.75,14.75) -- cycle;
+    \draw [<->, >=Stealth] (14.25,16) -- (14,16.5);
+    \draw [->, >=Stealth] (16.25,16) -- (15,17.25);
+    \draw [->, >=Stealth] (15.75,16.75) -- (16.5,17.5);
+    \draw [->, >=Stealth] (13.5,16.25) -- (14.5,17.25);
+    \draw [->, >=Stealth] (13.75,16.75) -- (13,17.5);
+    \draw [->, >=Stealth] (13.5,15.75) -- (14.5,14.75);
+    \draw [->, >=Stealth] (13.75,15.25) -- (12.75,14.5);
+    \draw [->, >=Stealth] (16,15.75) -- (14.75,14.5);
+    \draw [->, >=Stealth] (15.5,15) -- (16.25,14.25);
+    \node [font=\normalsize, rotate around={-45:(0,0)}] at (13,17) {15MPa};
+    \node [font=\normalsize] at (14.75,17.5) {5 MPa};
+    \node [font=\normalsize] at (16.5,16.75) {15 MPa};
+    \node [font=\normalsize] at (14.75,16.25) {18.4};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{option1}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_3.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw [short] (12.75,16) -- (12.75,16);
+        \draw [short] (12.75,16) -- (14.25,16);
+        \draw  (15.5,16) -- (14.125,15) -- (12.75,16) -- (14.125,17) -- cycle;
+        \draw [->, >=Stealth] (14.5,17) -- (15.75,16.25);
+        \draw [->, >=Stealth] (15.25,16.75) -- (16,17.75);
+        \draw [->, >=Stealth] (14,17.25) -- (12.75,16.25);
+        \draw [->, >=Stealth] (13.25,17) -- (12.5,17.75);
+        \draw [->, >=Stealth] (13.75,15) -- (12.5,15.75);
+        \draw [->, >=Stealth] (13,15.25) -- (12.25,14.5);
+        \draw [->, >=Stealth] (14.25,14.75) -- (15.5,15.75);
+        \draw [->, >=Stealth] (15,15.25) -- (16,14.25);
+        \draw [<->, >=Stealth] (13.5,16) .. controls (13.75,15.75) and (13.5,15.75) .. (13.25,15.75);
+        \node [font=\normalsize] at (14.75,17.75) {15MPa};
+        \node [font=\normalsize] at (16,16) {5MPa};
+        \node [font=\normalsize] at (16,15) {15MPa};
+        \node [font=\normalsize] at (14,15.75) {18.4};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{option2}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_4.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [short] (12.75,16) -- (12.75,16);
+    \draw [short] (12.75,16) -- (14.25,16);
+    \draw  (15.5,16) -- (14.125,15) -- (12.75,16) -- (14.125,17) -- cycle;
+    \draw [->, >=Stealth] (14.5,17) -- (15.75,16.25);
+    \draw [->, >=Stealth] (16,17.75) -- (15.25,16.75);
+    \draw [->, >=Stealth] (14,17.25) -- (12.75,16.25);
+    \draw [->, >=Stealth] (12.5,17.75) -- (13.25,17);
+    \draw [->, >=Stealth] (13.75,15) -- (12.5,15.75);
+    \draw [->, >=Stealth] (12.25,14.5) -- (13,15.25);
+    \draw [->, >=Stealth] (14.25,14.75) -- (15.5,15.75);
+    \draw [->, >=Stealth] (16,14.25) -- (15,15.25);
+    \draw [<->, >=Stealth] (13.5,16) .. controls (13.75,15.75) and (13.5,15.75) .. (13.25,15.75);
+    \node [font=\normalsize] at (14.75,17.75) {15MPa};
+    \node [font=\normalsize] at (16,16) {5MPa};
+    \node [font=\normalsize] at (16,15) {15MPa};
+    \node [font=\normalsize] at (14,15.75) {18.4};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{option3}
         %\label{fig2}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_5.tex}  % Specify the path to your TikZ file
+        \resizebox{0.3\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw [short] (12.75,16) -- (12.75,16);
+        \draw [short] (12.75,16) -- (14.25,16);
+        \draw  (15.5,16) -- (14.125,15) -- (12.75,16) -- (14.125,17) -- cycle;
+        \draw [->, >=Stealth] (15.75,16.25) -- (14.5,17);
+        \draw [->, >=Stealth] (16,17.75) -- (15.25,16.75);
+        \draw [->, >=Stealth] (12.75,16.25) -- (14,17.25);
+        \draw [->, >=Stealth] (12.5,17.75) -- (13.25,17);
+        \draw [->, >=Stealth] (12.5,15.75) -- (13.75,15);
+        \draw [->, >=Stealth] (12.25,14.5) -- (13,15.25);
+        \draw [->, >=Stealth] (15.5,15.75) -- (14.25,14.75);
+        \draw [->, >=Stealth] (16,14.25) -- (15,15.25);
+        \draw [<->, >=Stealth] (13.5,16) .. controls (13.75,15.75) and (13.5,15.75) .. (13.25,15.75);
+        \node [font=\normalsize] at (14.75,17.75) {15MPa};
+        \node [font=\normalsize] at (16,16) {5MPa};
+        \node [font=\normalsize] at (16,15) {15MPa};
+        \node [font=\normalsize] at (14,15.75) {18.4};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{option4}
         %\label{fig2}
     \end{figure}
@@ -134,7 +239,12 @@
     \newpage
     \begin{table}
         \centering
-        \input{tables/table_2.tex}  % Specify the path to your TikZ file
+        \begin{tabular}{|c|c|}
+            \hline
+            Angle of attack $\alpha$ (in degrees) & Lift coefficient $C_l$ \\ \hline
+            0 & 0.10 \\ \hline
+            4 & 0.53 \\ \hline
+        \end{tabular} % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{table}
@@ -142,7 +252,49 @@
     \item[38.] A low speed uniform flow $U_0$ is incident on an airfoil of chord c. In the figure, the velocity profilr some distance downstream of the airfoil is idealized as shown for section B. The static pressure at sections A and B is the same. The drag coefficient of thhe airfoil is.........(round off to three decimal places).\hfill (2020)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_6.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw [<->, >=Stealth] (12.75,18.5) -- (12.75,11.5);
+    \draw [->, >=Stealth] (12.75,17.75) -- (13.5,17.75);
+    \draw [->, >=Stealth] (12.75,17) -- (13.5,17);
+    \draw [->, >=Stealth] (12.75,16.25) -- (13.5,16.25);
+    \draw [->, >=Stealth] (12.75,15.75) -- (13.5,15.75);
+    \draw [->, >=Stealth] (12.75,15.25) -- (13.5,15.25);
+    \draw [->, >=Stealth] (12.75,14.5) -- (13.5,14.5);
+    \draw [->, >=Stealth] (12.75,13.75) -- (13.5,13.75);
+    \draw [->, >=Stealth] (12.75,13.25) -- (13.5,13.25);
+    \draw [->, >=Stealth] (12.75,12.75) -- (13.5,12.75);
+    \draw [->, >=Stealth] (12.75,12.25) -- (13.5,12.25);
+    \draw [short] (13.5,18) -- (13.5,12);
+    \draw [<->, >=Stealth] (17.75,18.5) -- (17.75,11.5);
+    \draw [->, >=Stealth] (17.75,17.75) -- (18.75,17.75);
+    \draw [->, >=Stealth] (17.75,17.25) -- (18.75,17.25);
+    \draw [->, >=Stealth] (17.75,16.5) -- (18.75,16.5);
+    \draw [->, >=Stealth] (17.75,16) -- (18.5,16);
+    \draw [->, >=Stealth] (17.75,15.25) -- (18.5,15.25);
+    \draw [->, >=Stealth] (17.75,14.5) -- (18.75,14.5);
+    \draw [->, >=Stealth] (17.75,13.5) -- (18.75,13.5);
+    \draw [->, >=Stealth] (17.75,13) -- (18.75,13);
+    \draw [->, >=Stealth] (17.75,12.5) -- (18.75,12.5);
+    \draw [->, >=Stealth] (17.75,12) -- (18.75,12);
+    \draw [short] (18.5,16.25) -- (18.5,15);
+    \draw [dashed] (18.5,16.25) -- (19.75,16.25);
+    \draw [dashed] (18.5,15) -- (19.75,15);
+    \draw [<->, >=Stealth] (19.75,16.25) -- (19.75,15);
+    \node [font=\normalsize] at (19.25,15.5) {$0.995U_0$};
+    \node [font=\normalsize] at (20,15.75) {c};
+    \node [font=\normalsize] at (19.25,17) {$U_0$};
+    \node [font=\normalsize] at (19.25,12.5) {$U_0$};
+    \node [font=\normalsize] at (13.75,15) {$U_0$};
+    \node [font=\normalsize] at (17.75,11.25) {-$\infty$};
+    \node [font=\normalsize] at (17.75,18.75) {$\infty$};
+    \node [font=\normalsize] at (12.75,18.75) {$\infty$};
+    \node [font=\normalsize] at (12.75,11.25) {-$\infty$};
+    \node [font=\normalsize] at (12.75,19.25) {Section-A};
+    \node [font=\normalsize] at (17.75,19.25) {Section-B};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
         \caption{}
         %\label{fig2}
     \end{figure}

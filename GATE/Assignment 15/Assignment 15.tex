@@ -112,7 +112,20 @@
     \item[21.] Assuming that the aircraft is flying straight, the top spar cap/ flange of wing is most likely to fail in: \hfill (2017)
     \begin{figure}[!ht]
         \centering
-        \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+        \resizebox{0.4\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\normalsize]
+        \draw [short] (3.75,10) -- (10.75,9);
+        \draw [short] (10.75,9) -- (3.75,8);
+        \draw [short] (3.75,10) .. controls (2.5,9.5) and (2.25,8.75) .. (3.75,8);
+        \draw [short] (5.25,9.75) -- (5.25,8.25);
+        \draw [short] (7.25,9.5) -- (7.25,8.5);
+        \draw [->, >=Stealth] (4.75,9.25) -- (4.75,9.75);
+        \draw [short] (4.75,9.25) -- (4.75,7.75);
+        \draw [short] (4.75,7.75) -- (5.75,7.75);
+        \node [font=\normalsize] at (7.25,7.75) {Top spar cap/flange};
+        \end{circuitikz}
+        }% % Specify the path to your TikZ file
         \caption{1}
         %\label{fig2}
     \end{figure}

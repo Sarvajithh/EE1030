@@ -61,7 +61,20 @@
  \item[14.] Consider an incompressible 2-D Couette flow of water between two walls spaced 1m apart. The lower wall is kept stationary. What is the shear stress acting on the lower wall if the upper wall is moving at a constant speed of $2\frac{m}{s}$?$\brak{\mu_{water}=7\times 10^{-1}\frac{Ns}{m^2}}$ \hfill (2010)
  \begin{figure}[!ht]
     \centering
-    \input{figs/fig_1.tex}  % Specify the path to your TikZ file
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    
+    \draw [->, >=Stealth] (-3.75,13.5) -- (2.5,13.5);
+    \draw [short] (-3.75,11.5) -- (1,11.5);
+    \draw [dashed] (-3.5,13) -- (0.75,13);
+    \draw [dashed] (-3.25,12) -- (0.75,12);
+    \draw [dashed] (-3.25,12.5) -- (0.75,12.5);
+    \draw [<->, >=Stealth] (-4.5,13.5) -- (-4.5,11.5);
+    \node [font=\normalsize] at (-5,12.5) {1m};
+    \node [font=\normalsize] at (3,13.5) {2$\frac{m}{s}$};
+    \end{circuitikz}
+    }% % Specify the path to your TikZ file
     \caption{1}
     \label{fig:1}
 \end{figure}
@@ -88,7 +101,18 @@
  \item[17.] A horizontal cantilevered steel beam of rectangular cross section having width $b$ and depth $d$ is vibrating in the vertical plane. The natural frequency of bending vibration is highest when \hfill (2010)
  \begin{figure}[!ht]
     \centering
-    \input{figs/fig_2.tex}  % Specify the path to your TikZ file
+    \resizebox{0.4\textwidth}{!}{%
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw  (-2.5,13.75) rectangle (-0.5,12.5);
+    \draw [<->, >=Stealth, dashed] (-2.5,12.25) -- (-0.5,12.25)node[pos=0.5, fill=white]{b};
+    \draw [<->, >=Stealth, dashed] (-3,13.75) -- (-3,12.5)node[pos=0.5, fill=white]{d};
+    \draw [->, >=Stealth, dashed] (-1.5,13) -- (0.5,13);
+    \draw [->, >=Stealth, dashed] (-1.5,13) -- (-1.5,14.25);
+    \node [font=\normalsize] at (-1.5,14.5) {y};
+    \node [font=\normalsize] at (0.75,13) {z};
+    \end{circuitikz}
+    }%  % Specify the path to your TikZ file
     \caption{2}
     \label{fig:2}
 \end{figure}
